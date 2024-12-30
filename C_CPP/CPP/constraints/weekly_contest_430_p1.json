@@ -1,0 +1,18 @@
+{
+    "fuzzing_params": {
+        "Constraints": "m == grid.length, n == grid[i].length, 1 <= m, n <= 50, 0 <= grid[i][j] < 2500",
+        "runs": 100
+    },
+    "problem_info": {
+        "contest": "Weekly Contest 430",
+        "problem_number": 1,
+        "title": "3402. Minimum Operations to Make Columns Strictly Increasing",
+        "difficulty": "Easy",
+        "source_url": "https://leetcode.com/problems/minimum-operations-to-make-columns-strictly-increasing/",
+        "tags": [
+            "TODO",
+            "Add",
+            "Tags"
+        ]
+    }
+}

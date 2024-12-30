@@ -1,0 +1,18 @@
+{
+    "fuzzing_params": {
+        "Constraints": "7 <= nums.length <= 1000, 1 <= nums[i] <= 1000",
+        "runs": 100
+    },
+    "problem_info": {
+        "contest": "Weekly Contest 430",
+        "problem_number": 3,
+        "title": "3404. Count Special Subsequences",
+        "difficulty": "Medium",
+        "source_url": "https://leetcode.cn/problems/count-special-subsequences/",
+        "tags": [
+            "TODO",
+            "Add",
+            "Tags"
+        ]
+    }
+}

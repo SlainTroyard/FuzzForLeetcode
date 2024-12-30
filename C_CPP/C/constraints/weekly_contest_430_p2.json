@@ -1,0 +1,18 @@
+{
+    "fuzzing_params": {
+        "Constraints": "1 <= word.length <= 5 * 10^3, word consists only of lowercase English letters., 1 <= numFriends <= word.length",
+        "runs": 100
+    },
+    "problem_info": {
+        "contest": "Weekly Contest 430",
+        "problem_number": 2,
+        "title": "3403. Find the Lexicographically Largest String From the Box I",
+        "difficulty": "Medium",
+        "source_url": "https://leetcode.com/problems/find-the-lexicographically-largest-string-from-the-box-i/",
+        "tags": [
+            "TODO",
+            "Add",
+            "Tags"
+        ]
+    }
+}
