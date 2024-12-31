@@ -1,0 +1,18 @@
+{
+    "fuzzing_params": {
+        "Constraints": "1 <= n == s.length <= 1000, s consists only of '0' and '1'., 0 <= numOps <= n",
+        "runs": 100
+    },
+    "problem_info": {
+        "contest": "Weekly Contest 429",
+        "problem_number": 3,
+        "title": "3398. Smallest Substring With Identical Characters I",
+        "difficulty": "Hard",
+        "source_url": "https://leetcode.com/problems/smallest-substring-with-identical-characters-i/",
+        "tags": [
+            "TODO",
+            "Add",
+            "Tags"
+        ]
+    }
+}
