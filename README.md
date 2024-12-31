@@ -1,6 +1,5 @@
 # FuzzForLeetcode
-=======
-# LeetCode Contest Fuzzing Project
+- LeetCode Contest Fuzzing Project
 
 这是一个针对LeetCode竞赛题目的自动化Fuzzing测试项目。
 该项目旨在通过模糊测试(Fuzzing)技术，为LeetCode竞赛题目生成大量有效的测试用例。
