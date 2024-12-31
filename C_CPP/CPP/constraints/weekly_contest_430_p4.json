@@ -1,0 +1,18 @@
+{
+    "fuzzing_params": {
+        "Constraints": "1 <= n <= 10^5, 1 <= m <= 10^5, 0 <= k <= n - 1",
+        "runs": 100
+    },
+    "problem_info": {
+        "contest": "Weekly Contest 430",
+        "problem_number": 4,
+        "title": "3405. Count the Number of Arrays with K Matching Adjacent Elements",
+        "difficulty": "Hard",
+        "source_url": "https://leetcode.com/problems/count-the-number-of-arrays-with-k-matching-adjacent-elements/",
+        "tags": [
+            "TODO",
+            "Add",
+            "Tags"
+        ]
+    }
+}
