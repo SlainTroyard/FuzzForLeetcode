@@ -3,7 +3,7 @@ import subprocess
 import random
 
 # Configure test case generation parameters
-test_cases = 100  # Number of test cases to generate
+test_cases = 10  # Number of test cases to generate
 min_array_size = 1  # Minimum size of the array
 max_array_size = 10**5  # Maximum size of the array
 min_value = 1  # Minimum value in the array

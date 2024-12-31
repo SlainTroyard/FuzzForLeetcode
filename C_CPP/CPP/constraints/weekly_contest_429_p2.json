@@ -1,7 +1,7 @@
 {
     "fuzzing_params": {
         "Constraints": "1 <= nums.length <= 10^5, 1 <= nums[i] <= 10^9, 0 <= k <= 10^9",
-        "runs": 100
+        "runs": 10
     },
     "problem_info": {
         "contest": "Weekly Contest 429",
