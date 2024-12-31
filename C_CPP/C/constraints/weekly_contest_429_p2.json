@@ -1,0 +1,18 @@
+{
+    "fuzzing_params": {
+        "Constraints": "1 <= nums.length <= 10^5, 1 <= nums[i] <= 10^9, 0 <= k <= 10^9",
+        "runs": 100
+    },
+    "problem_info": {
+        "contest": "Weekly Contest 429",
+        "problem_number": 2,
+        "title": "3397. Maximum Number of Distinct Elements After Operations",
+        "difficulty": "Medium",
+        "source_url": "https://leetcode.com/problems/maximum-number-of-distinct-elements-after-operations/",
+        "tags": [
+            "TODO",
+            "Add",
+            "Tags"
+        ]
+    }
+}
