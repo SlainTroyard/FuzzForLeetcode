@@ -1,0 +1,20 @@
+{
+    "fuzzing_params": {
+        "Constraints": "1 <= initialCurrency.length <= 3, initialCurrency consists only of uppercase English letters., 1 <= n == pairs1.length <= 10, 1 <= m == pairs2.length <= 10, pairs1[i] == [startCurrencyi, targetCurrencyi], pairs2[i] == [startCurrencyi, targetCurrencyi], 1 <= startCurrencyi.length, targetCurrencyi.length <= 3, startCurrencyi and targetCurrencyi consist only of uppercase English letters., rates1.length == n, rates2.length == m, 1.0 <= rates1[i], rates2[i] <= 10.0, The input is generated such that there are no contradictions or cycles in the conversion graphs for either day., The input is generated such that the output is at most 5 * 10^10.",
+        "runs": 100
+    },
+    "problem_info": {
+        "contest": "Weekly Contest 428",
+        "problem_number": 2,
+        "title": "3387. Maximize Amount After Two Days of Conversions",
+        "difficulty": "Medium",
+        "source_url": "https://leetcode.com/problems/maximize-amount-after-two-days-of-conversions/ ",
+        "tags": [
+            "Array",
+            "String",
+            "Depth-First Search",
+            "Breadth-First Search",
+            "Graph"
+        ]
+    }
+}
