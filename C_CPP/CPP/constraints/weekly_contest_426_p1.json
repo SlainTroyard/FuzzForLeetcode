@@ -1,0 +1,17 @@
+{
+    "fuzzing_params": {
+        "Constraints": "1 <= n <= 1000",
+        "runs": 100
+    },
+    "problem_info": {
+        "contest": "Weekly Contest 426",
+        "problem_number": 1,
+        "title": "3370. Smallest Number With All Set Bits",
+        "difficulty": "Easy",
+        "source_url": "https://leetcode.com/problems/smallest-number-with-all-set-bits/",
+        "tags": [
+            "Math",
+            "Bit Manipulation"
+        ]
+    }
+}
