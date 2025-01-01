@@ -1,0 +1,20 @@
+{
+    "fuzzing_params": {
+        "Constraints": "3 <= s.length <= 2 * 10^4, s contains only lowercase English letters.",
+        "runs": 100
+    },
+    "problem_info": {
+        "contest": "Weekly Contest 428",
+        "problem_number": 4,
+        "title": "3389. Minimum Operations to Make Character Frequencies Equal",
+        "difficulty": "Hard",
+        "source_url": "https://leetcode.com/problems/minimum-operations-to-make-character-frequencies-equal/",
+        "tags": [
+            "Hash Table",
+            "String",
+            "Dynamic Programming",
+            "Counting",
+            "Enumeration"
+        ]
+    }
+}
