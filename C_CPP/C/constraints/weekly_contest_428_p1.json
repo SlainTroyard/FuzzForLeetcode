@@ -1,0 +1,16 @@
+{
+    "fuzzing_params": {
+        "Constraints": "1 <= events.length <= 1000, events[i] == [indexi, timei], 1 <= indexi, timei <= 10^5",
+        "runs": 100
+    },
+    "problem_info": {
+        "contest": "Weekly Contest 428",
+        "problem_number": 1,
+        "title": "3386. Button with Longest Push Time",
+        "difficulty": "Easy",
+        "source_url": "https://leetcode.com/problems/button-with-longest-push-time/",
+        "tags": [
+            "Array"
+        ]
+    }
+}
