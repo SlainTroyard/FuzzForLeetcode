@@ -3,6 +3,7 @@
         "functional": "cpp",
         "limits.h": "c",
         "string.h": "c",
-        "numeric": "cpp"
+        "numeric": "cpp",
+        "iostream": "cpp"
     }
 }
