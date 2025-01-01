@@ -1,0 +1,17 @@
+{
+    "fuzzing_params": {
+        "Constraints": "1 <= nums.length <= 5000, 0 <= nums[i] <= 50",
+        "runs": 100
+    },
+    "problem_info": {
+        "contest": "Weekly Contest 428",
+        "problem_number": 3,
+        "title": "3388. Count Beautiful Splits in an Array",
+        "difficulty": "Medium",
+        "source_url": "https://leetcode.com/problems/count-beautiful-splits-in-an-array/",
+        "tags": [
+            "Array",
+            "Dynamic Programming"
+        ]
+    }
+}
