@@ -1,0 +1,22 @@
+{
+    "fuzzing_params": {
+        "Constraints": "1 <= points.length <= 10, points[i].length == 2, 0 <= xi, yi <= 100, All the given points are unique.",
+        "runs": 100
+    },
+    "problem_info": {
+        "contest": "Weekly Contest 427",
+        "problem_number": 2,
+        "title": "3380. Maximum Area Rectangle With Point Constraints I",
+        "difficulty": "Medium",
+        "source_url": "https://leetcode.com/problems/maximum-area-rectangle-with-point-constraints-i/",
+        "tags": [
+            "Array",
+            "Math",
+            "Binary Indexed Tree",
+            "Segment Tree",
+            "Geometry",
+            "Sorting",
+            "Enumeration"
+        ]
+    }
+}
