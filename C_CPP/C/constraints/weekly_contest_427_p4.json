@@ -1,0 +1,22 @@
+{
+    "fuzzing_params": {
+        "Constraints": "1 <= xCoord.length == yCoord.length <= 2 * 10^5, 0 <= xCoord[i], yCoord[i] <= 8 * 10^7,All the given points are unique.",
+        "ATTENTION" : "we have reduced the constraints to 1/10th of the original constraints",
+        "runs": 100
+    },
+    "problem_info": {
+        "contest": "Weekly Contest 427",
+        "problem_number": 4,
+        "title": "3382. Maximum Area Rectangle With Point Constraints II",
+        "difficulty": "Hard",
+        "source_url": "https://leetcode.com/problems/maximum-area-rectangle-with-point-constraints-ii/",
+        "tags": [
+            "Array",
+            "Math",
+            "Binary Indexed Tree",
+            "Segment Tree",
+            "Geometry",
+            "Sorting"
+        ]
+    }
+}

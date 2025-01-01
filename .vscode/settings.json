@@ -5,5 +5,6 @@
         "string.h": "c",
         "numeric": "cpp",
         "iostream": "cpp"
-    }
+    },
+    "C_Cpp.errorSquiggles": "disabled"
 }
