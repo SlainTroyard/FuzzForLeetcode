@@ -1,0 +1,18 @@
+{
+    "fuzzing_params": {
+        "Constraints": "1 <= k <= nums.length <= 2 * 10^5, -10^9 <= nums[i] <= 10^9",
+        "runs": 10
+    },
+    "problem_info": {
+        "contest": "Weekly Contest 427",
+        "problem_number": 3,
+        "title": "3381. Maximum Subarray Sum With Length Divisible by K",
+        "difficulty": "Medium",
+        "source_url": "https://leetcode.com/problems/maximum-subarray-sum-with-length-divisible-by-k/",
+        "tags": [
+            "Array",
+            "Hash Table",
+            "Prefix Sum"
+        ]
+    }
+}
