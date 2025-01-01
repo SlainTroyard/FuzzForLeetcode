@@ -1,0 +1,19 @@
+{
+    "fuzzing_params": {
+        "Constraints": "3 <= nums.length <= 10^5, -1000 <= nums[i] <= 1000, The input is generated such that at least one potential outlier exists in nums.",
+        "runs": 100
+    },
+    "problem_info": {
+        "contest": "Weekly Contest 426",
+        "problem_number": 2,
+        "title": "3371. Identify the Largest Outlier in an Array",
+        "difficulty": "Medium",
+        "source_url": "https://leetcode.com/problems/identify-the-largest-outlier-in-an-array/",
+        "tags": [
+            "Array",
+            "Hash Table",
+            "Counting",
+            "Enumeration"
+        ]
+    }
+}
