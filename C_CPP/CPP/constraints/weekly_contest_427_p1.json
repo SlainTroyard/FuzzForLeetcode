@@ -1,0 +1,17 @@
+{
+    "fuzzing_params": {
+        "Constraints": "1 <= nums.length <= 100, -100 <= nums[i] <= 100",
+        "runs": 100
+    },
+    "problem_info": {
+        "contest": "Weekly Contest 427",
+        "problem_number": 1,
+        "title": "3379. Transformed Array",
+        "difficulty": "Easy",
+        "source_url": "https://leetcode.com/problems/transformed-array/",
+        "tags": [
+            "Array",
+            "Simulation"
+        ]
+    }
+}
