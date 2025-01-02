@@ -1,0 +1,18 @@
+{
+    "fuzzing_params": {
+        "Constraints": "1 <= nums.length <= 100, 0 <= nums[i] <= 100, There is at least one element i where nums[i] == 0.",
+        "runs": 100
+    },
+    "problem_info": {
+        "contest": "Weekly Contest 424",
+        "problem_number": 1,
+        "title": "3354. Make Array Elements Equal to Zero",
+        "difficulty": "Easy",
+        "source_url": "https://leetcode.com/problems/make-array-elements-equal-to-zero/",
+        "tags": [
+            "Array",
+            "Simulation",
+            "Prefix Sum"
+        ]
+    }
+}
