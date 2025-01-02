@@ -74,6 +74,7 @@ int main() {{
             template_fuzz = f"""import os
 import subprocess
 import random
+import string
 
 # TODO: Configure test case generation parameters
 test_cases = 100  # Number of test cases to generate
@@ -142,6 +143,7 @@ if __name__ == "__main__":
             template_fuzz = f"""import os
 import subprocess
 import random
+import string
 
 # TODO: Configure test case generation parameters
 test_cases = 100  # Number of test cases to generate
