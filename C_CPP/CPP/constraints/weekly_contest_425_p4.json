@@ -1,0 +1,18 @@
+{
+    "fuzzing_params": {
+        "Constraints": "2 <= n <= 10^5, 1 <= k <= n - 1, edges.length == n - 1, edges[i].length == 3, 0 <= edges[i][0] <= n - 1, 0 <= edges[i][1] <= n - 1, 1 <= edges[i][2] <= 10^6, The input is generated such that edges form a valid tree.",
+        "runs": 20
+    },
+    "problem_info": {
+        "contest": "Weekly Contest 425",
+        "problem_number": 4,
+        "title": "3367. Maximize Sum of Weights after Edge Removals",
+        "difficulty": "Hard",
+        "source_url": "https://leetcode.com/problems/maximize-sum-of-weights-after-edge-removals/",
+        "tags": [
+            "Dynamic Programming",
+            "Tree",
+            "Depth-First Search"
+        ]
+    }
+}
