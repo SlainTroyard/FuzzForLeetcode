@@ -1,0 +1,18 @@
+{
+    "fuzzing_params": {
+        "Constraints": "2 <= n, m <= 10^5, edges1.length == n - 1, edges2.length == m - 1, edges1[i].length == edges2[i].length == 2, edges1[i] = [ai, bi], 0 <= ai, bi < n, edges2[i] = [ui, vi], 0 <= ui, vi < m, The input is generated such that edges1 and edges2 represent valid trees.",
+        "runs": 10
+    },
+    "problem_info": {
+        "contest": "Weekly Contest 426",
+        "problem_number": 4,
+        "title": "3373. Maximize the Number of Target Nodes After Connecting Trees II",
+        "difficulty": "Hard",
+        "source_url": "https://leetcode.com/problems/maximize-the-number-of-target-nodes-after-connecting-trees-ii/",
+        "tags": [
+            "Tree", 
+            "Depth-First Search", 
+            "Breadth-First Search"
+        ]
+    }
+}
