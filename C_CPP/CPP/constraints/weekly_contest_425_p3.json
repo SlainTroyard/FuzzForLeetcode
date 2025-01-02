@@ -1,0 +1,17 @@
+{
+    "fuzzing_params": {
+        "Constraints": "1 <= nums.length <= 100, 0 <= nums[i] <= 10^5, 0 <= k <= 10^5, 0 <= op1, op2 <= nums.length",
+        "runs": 100
+    },
+    "problem_info": {
+        "contest": "Weekly Contest 425",
+        "problem_number": 3,
+        "title": "3366. Minimum Array Sum",
+        "difficulty": "Medium",
+        "source_url": "https://leetcode.com/problems/minimum-array-sum/",
+        "tags": [
+            "Array",
+            "Dynamic Programming"
+        ]
+    }
+}

@@ -4,7 +4,8 @@
         "limits.h": "c",
         "string.h": "c",
         "numeric": "cpp",
-        "iostream": "cpp"
+        "iostream": "cpp",
+        "cstring": "cpp"
     },
     "C_Cpp.errorSquiggles": "disabled"
 }
