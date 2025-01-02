@@ -133,7 +133,7 @@ if __name__ == "__main__":
                 formatted_input = format_test_input(test_input)
                 simulated_output = simulate_output(test_input)
                 # TODO: if the formatted_input ends with a newline, remove the newline
-                if formatted_input.endswith("\n"):
+                if formatted_input.endswith("\\n"):
                     formatted_input = formatted_input[:-1]
                 f.write(f"input:\\n{{formatted_input}}\\n")
                 f.write(f"output:\\n{{simulated_output}}\\n")
@@ -205,7 +205,7 @@ if __name__ == "__main__":
                 formatted_input = format_test_input(test_input)
                 simulated_output = simulate_output(test_input)
                 # TODO: if the formatted_input ends with a newline, remove the newline
-                if formatted_input.endswith("\n"):
+                if formatted_input.endswith("\\n"):
                     formatted_input = formatted_input[:-1]
                 f.write(f"input:\\n{{formatted_input}}\\n")
                 f.write(f"output:\\n{{simulated_output}}\\n")
