@@ -12,20 +12,49 @@ cpp_folder = "../src"  # Folder containing the C++ source code
 cpp_file = "weekly_contest_425_p2.cpp"  # C++ source file name
 executable_name = "solution"  # Executable name
 
-# Helper function to generate random lowercase letters string
 def generate_random_string(length):
+    """
+    Generates a random string of lowercase English letters with the specified length.
+    """
     return ''.join(random.choices(string.ascii_lowercase, k=length))
 
-# Generate test input based on constraints
+def get_divisors(n):
+    """
+    Returns a sorted list of all divisors of a given number n.
+    """
+    divisors = set()
+    for i in range(1, int(n**0.5) + 1):
+        if n % i == 0:
+            divisors.add(i)
+            divisors.add(n // i)
+    return sorted(divisors)
+
 def generate_test_input():
-    n = random.randint(1, 10) * 10  # Generate lengths that are multiples of 10
-    k = random.randint(1, n)
+    """
+    Generates a single test case consisting of two anagram strings s and t, and an integer k.
     
-    # Generate an anagram pair of strings `s` and `t`
+    Returns:
+        tuple: (s, t, k) where:
+            - s (str): Original string
+            - t (str): Anagram of s
+            - k (int): Divisor of the length of s
+    """
+    # Generate n, the length of the strings, ensuring 1 <= n <= 200,000
+    n = random.randint(1, 200000)
+    
+    # Get all divisors of n to ensure k divides n
+    divisors = get_divisors(n)
+    
+    # Randomly select k from the list of divisors
+    k = random.choice(divisors)
+    
+    # Generate string s with random lowercase letters
     s = generate_random_string(n)
-    t = list(s)  # Create a copy of `s`
-    random.shuffle(t)  # Shuffle to create an anagram
-    t = ''.join(t)  # Convert back to string
+    
+    # Generate string t by shuffling the characters of s to ensure it's an anagram
+    t = list(s)
+    random.shuffle(t)
+    t = ''.join(t)
     
     return s, t, k
 

@@ -1,6 +1,6 @@
 {
     "fuzzing_params": {
-        "Constraints": "1 <= s.length == t.length <= 2 * 105, 1 <= k <= s.length, s.length is divisible by k., s and t consist only of lowercase English letters., The input is generated such that s and t are anagrams of each other.",
+        "Constraints": "1 <= s.length == t.length <= 2 * 10^5, 1 <= k <= s.length, s.length is divisible by k., s and t consist only of lowercase English letters., The input is generated such that s and t are anagrams of each other.",
         "runs": 100
     },
     "problem_info": {

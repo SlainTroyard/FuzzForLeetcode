@@ -19,7 +19,7 @@ bool isPossibleToRearrange(char* s, char* t, int k) {
 
 int main() {
     // Input the strings s, t, and the integer k
-    char s[1001], t[1001];
+    char s[200001], t[200001];
     int k;
 
     scanf("%s", s);
