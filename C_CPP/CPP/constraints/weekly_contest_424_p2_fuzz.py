@@ -2,6 +2,7 @@ import os
 import subprocess
 import random
 import string
+import time
 
 # TODO: Configure test case generation parameters
 test_cases = 20  # Number of test cases to generate
@@ -47,7 +48,10 @@ def generate_nums(nums_size, coverage_count, valid=True):
             nums.append(random.randint(0, MAX_VAL))
     return nums
 
-def generate_test_input(nums_size=random.randint(1,MAX_VAL), queries_size=random.randint(1,MAX_VAL)):
+def generate_test_input(nums_size=0, queries_size=0):
+    random.seed(time.time())
+    nums_size=random.randint(1,MAX_VAL)
+    queries_size=random.randint(1,MAX_VAL)
     # Step 1: Generate random queries
     queries = generate_queries(nums_size, queries_size)
 
