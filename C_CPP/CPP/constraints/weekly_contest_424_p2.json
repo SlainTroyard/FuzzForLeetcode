@@ -1,0 +1,17 @@
+{
+    "fuzzing_params": {
+        "Constraints": "1 <= nums.length <= 10^5, 0 <= nums[i] <= 10^5, 1 <= queries.length <= 10^5, queries[i].length == 2, 0 <= li <= ri < nums.length",
+        "runs": 20
+    },
+    "problem_info": {
+        "contest": "Weekly Contest 424",
+        "problem_number": 2,
+        "title": "3355. Zero Array Transformation I",
+        "difficulty": "Medium",
+        "source_url": "https://leetcode.com/problems/zero-array-transformation-i/",
+        "tags": [
+            "Array",
+            "Prefix Sum"
+        ]
+    }
+}
