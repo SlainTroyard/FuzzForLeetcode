@@ -75,6 +75,7 @@ int main() {{
 import subprocess
 import random
 import string
+import time
 
 # TODO: Configure test case generation parameters
 test_cases = 100  # Number of test cases to generate
@@ -87,6 +88,7 @@ executable_name = "solution"  # Executable name
 
 # TODO: Generate a single test case
 def generate_test_input():
+    random.seed(time.time())
     pass
 
 # TODO: Format test_input as a string for terminal input simulation
@@ -146,6 +148,7 @@ if __name__ == "__main__":
 import subprocess
 import random
 import string
+import time
 
 # TODO: Configure test case generation parameters
 test_cases = 100  # Number of test cases to generate
@@ -159,6 +162,7 @@ executable_name = "solution"  # Executable name
 
 # TODO: Generate a single test case
 def generate_test_input():
+    random.seed(time.time())
     pass
 
 # TODO: Format test_input as a string for terminal input simulation
