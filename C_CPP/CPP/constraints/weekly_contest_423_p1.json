@@ -1,0 +1,16 @@
+{
+    "fuzzing_params": {
+        "Constraints": "2 <= nums.length <= 100, 1 < 2 * k <= nums.length, -1000 <= nums[i] <= 1000",
+        "runs": 100
+    },
+    "problem_info": {
+        "contest": "Weekly Contest 423",
+        "problem_number": 1,
+        "title": "3349. Adjacent Increasing Subarrays Detection I",
+        "difficulty": "Easy",
+        "source_url": "https://leetcode.com/problems/adjacent-increasing-subarrays-detection-i/",
+        "tags": [
+            "Array"
+        ]
+    }
+}
