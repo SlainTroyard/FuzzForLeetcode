@@ -1,0 +1,18 @@
+{
+    "fuzzing_params": {
+        "Constraints": "2 <= nums.length <= 10^5, nums[i] is either -1 or in the range [1, 10^9].",
+        "runs": 20
+    },
+    "problem_info": {
+        "contest": "Weekly Contest 424",
+        "problem_number": 4,
+        "title": "3357. Minimize the Maximum Adjacent Element Difference",
+        "difficulty": "Hard",
+        "source_url": "https://leetcode.com/problems/minimize-the-maximum-adjacent-element-difference/",
+        "tags": [
+            "Array",
+            "Binary Search",
+            "Greedy"
+        ]
+    }
+}
