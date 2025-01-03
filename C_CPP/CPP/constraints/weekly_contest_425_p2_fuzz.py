@@ -2,6 +2,7 @@ import os
 import subprocess
 import random
 import string
+import time 
 
 # TODO: Configure test case generation parameters
 test_cases = 100  # Number of test cases to generate
@@ -40,6 +41,7 @@ def generate_test_input():
             - k (int): Divisor of the length of s
     """
     # Generate n, the length of the strings, ensuring 1 <= n <= 200,000
+    random.seed(time.time())
     n = random.randint(1, 200000)
     
     # Get all divisors of n to ensure k divides n

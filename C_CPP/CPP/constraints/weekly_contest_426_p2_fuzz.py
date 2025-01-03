@@ -1,6 +1,7 @@
 import os
 import subprocess
 import random
+import time  
 
 # TODO: Configure test case generation parameters
 test_cases = 100  # Number of test cases to generate
@@ -16,6 +17,7 @@ cpp_file = "weekly_contest_426_p2.cpp"  # C++ source file name
 executable_name = "solution"  # Executable name
 
 def generate_test_input():
+    random.seed(time.time())
     # Step 1: Randomly generate the array length n
     nums_length = random.randint(4, 1000)  # Avoid extremely large arrays, example size
     num_special = nums_length  # n - 2 special numbers

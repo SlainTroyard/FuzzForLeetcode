@@ -1,7 +1,7 @@
 import os
 import subprocess
 import random
-import string
+import time
 
 # TODO: Configure test case generation parameters
 test_cases = 20  # Number of test cases to generate
@@ -14,6 +14,7 @@ executable_name = "solution"  # Executable name
 
 # TODO: Generate a single test case
 def generate_test_input():
+    random.seed(time.time())
     n = random.randint(2, 100000)  # n nodes (between 2 and 10^5)
     k = random.randint(1, n - 1)  # k edges to select (1 to n-1)
     

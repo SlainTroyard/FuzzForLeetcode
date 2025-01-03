@@ -2,6 +2,7 @@ import os
 import subprocess
 import random
 import string
+import time
 
 # TODO: Configure test case generation parameters
 test_cases = 100  # Number of test cases to generate
@@ -18,6 +19,7 @@ def random_currency():
 
 # Generate a single test case following the specified rules
 def generate_random_test_input():
+    random.seed(time.time())
     initial_currency = random_currency()
     n1 = random.randint(1, 10)  # Number of pairs in day 1
     n2 = random.randint(1, 10)  # Number of pairs in day 2

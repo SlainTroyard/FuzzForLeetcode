@@ -1,6 +1,7 @@
 import os
 import subprocess
 import random
+import time
 
 # TODO: Configure test case generation parameters
 test_cases = 100  # Number of test cases to generate
@@ -16,6 +17,7 @@ executable_name = "solution"  # Executable name
 
 # TODO: Generate a single test case
 def generate_test_input():
+    random.seed(time.time())
     rows = random.randint(1, max_rows)  # Random number of rows
     cols = random.randint(1, max_cols)  # Random number of columns
     grid = [[random.randint(0, max_value) for _ in range(cols)] for _ in range(rows)]

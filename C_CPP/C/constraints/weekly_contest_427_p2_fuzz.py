@@ -1,6 +1,7 @@
 import os
 import subprocess
 import random
+import time
 
 # Configure test case generation parameters
 test_cases = 100  # Number of test cases to generate
@@ -16,6 +17,7 @@ executable_name = "solution"  # Executable name
 
 # Generate a single test case
 def generate_test_input():
+    random.seed(time.time())
     num_points = random.randint(4, 10)  # Minimum of 4 points
     points = []
 

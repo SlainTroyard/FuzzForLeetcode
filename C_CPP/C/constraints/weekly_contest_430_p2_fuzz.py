@@ -2,6 +2,7 @@ import os
 import subprocess
 import random
 import string
+import time
 
 # Configure test case generation parameters
 test_cases = 100  # Number of test cases to generate
@@ -15,6 +16,7 @@ executable_name = "solution"  # Executable name
 
 # Generate a single test case
 def generate_test_input():
+    random.seed(time.time())
     word_length = random.randint(1, max_word_length)
     word = ''.join(random.choices(string.ascii_lowercase, k=word_length))
     num_friends = random.randint(1, word_length)

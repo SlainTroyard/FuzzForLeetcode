@@ -1,6 +1,7 @@
 import os
 import subprocess
 import random
+import time
 
 # TODO: Configure test case generation parameters
 test_cases = 10  # Number of test cases to generate
@@ -21,6 +22,7 @@ max_m = 10**5
 
 # Function to generate test input
 def generate_test_input():
+    random.seed(time.time())
     # Randomly select n and m within the valid range
     n = random.randint(min_n, max_n)
     m = random.randint(min_m, max_m)
