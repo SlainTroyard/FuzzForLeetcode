@@ -1,0 +1,17 @@
+{
+    "fuzzing_params": {
+        "Constraints": "2 <= nums.length <= 2 * 10^5, -10^9 <= nums[i] <= 10^9",
+        "runs": 20
+    },
+    "problem_info": {
+        "contest": "Weekly Contest 423",
+        "problem_number": 2,
+        "title": "3350. Adjacent Increasing Subarrays Detection II",
+        "difficulty": "Medium",
+        "source_url": "https://leetcode.com/problems/adjacent-increasing-subarrays-detection-ii/",
+        "tags": [
+            "Array",
+            "Binary Search"
+        ]
+    }
+}
