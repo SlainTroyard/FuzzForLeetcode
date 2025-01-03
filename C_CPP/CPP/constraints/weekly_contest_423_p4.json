@@ -1,0 +1,19 @@
+{
+    "fuzzing_params": {
+        "Constraints": "1 <= s.length <= 800, s has no leading zeros., s consists only of the characters '0' and '1'., 1 <= k <= 5",
+        "runs": 100
+    },
+    "problem_info": {
+        "contest": "Weekly Contest 423",
+        "problem_number": 4,
+        "title": "3352. Count K-Reducible Numbers Less Than N",
+        "difficulty": "Hard",
+        "source_url": "https://leetcode.com/problems/count-k-reducible-numbers-less-than-n/",
+        "tags": [
+            "Math",
+            "String",
+            "Dynamic Programming",
+            "Combinatorics"
+        ]
+    }
+}
