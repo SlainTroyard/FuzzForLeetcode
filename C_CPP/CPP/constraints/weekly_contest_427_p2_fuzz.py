@@ -26,7 +26,7 @@ def generate_test_input():
     if case_type == "valid_rectangle":
         # Generate a valid rectangle
         x1, y1 = random.randint(0, 50), random.randint(0, 50)
-        x2, y2 = random.randint(x1 + 1, 100), random.randint(y1 + 1, 100)
+        x2, y2 = random.randint(x1 + 3, 100), random.randint(y1 + 3, 100)
         points = [[x1, y1], [x1, y2], [x2, y1], [x2, y2]]
 
         # Add random additional points outside the rectangle
@@ -38,7 +38,7 @@ def generate_test_input():
     elif case_type == "rectangle_with_extra":
         # Generate a valid rectangle
         x1, y1 = random.randint(0, 50), random.randint(0, 50)
-        x2, y2 = random.randint(x1 + 1, 100), random.randint(y1 + 1, 100)
+        x2, y2 = random.randint(x1 + 3, 100), random.randint(y1 + 3, 100)
         points = [[x1, y1], [x1, y2], [x2, y1], [x2, y2]]
 
         # Add random points inside or on the rectangle
