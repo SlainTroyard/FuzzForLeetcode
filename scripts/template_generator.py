@@ -234,7 +234,8 @@ if __name__ == "__main__":
                 "title": "TODO: Add problem title",
                 "difficulty": "TODO: Add difficulty",
                 "source_url": f"https://leetcode.com/problems/...",
-                "tags": ["TODO", "Add", "Tags"]
+                "tags": ["TODO", "Add", "Tags"],
+                "test_examples":""" """,
             }
         }
 
