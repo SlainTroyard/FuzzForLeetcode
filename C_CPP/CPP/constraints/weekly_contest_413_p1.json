@@ -1,0 +1,18 @@
+{
+    "fuzzing_params": {
+        "Constraints": "coordinate1.length == coordinate2.length == 2, 'a' <= coordinate1[0], coordinate2[0] <= 'h', '1' <= coordinate1[1], coordinate2[1] <= '8'",
+        "runs": 100
+    },
+    "problem_info": {
+        "contest": "Weekly Contest 413",
+        "problem_number": 1,
+        "title": "3274. Check if Two Chessboard Squares Have the Same Color",
+        "difficulty": "Easy",
+        "source_url": "https://leetcode.com/problems/check-if-two-chessboard-squares-have-the-same-color/",
+        "tags": [
+            "Math",
+            "String"
+        ],
+        "test_examples": "Example 1:\nInput: coordinate1 = \"a1\", coordinate2 = \"c3\"\nOutput: true\nExplanation:\nBoth squares are black.\nExample 2:\nInput: coordinate1 = \"a1\", coordinate2 = \"h3\"\nOutput: false\nExplanation:\nSquare \"a1\" is black and \"h3\" is white."
+    }
+}
