@@ -26,7 +26,11 @@ def generate_test_input():
 
 # TODO: Format test_input as a string for terminal input simulation
 def format_test_input(test_input):
-    pass
+    queries, k = test_input
+    formatted_input = f"{len(queries)} {k}\n"
+    for query in queries:
+        formatted_input += f"{query[0]} {query[1]}\n"
+    return formatted_input
 
 # Compile the C program
 def compile_c():
