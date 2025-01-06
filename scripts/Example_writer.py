@@ -2,16 +2,16 @@ import os
 
 examples = [
     {
-        "input": "4 2\n1 2\n3 4\n2 3\n-3 0",
-        "output": "-1 7 5 3"
+        "input": "3\n1 2 3\n4 3 2\n1 1 1",
+        "output": "8"
     },
     {
-        "input": "3 1\n5 5\n4 4\n3 3",
-        "output": "10 8 6"
+        "input": "2\n8 7 6\n8 3 2",
+        "output": "15"
     }
 ]
 
-output_file = "fuzz_outputs/CPP/weekly_contest_413_p2/outputs"
+output_file = "fuzz_outputs/CPP/weekly_contest_413_p3/outputs"
 
 def write_examples_to_file():
     with open(output_file, "r") as f:
