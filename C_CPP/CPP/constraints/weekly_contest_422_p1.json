@@ -1,0 +1,16 @@
+{
+    "fuzzing_params": {
+        "Constraints": "2 <= num.length <= 100, num consists of digits only",
+        "runs": 100
+    },
+    "problem_info": {
+        "contest": "Weekly Contest 422",
+        "problem_number": 1,
+        "title": "3340. Check Balanced String",
+        "difficulty": "Easy",
+        "source_url": "https://leetcode.com/problems/check-balanced-string/",
+        "tags": [
+            "String"
+        ]
+    }
+}
