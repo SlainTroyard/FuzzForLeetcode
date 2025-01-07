@@ -1,13 +1,14 @@
 {
-    "files.associations": {
-        "functional": "cpp",
-        "limits.h": "c",
-        "string.h": "c",
-        "numeric": "cpp",
-        "iostream": "cpp",
-        "cstring": "cpp",
-        "string": "cpp",
-        "unordered_map": "cpp"
-    },
-    "C_Cpp.errorSquiggles": "disabled"
+  "files.associations": {
+    "functional": "cpp",
+    "limits.h": "c",
+    "string.h": "c",
+    "numeric": "cpp",
+    "iostream": "cpp",
+    "cstring": "cpp",
+    "string": "cpp",
+    "unordered_map": "cpp"
+  },
+  "C_Cpp.errorSquiggles": "disabled",
+  "C_Cpp_Runner.msvcBatchPath": ""
 }
