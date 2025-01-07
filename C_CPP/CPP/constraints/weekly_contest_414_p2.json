@@ -1,0 +1,20 @@
+{
+    "fuzzing_params": {
+        "Constraints": "2 <= start.length <= 10^5, 0 <= start[i] <= 10^9, 0 <= d <= 10^9",
+        "runs": 20
+    },
+    "problem_info": {
+        "contest": "Weekly Contest 414",
+        "problem_number": 2,
+        "title": "3281. Maximize Score of Numbers in Ranges",
+        "difficulty": "Medium",
+        "source_url": "https://leetcode.com/problems/maximize-score-of-numbers-in-ranges/",
+        "tags": [
+            "Array",
+            "Binary Search",
+            "Greedy",
+            "Sorting"
+        ],
+        "test_examples": "Example 1:\nInput: start = [6,0,3], d = 2\nOutput: 4\nExplanation:\nThe maximum possible score can be obtained by choosing integers: 8, 0, and 4. The score of these chosen integers is min(|8 - 0|, |8 - 4|, |0 - 4|) which equals 4.\nExample 2:\nInput: start = [2,6,13,13], d = 5\nOutput: 5\nExplanation:\nThe maximum possible score can be obtained by choosing integers: 2, 7, 13, and 18. The score of these chosen integers is min(|2 - 7|, |2 - 13|, |2 - 18|, |7 - 13|, |7 - 18|, |13 - 18|) which equals 5."
+    }
+}
