@@ -71,5 +71,12 @@ int main() {
         printf("%d ", answer[i]);
     }
     printf("\n");
+    free(nums);
+    for (int i = 0; i < queriesSize; i++) {
+        free(queries[i]);
+    }
+    free(queries);
+    free(queriesColSize);
+    free(answer);
     return 0;
 }

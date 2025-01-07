@@ -62,5 +62,9 @@ int main() {
     }
     int ans = maxScore(grid, gridSize, gridColSize);
     printf("%d\n", ans);
+    for (int i = 0; i < gridSize; i++) {
+        free(grid[i]);
+    }
+    free(grid);
     return 0;
 }

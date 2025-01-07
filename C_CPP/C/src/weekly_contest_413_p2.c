@@ -50,5 +50,10 @@ int main() {
     for (int i = 0; i < returnSize; i++) {
         printf("%d ", result[i]);
     }
+    free(result);
+    for (int i = 0; i < queriesSize; i++) {
+        free(queries[i]);
+    }
+    free(queries);
     return 0;
 }
