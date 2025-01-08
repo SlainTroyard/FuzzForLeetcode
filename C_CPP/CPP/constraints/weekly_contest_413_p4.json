@@ -13,6 +13,9 @@
             "Array",
             "Dynamic Programming"
         ],
-        "test_examples": "Example 1:\nInput: nums = [2,8,4,32,16,1], queries = [[0,2],[1,4],[0,5]]\nOutput: [12,60,60]\nExample 2:\nInput: nums = [0,7,3,2,8,5,1], queries = [[0,3],[1,5],[2,4],[2,6],[5,6]]\nOutput: [7,14,11,14,5]"
+        "test_examples": [
+            "Example 1: Input: nums = [2,8,4,32,16,1], queries = [[0,2],[1,4],[0,5]] Output: [12,60,60]",
+            "Example 2: Input: nums = [0,7,3,2,8,5,1], queries = [[0,3],[1,5],[2,4],[2,6],[5,6]] Output: [7,14,11,14,5]"
+        ]
     }
 }
