@@ -68,7 +68,6 @@ if __name__ == "__main__":
                 simulated_output = simulate_output(test_input)
                 # TODO: if the formatted_input ends with a newline, remove the newline
                 f.write(f"input:\n{formatted_input}")
-                f.write(f"input:\n{formatted_input}")
                 f.write(f"output:\n{simulated_output}\n")
                 f.write("-------------------------\n")
     finally:
