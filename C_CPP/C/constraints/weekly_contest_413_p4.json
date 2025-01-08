@@ -1,6 +1,6 @@
 {
     "fuzzing_params": {
-        "Constraints": "max_len ==10 ",
+        "Constraints": "1 <= n == nums.length <= 2000, 0 <= nums[i] <= 2^31 - 1, 1 <= q == queries.length <= 10^5, queries[i].length == 2, queries[i] = [li, ri], 0 <= li <= ri <= n - 1",
         "runs": 15
     },
     "problem_info": {
