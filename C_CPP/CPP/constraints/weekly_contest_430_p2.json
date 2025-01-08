@@ -13,6 +13,10 @@
             "TODO",
             "Add",
             "Tags"
+        ],
+        "test_examples": [
+            "Example 1:Input: word = dbca, numFriends = 2Output: dbcExplanation:All possible splits are: d and bca. db and ca.dbc and a.",
+            "Example 2:Input: word = gggg, numFriends = 4Output: gExplanation:The only possible split is: g, g, g, and g."
         ]
     }
 }
