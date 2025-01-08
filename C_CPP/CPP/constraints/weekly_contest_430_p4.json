@@ -15,8 +15,8 @@
             "Tags"
         ],
         "test_examples": [
-            "Example 1:Input: n = 3, m = 2, k = 1Output: 4Explanation:There are 4 good arrays. They are [1, 1, 2], [1, 2, 2], [2, 1, 1] and [2, 2, 1].Hence, the answer is 4.",
-            "Example 2:Input: n = 4, m = 2, k = 2Output: 6Explanation:The good arrays are [1, 1, 1, 2], [1, 1, 2, 2], [1, 2, 2, 2], [2, 1, 1, 1], [2, 2, 1, 1] and [2, 2, 2, 1].Hence, the answer is 6.",
+            "Example 1: Input: n = 3, m = 2, k = 1 Output: 4 Explanation:There are 4 good arrays. They are [1, 1, 2], [1, 2, 2], [2, 1, 1] and [2, 2, 1].Hence, the answer is 4.",
+            "Example 2: Input: n = 4, m = 2, k = 2 Output: 6 Explanation:The good arrays are [1, 1, 1, 2], [1, 1, 2, 2], [1, 2, 2, 2], [2, 1, 1, 1], [2, 2, 1, 1] and [2, 2, 2, 1].Hence, the answer is 6.",
             "Example 3:Input: n = 5, m = 2, k = 0Output: 2Explanation:The good arrays are [1, 2, 1, 2, 1] and [2, 1, 2, 1, 2]. Hence, the answer is 2."
         ]
     }

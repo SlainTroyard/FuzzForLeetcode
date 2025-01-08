@@ -16,6 +16,9 @@
             "Matrix",
             "Bitmask"
         ],
-        "test_examples": "Example 1:\nInput: grid = [[1,2,3],[4,3,2],[1,1,1]]\nOutput: 8\nExplanation:\nWe can select the cells with values 1, 3, and 4 that are colored above.\nExample 2:\nInput: grid = [[8,7,6],[8,3,2]]\nOutput: 15\nExplanation:\nWe can select the cells with values 7 and 8 that are colored above."
+        "test_examples": [
+            "Example 1: Input: grid = [[1,2,3],[4,3,2],[1,1,1]] Output: 8 Explanation: We can select the cells with values 1, 3, and 4 that are colored above.",
+            "Example 2: Input: grid = [[8,7,6],[8,3,2]] Output: 15 Explanation: We can select the cells with values 7 and 8 that are colored above."
+        ]
     }
 }
