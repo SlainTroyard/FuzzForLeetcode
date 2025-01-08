@@ -1,0 +1,25 @@
+{
+    "fuzzing_params": {
+        "Constraints": "1 <= words.length <= 100, 1 <= words[i].length <= 5 * 10^4. The input is generated such that sum(words[i].length) <= 10^5. words[i] consists only of lowercase English letters. 1 <= target.length <= 5 * 10^4. target consists only of lowercase English letters.",
+        "runs": 20
+    },
+    "problem_info": {
+        "contest": "Weekly Contest 415",
+        "problem_number": 4,
+        "title": "3292. Minimum Number of Valid Strings to Form Target II",
+        "difficulty": "Medium",
+        "source_url": "https://leetcode.com/problems/minimum-number-of-valid-strings-to-form-target-ii/",
+        "tags": [
+            "Array",
+            "String",
+            "Binary Search",
+            "Dynamic Programming",
+            "Trie",
+            "Segment Tree",
+            "Rolling Hash",
+            "String Matching",
+            "Hash Function"
+        ],
+        "test_examples": "Example 1:\nInput: words = [\"abc\",\"aaaaa\",\"bcdef\"], target = \"aabcdabc\"\nOutput: 3\nExplanation:\nThe target string can be formed by concatenating:\nPrefix of length 2 of words[1], i.e. \"aa\".\nPrefix of length 3 of words[2], i.e. \"bcd\".\nPrefix of length 3 of words[0], i.e. \"abc\".\nExample 2:\nInput: words = [\"abababab\",\"ab\"], target = \"ababaababa\"\nOutput: 2\nExplanation:\nThe target string can be formed by concatenating:\nPrefix of length 5 of words[0], i.e. \"ababa\".\nPrefix of length 5 of words[0], i.e. \"ababa\"."
+    }
+}
