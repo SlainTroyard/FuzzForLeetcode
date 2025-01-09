@@ -32,6 +32,10 @@ int main() {
         cin >> bannedWords[i];
     }
     Solution s;
-    cout << s.reportSpam(message, bannedWords) << endl;
+    if (s.reportSpam(message, bannedWords)) {
+        cout << "true" << endl;
+    } else {
+        cout << "false" << endl;
+    }
     return 0;
 }

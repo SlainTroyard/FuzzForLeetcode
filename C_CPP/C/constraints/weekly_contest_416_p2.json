@@ -1,0 +1,21 @@
+{
+    "fuzzing_params": {
+        "Constraints": "1 <= mountainHeight <= 10^5, 1 <= workerTimes.length <= 10^4, 1 <= workerTimes[i] <= 10^6",
+        "runs": 20
+    },
+    "problem_info": {
+        "contest": "Weekly Contest 416",
+        "problem_number": 2,
+        "title": "3296. Minimum Number of Seconds to Make Mountain Height Zero",
+        "difficulty": "Medium",
+        "source_url": "https://leetcode.com/problems/minimum-number-of-seconds-to-make-mountain-height-zero/",
+        "tags": [
+            "Array",
+            "Math",
+            "Binary Search",
+            "Greedy",
+            "Heap (Priority Queue)"
+        ],
+        "test_examples": "Example 1:\nInput: mountainHeight = 4, workerTimes = [2,1,1]\nOutput: 3\nExplanation:\nOne way the height of the mountain can be reduced to 0 is:\nWorker 0 reduces the height by 1, taking workerTimes[0] = 2 seconds.\nWorker 1 reduces the height by 2, taking workerTimes[1] + workerTimes[1] * 2 = 3 seconds.\nWorker 2 reduces the height by 1, taking workerTimes[2] = 1 second.\nSince they work simultaneously, the minimum time needed is max(2, 3, 1) = 3 seconds.\nExample 2:\nInput: mountainHeight = 10, workerTimes = [3,2,2,4]\nOutput: 12\nExplanation:\nWorker 0 reduces the height by 2, taking workerTimes[0] + workerTimes[0] * 2 = 9 seconds.\nWorker 1 reduces the height by 3, taking workerTimes[1] + workerTimes[1] * 2 + workerTimes[1] * 3 = 12 seconds.\nWorker 2 reduces the height by 3, taking workerTimes[2] + workerTimes[2] * 2 + workerTimes[2] * 3 = 12 seconds.\nWorker 3 reduces the height by 2, taking workerTimes[3] + workerTimes[3] * 2 = 12 seconds.\nThe number of seconds needed is max(9, 12, 12, 12) = 12 seconds."
+    }
+}

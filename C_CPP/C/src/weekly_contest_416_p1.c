@@ -41,7 +41,14 @@ int main() {
         bannedWords[i] = (char*)malloc(sizeof(char) * 100);
         scanf("%s", bannedWords[i]);
     }
-    printf("%d\n", reportSpam(message, messageSize, bannedWords, bannedWordsSize));
+    if (reportSpam(message, messageSize, bannedWords, bannedWordsSize))
+    {
+        printf("true\n");
+    }
+    else
+    {
+        printf("false\n");
+    }
     free(message);
     free(bannedWords);
     return 0;
