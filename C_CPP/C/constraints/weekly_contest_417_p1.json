@@ -1,0 +1,20 @@
+{
+    "fuzzing_params": {
+        "Constraints": "1 <= k <= 500",
+        "runs": 100
+    },
+    "problem_info": {
+        "contest": "Weekly Contest 417",
+        "problem_number": 1,
+        "title": "3304. Find the K-th Character in String Game I",
+        "difficulty": "Easy",
+        "source_url": "https://leetcode.com/problems/find-the-k-th-character-in-string-game-i/",
+        "tags": [
+            "Math",
+            "Bit Manipulation",
+            "Recursion",
+            "Simulation"
+        ],
+        "test_examples": "Example 1:\nInput: k = 5\nOutput: \"b\"\nExplanation:\nInitially, word = \"a\". We need to do the operation three times:\nGenerated string is \"b\", word becomes \"ab\".\nGenerated string is \"bc\", word becomes \"abbc\".\nGenerated string is \"bccd\", word becomes \"abbcbccd\".\nExample 2:\nInput: k = 10\nOutput: \"c\""
+    }
+}
