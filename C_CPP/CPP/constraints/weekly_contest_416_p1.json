@@ -1,0 +1,19 @@
+{
+    "fuzzing_params": {
+        "Constraints": "1 <= message.length, bannedWords.length <= 10^5, 1 <= message[i].length, bannedWords[i].length <= 15. message[i] and bannedWords[i] consist only of lowercase English letters.",
+        "runs": 20
+    },
+    "problem_info": {
+        "contest": "Weekly Contest 416",
+        "problem_number": 1,
+        "title": "3295. Report Spam Message",
+        "difficulty": "TODO: Add difficulty",
+        "source_url": "https://leetcode.com/problems/report-spam-message/",
+        "tags": [
+            "Array",
+            "Hash Table",
+            "String"
+        ],
+        "test_examples": "Example 1:\nInput: message = [\"hello\",\"world\",\"leetcode\"], bannedWords = [\"world\",\"hello\"]\nOutput: true\nExplanation:\nThe words \"hello\" and \"world\" from the message array both appear in the bannedWords array.\nExample 2:\nInput: message = [\"hello\",\"programming\",\"fun\"], bannedWords = [\"world\",\"programming\",\"leetcode\"]\nOutput: false\nExplanation:\nOnly one word from the message array (\"programming\") appears in the bannedWords array."
+    }
+}
