@@ -1,0 +1,19 @@
+{
+    "fuzzing_params": {
+        "Constraints": "5 <= word.length <= 2 * 10^5. word consists only of lowercase English letters. 0 <= k <= word.length - 5",
+        "runs": 100
+    },
+    "problem_info": {
+        "contest": "Weekly Contest 417",
+        "problem_number": 3,
+        "title": "3305. Count of Substrings Containing Every Vowel and K Consonants I",
+        "difficulty": "Medium",
+        "source_url": "https://leetcode.com/problems/count-of-substrings-containing-every-vowel-and-k-consonants-ii/",
+        "tags": [
+            "Hash Table",
+            "String",
+            "Sliding Window"
+        ],
+        "test_examples": "Example 1:\nInput: word = \"aeioqq\", k = 1\nOutput: 0\nExplanation:\nThere is no substring with every vowel.\nExample 2:\nInput: word = \"aeiou\", k = 0\nOutput: 1\nExplanation:\nThe only substring with every vowel and zero consonants is word[0..4], which is \"aeiou\".\nExample 3:\nInput: word = \"ieaouqqieaouqq\", k = 1\nOutput: 3\nExplanation:\nThe substrings with every vowel and one consonant are:\nword[0..5], which is \"ieaouq\".\nword[6..11], which is \"qieaou\".\nword[7..12], which is \"ieaouq\"."
+    }
+}
