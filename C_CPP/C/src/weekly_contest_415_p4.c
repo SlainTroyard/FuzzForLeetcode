@@ -1,4 +1,4 @@
-// Problem: Weekly Contest 415 Problem 3
+// Problem: Weekly Contest 415 Problem 4
 #include <stdbool.h>
 #include <stdlib.h>
 #include <string.h>

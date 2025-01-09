@@ -1,0 +1,19 @@
+{
+    "fuzzing_params": {
+        "Constraints": "1 <= word1.length <= 10^6, 1 <= word2.length <= 10^4. word1 and word2 consist only of lowercase English letters.",
+        "runs": 20
+    },
+    "problem_info": {
+        "contest": "Weekly Contest 416",
+        "problem_number": 4,
+        "title": "3298. Count Substrings That Can Be Rearranged to Contain a String II",
+        "difficulty": "Hard",
+        "source_url": "https://leetcode.com/problems/count-substrings-that-can-be-rearranged-to-contain-a-string-ii/",
+        "tags": [
+            "Hash Table",
+            "String",
+            "Sliding Window"
+        ],
+        "test_examples": "Example 1:\nInput: word1 = \"bcca\", word2 = \"abc\"\nOutput: 1\nExplanation:\nThe only valid substring is \"bcca\" which can be rearranged to \"abcc\" having \"abc\" as a prefix.\nExample 2:\nInput: word1 = \"abcabc\", word2 = \"abc\"\nOutput: 10\nExplanation:\nAll the substrings except substrings of size 1 and size 2 are valid."
+    }
+}

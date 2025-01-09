@@ -4,44 +4,45 @@
 #include <string.h>
 #include <stdio.h>
 
-void update(int *diff, int c, int add, int *cnt) {
-    diff[c] += add;
-    if (add == 1 && diff[c] == 0) {
-        // 表明 diff[c] 由 -1 变为 0
-        (*cnt)--;
-    } else if (add == -1 && diff[c] == -1) {
-        // 表明 diff[c] 由 0 变为 -1
-        (*cnt)++;
+int get(int l, int r, int preCount[][26], int* count) {
+    int border = l;
+    while (l < r) {
+        int m = (l + r) >> 1;
+        int f = 1;
+        for (int i = 0; i < 26; i++) {
+            if (preCount[m][i] - preCount[border - 1][i] < count[i]) {
+                f = 0;
+                break;
+            }
+        }
+        if (f) {
+            r = m;
+        } else {
+            l = m + 1;
+        }
     }
+    return l;
 }
 
 long long validSubstringCount(char* word1, char* word2) {
-    int diff[26] = {0};
-    for (const char *c = word2; *c; c++) {
-        diff[*c - 'a']--;
+    int count[26] = {0};
+    for (int i = 0; word2[i]; i++) {
+        count[word2[i] - 'a']++;
     }
 
-    int cnt = 0;
-    for (int i = 0; i < 26; i++) {
-        if (diff[i] < 0) {
-            cnt++;
-        }
+    int n = strlen(word1);
+    int preCount[n + 1][26];
+    memset(preCount, 0, sizeof(preCount));
+    for (int i = 1; i <= n; i++) {
+        memcpy(preCount[i], preCount[i - 1], sizeof(preCount[i]));
+        preCount[i][word1[i - 1] - 'a']++;
     }
+
     long long res = 0;
-    int l = 0, r = 0;
-    int len1 = strlen(word1);
-    while (l < len1) {
-        while (r < len1 && cnt > 0) {
-            update(diff, word1[r] - 'a', 1, &cnt);
-            r++;
-        }
-        if (cnt == 0) {
-            res += len1 - r + 1;
-        }
-        update(diff, word1[l] - 'a', -1, &cnt);
-        l++;
+    for (int l = 1; l <= n; l++) {
+        int r = get(l, n + 1, preCount, count);
+        res += n - r + 1;
     }
-
     return res;
 }
 
