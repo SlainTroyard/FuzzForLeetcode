@@ -6,7 +6,7 @@
     "problem_info": {
         "contest": "Weekly Contest 417",
         "problem_number": 3,
-        "title": "3305. Count of Substrings Containing Every Vowel and K Consonants I",
+        "title": "3306. Count of Substrings Containing Every Vowel and K Consonants II",
         "difficulty": "Medium",
         "source_url": "https://leetcode.com/problems/count-of-substrings-containing-every-vowel-and-k-consonants-ii/",
         "tags": [
