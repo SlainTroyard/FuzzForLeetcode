@@ -1,3 +1,4 @@
 .vscode
 script_for_debug.sh
 script_for_test.sh
+script_for_cp.sh
