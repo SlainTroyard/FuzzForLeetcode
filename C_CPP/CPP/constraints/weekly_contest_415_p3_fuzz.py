@@ -12,7 +12,7 @@ max_word_length = 5000  # Maximum length of each word
 max_target_length = 5000  # Maximum length of the target string
 min_word_length = 1  # Minimum length of each word
 min_target_length = 1  # Minimum length of the target string
-
+max_total_length = 100000  # Total length constraint for all words combined
 
 # File Configs
 output_file = "../../../fuzz_outputs/CPP/weekly_contest_415_p3/outputs"  # Output file to store test cases and results
@@ -20,33 +20,65 @@ cpp_folder = "../src"  # Folder containing the C++ source code
 cpp_file = "weekly_contest_415_p3.cpp"  # C++ source file name
 executable_name = "solution"  # Executable name
 
+
 # TODO: Generate a single test case
+# Generate a single test case ensuring at least 50% solvable cases
 def generate_test_input():
     random.seed(time.time())
-    # 1 <= words.length <= 100, 1 <= words[i].length <= 5 * 10^3. The input is generated such that sum(words[i].length) <= 10^5. words[i] consists only of lowercase English letters. 1 <= target.length <= 5 * 10^3. target consists only of lowercase English letters.
     words = []
-    target = ""
     total_length = 0
     num_words = random.randint(min_words, max_words)
-    for _ in range(num_words):
-        word_length = random.randint(min_word_length, max_word_length)
-        total_length += word_length
-        if total_length > 100000:
-            break
-        word = "".join(random.choices(string.ascii_lowercase, k=word_length))
-        words.append(word)
-    target_length = random.randint(min_target_length, max_target_length)
-    target = "".join(random.choices(string.ascii_lowercase, k=target_length))
+
+    # Decide whether to generate a solvable test case
+    solvable = random.random() < 0.5  # 50% chance to generate a solvable test case
+
+    if solvable:
+        # Generate words first and ensure the target can be formed from them
+        for _ in range(num_words):
+            word_length = random.randint(min_word_length, max_word_length)
+            total_length += word_length
+            if total_length > max_total_length:
+                break
+            word = "".join(random.choices(string.ascii_lowercase, k=word_length))
+            words.append(word)
+            shuffled_words = words.copy()
+            random.shuffle(shuffled_words)
+
+            target = ""
+        # Randomly choose some words with length > 1 and allow repetition
+            while len(target) < max_target_length:
+                selected_word = random.choice([word for word in shuffled_words if len(word) > 1])
+                cut_index = random.randint(1, len(selected_word))  # Cut index cannot be zero to avoid empty slices
+                target += selected_word[:cut_index]
+                
+                # Stop if target exceeds the length constraint
+                if len(target) >= max_target_length:
+                    target = target[:max_target_length]
+                    break
+        
+    else:
+        # Generate words randomly without ensuring the target is constructible
+        for _ in range(num_words):
+            word_length = random.randint(min_word_length, max_word_length)
+            total_length += word_length
+            if total_length > max_total_length:
+                break
+            word = "".join(random.choices(string.ascii_lowercase, k=word_length))
+            words.append(word)
+
+        # Generate a completely random target string
+        target_length = random.randint(min_target_length, len(word))
+        target = "".join(random.choices(string.ascii_lowercase, k=target_length))
+
     return words, target
 
-# TODO: Format test_input as a string for terminal input simulation
+# Format test_input as a string for terminal input simulation
 def format_test_input(test_input):
     words, target = test_input
     formatted_input = f"{len(words)}\n"
     for word in words:
         formatted_input += f"{len(word)} {word}\n"
-    formatted_input += f"{len(target)}\n"
-    formatted_input += f"{target}\n"
+    formatted_input += f"{len(target)}\n{target}\n"
     return formatted_input
 
 # Compile the C++ program
