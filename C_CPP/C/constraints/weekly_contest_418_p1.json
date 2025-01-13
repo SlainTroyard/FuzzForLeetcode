@@ -1,0 +1,19 @@
+{
+    "fuzzing_params": {
+        "Constraints": "nums.length == 3, 1 <= nums[i] <= 127",
+        "runs": 100
+    },
+    "problem_info": {
+        "contest": "Weekly Contest 418",
+        "problem_number": 1,
+        "title": "3309. Maximum Possible Number by Binary Concatenation",
+        "difficulty": "Medium",
+        "source_url": "https://leetcode.com/problems/maximum-possible-number-by-binary-concatenation/",
+        "tags": [
+            "Array",
+            "Bit Manipulation",
+            "Enumeration"
+        ],
+        "test_examples": "Example 1:\nInput: nums = [1,2,3]\nOutput: 30\nExplanation:\nConcatenate the numbers in the order [3, 1, 2] to get the result \"11110\", which is the binary representation of 30.\nExample 2:\nInput: nums = [2,8,16]\nOutput: 1296\nExplanation:\nConcatenate the numbers in the order [2, 8, 16] to get the result \"10100010000\", which is the binary representation of 1296."
+    }
+}
