@@ -14,6 +14,9 @@
             "Bit Manipulation",
             "Recursion"
         ],
-        "test_examples": "Example 1:\nInput: k = 5\nOutput: \"b\"\nExplanation:\nInitially, word = \"a\". We need to do the operation three times:\nGenerated string is \"b\", word becomes \"ab\".\nGenerated string is \"bc\", word becomes \"abbc\".\nGenerated string is \"bccd\", word becomes \"abbcbccd\".\nExample 2:\nInput: k = 10\nOutput: \"c\""
+        "test_examples": [
+            "Example 1: Input: k = 5 Output:  b  Explanation: Initially, word =  a . We need to do the operation three times: Generated string is  b , word becomes  ab . Generated string is  bc , word becomes  abbc . Generated string is  bccd , word becomes  abbcbccd . ",
+            "Example 2: Input: k = 10 Output:  c "
+        ]
     }
 }

@@ -3,7 +3,7 @@
 - Note: weekly 429, and 430 do not have "tags", we simply add the most common Comment section (Top 3).
 
 - 414 P4 UNSOLVED.
-- 415 P3/4 BAD CASES?
+- 415 P3/4 BAD CASES? solved.
 
 ## add contests
 

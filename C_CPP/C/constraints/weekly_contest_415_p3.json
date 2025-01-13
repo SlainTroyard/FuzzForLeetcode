@@ -20,6 +20,9 @@
             "String Matching",
             "Hash Function"
         ],
-        "test_examples": "Example 1:\nInput: words = [\"abc\",\"aaaaa\",\"bcdef\"], target = \"aabcdabc\"\nOutput: 3\nExplanation:\nThe target string can be formed by concatenating:\nPrefix of length 2 of words[1], i.e. \"aa\".\nPrefix of length 3 of words[2], i.e. \"bcd\".\nPrefix of length 3 of words[0], i.e. \"abc\".\nExample 2:\nInput: words = [\"abababab\",\"ab\"], target = \"ababaababa\"\nOutput: 2\nExplanation:\nThe target string can be formed by concatenating:\nPrefix of length 5 of words[0], i.e. \"ababa\".\nPrefix of length 5 of words[0], i.e. \"ababa\"."
-    }
+        "test_examples": [
+                "Example 1: Input: words = [ abc , aaaaa , bcdef ], target =  aabcdabc  Output: 3 Explanation: The target string can be formed by concatenating: Prefix of length 2 of words[1], i.e.  aa . Prefix of length 3 of words[2], i.e.  bcd . Prefix of length 3 of words[0], i.e.  abc . ",
+                "Example 2: Input: words = [ abababab , ab ], target =  ababaababa  Output: 2 Explanation: The target string can be formed by concatenating: Prefix of length 5 of words[0], i.e.  ababa . Prefix of length 5 of words[0], i.e.  ababa ."
+            ]
+        }
 }
