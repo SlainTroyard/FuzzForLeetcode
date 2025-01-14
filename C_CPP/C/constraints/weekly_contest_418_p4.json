@@ -1,0 +1,24 @@
+{
+    "fuzzing_params": {
+        "Constraints": "2 <= n == nums.length <= 10^5, 1 <= nums[i] <= 5 * 10^4, 1 <= queries.length <= 10^5, 0 <= queries[i] < n * (n - 1) / 2",
+        "runs": 20
+    },
+    "problem_info": {
+        "contest": "Weekly Contest 418",
+        "problem_number": 4,
+        "title": "3312. Sorted GCD Pair Queries",
+        "difficulty": "Hard",
+        "source_url": "https://leetcode.com/problems/sorted-gcd-pair-queries/",
+        "tags": [
+            "Array",
+            "Hash Table",
+            "Math",
+            "Binary Search",
+            "Combinatorics",
+            "Counting",
+            "Number Theory",
+            "Prefix Sum"
+        ],
+        "test_examples": "Example 1:\nInput: nums = [2,3,4], queries = [0,2,2]\nOutput: [1,2,2]\nExplanation:\ngcdPairs = [gcd(nums[0], nums[1]), gcd(nums[0], nums[2]), gcd(nums[1], nums[2])] = [1, 2, 1].\nAfter sorting in ascending order, gcdPairs = [1, 1, 2].\nSo, the answer is [gcdPairs[queries[0]], gcdPairs[queries[1]], gcdPairs[queries[2]]] = [1, 2, 2].\nExample 2:\nInput: nums = [4,4,2,1], queries = [5,3,1,0]\nOutput: [4,2,1,1]\nExplanation:\ngcdPairs sorted in ascending order is [1, 1, 1, 2, 2, 4]."
+    }
+}
