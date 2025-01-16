@@ -1,0 +1,20 @@
+{
+    "fuzzing_params": {
+        "Constraints": "1 <= n == nums.length <= 10^5, 1 <= nums[i] <= 10^9, 1 <= x <= k <= nums.length",
+        "runs": 10
+    },
+    "problem_info": {
+        "contest": "Weekly Contest 419",
+        "problem_number": 4,
+        "title": "3321. Find X-Sum of All K-Long Subarrays II",
+        "difficulty": "Hard",
+        "source_url": "https://leetcode.com/problems/...",
+        "tags": [
+            "Array",
+            "Hash Table",
+            "Sliding Window",
+            "Heap (Priority Queue)"
+        ],
+        "test_examples": "Example 1:\nInput: nums = [1,1,2,2,3,4,2,3], k = 6, x = 2\nOutput: [6,10,12]\nExplanation:\nFor subarray [1, 1, 2, 2, 3, 4], only elements 1 and 2 will be kept in the resulting array. Hence, answer[0] = 1 + 1 + 2 + 2.\nFor subarray [1, 2, 2, 3, 4, 2], only elements 2 and 4 will be kept in the resulting array. Hence, answer[1] = 2 + 2 + 2 + 4. Note that 4 is kept in the array since it is bigger than 3 and 1 which occur the same number of times.\nFor subarray [2, 2, 3, 4, 2, 3], only elements 2 and 3 are kept in the resulting array. Hence, answer[2] = 2 + 2 + 2 + 3 + 3.\nExample 2:\nInput: nums = [3,8,7,8,7,5], k = 2, x = 2\nOutput: [11,15,15,15,12]\nExplanation:\nSince k == x, answer[i] is equal to the sum of the subarray nums[i..i + k - 1]."
+    }
+}
