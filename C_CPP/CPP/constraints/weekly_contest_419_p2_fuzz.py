@@ -6,7 +6,14 @@ import time
 
 # TODO: Configure test case generation parameters
 test_cases = 100  # Number of test cases to generate
-
+'''
+The number of nodes in the tree is in the range [1, 2000].
+1 <= Node.val <= 2000
+1 <= k <= 1024
+'''
+max_nodes = 2000
+max_val = 2000
+max_k = 1024
 
 # File Configs
 output_file = "../../../fuzz_outputs/CPP/weekly_contest_419_p2/outputs"  # Output file to store test cases and results
@@ -17,11 +24,22 @@ executable_name = "solution"  # Executable name
 # TODO: Generate a single test case
 def generate_test_input():
     random.seed(time.time())
-    pass
+    k = random.randint(1, max_k)
+    nodes = random.randint(1, max_nodes)
+    tree = []
+    for i in range(nodes):
+        val = random.randint(-10, max_val)
+        if val < 1:
+            val = 0
+        tree.append(val)
+    return k, nodes, tree
 
 # TODO: Format test_input as a string for terminal input simulation
 def format_test_input(test_input):
-    pass
+    k, nodes, tree = test_input
+    formatted_input = f"{k} {nodes}\n"
+    formatted_input += " ".join(map(str, tree)) + "\n"
+    return formatted_input
 
 # Compile the C++ program
 def compile_cpp():

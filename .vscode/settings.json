@@ -96,7 +96,8 @@
     "stdfloat": "cpp",
     "__nullptr": "cpp",
     "stdbool.h": "c",
-    "__node_handle": "c"
+    "__node_handle": "c",
+    "queue": "cpp"
   },
   "C_Cpp.errorSquiggles": "disabled",
   "C_Cpp_Runner.msvcBatchPath": ""
