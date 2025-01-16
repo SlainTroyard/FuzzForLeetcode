@@ -1,0 +1,18 @@
+{
+    "fuzzing_params": {
+        "Constraints": "1 <= s.length <= 1000, s[i] is one of 'F', 'W', or 'E'.",
+        "runs": 100
+    },
+    "problem_info": {
+        "contest": "Weekly Contest 419",
+        "problem_number": 3,
+        "title": "3320. Count The Number of Winning Sequences",
+        "difficulty": "Hard",
+        "source_url": "https://leetcode.com/problems/count-the-number-of-winning-sequences/",
+        "tags": [
+            "String",
+            "Dynamic Programming"
+        ],
+        "test_examples": "Example 1:\nInput: s = \"FFF\"\nOutput: 3\nExplanation:\nBob can beat Alice by making one of the following sequences of moves: \"WFW\", \"FWF\", or \"WEW\". Note that other winning sequences like \"WWE\" or \"EWW\" are invalid since Bob cannot make the same move twice in a row.\nExample 2:\nInput: s = \"FWEFW\"\nOutput: 18\nExplanation:\nBob can beat Alice by making one of the following sequences of moves: \"FWFWF\", \"FWFWE\", \"FWEFE\", \"FWEWE\", \"FEFWF\", \"FEFWE\", \"FEFEW\", \"FEWFE\", \"WFEFE\", \"WFEWE\", \"WEFWF\", \"WEFWE\", \"WEFEF\", \"WEFEW\", \"WEWFW\", \"WEWFE\", \"EWFWE\", or \"EWEWE\"."
+    }
+}
