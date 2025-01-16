@@ -10,9 +10,8 @@
         "difficulty": "Hard",
         "source_url": "https://leetcode.com/problems/count-the-number-of-arrays-with-k-matching-adjacent-elements/",
         "tags": [
-            "TODO",
-            "Add",
-            "Tags"
+            "Math",
+            "Combinatorics"
         ],
         "test_examples": [
             "Example 1: Input: n = 3, m = 2, k = 1 Output: 4 Explanation: There are 4 good arrays. They are [1, 1, 2], [1, 2, 2], [2, 1, 1] and [2, 2, 1].Hence, the answer is 4.",

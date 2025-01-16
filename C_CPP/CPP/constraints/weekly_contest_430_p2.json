@@ -10,9 +10,9 @@
         "difficulty": "Medium",
         "source_url": "https://leetcode.com/problems/find-the-lexicographically-largest-string-from-the-box-i/",
         "tags": [
-            "TODO",
-            "Add",
-            "Tags"
+            "Two Pointers",
+            "String",
+            "Enumeration"
         ],
         "test_examples": [
             "Example 1: Input: word = dbca, numFriends = 2 Output: dbc Explanation: All possible splits are: d and bca. db and ca.dbc and a.",

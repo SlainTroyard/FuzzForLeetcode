@@ -10,9 +10,10 @@
         "difficulty": "Medium",
         "source_url": "https://leetcode.cn/problems/count-special-subsequences/",
         "tags": [
-            "TODO",
-            "Add",
-            "Tags"
+            "Array",
+            "Hash Table",
+            "Math",
+            "Enumeration"
         ],
         "test_examples": [
             "Example 1: Input: nums = [1,2,3,4,3,6,1] Output: 1 Explanation:There is one special subsequence in nums.(p, q, r, s) = (0, 2, 4, 6):This corresponds to elements (1, 3, 3, 1).nums[p] * nums[r] = nums[0] * nums[4] = 1 * 3 = 3nums[q] * nums[s] = nums[2] * nums[6] = 3 * 1 = 3",
