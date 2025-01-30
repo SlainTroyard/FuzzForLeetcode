@@ -1,0 +1,21 @@
+{
+    "fuzzing_params": {
+        "Constraints": "1 <= s.length <= 10^5, s consists only of lowercase English letters. 1 <= t <= 10^5",
+        "runs": 20
+    },
+    "problem_info": {
+        "contest": "Weekly Contest 421",
+        "problem_number": 2,
+        "title": "3335. Total Characters in String After Transformations I",
+        "difficulty": "Medium",
+        "source_url": "https://leetcode.com/problems/total-characters-in-string-after-transformations-i/",
+        "tags": [
+            "Hash Table",
+            "Math",
+            "String",
+            "Dynamic Programming",
+            "Counting"
+        ],
+        "test_examples": "Example 1:\nInput: s = \"abcyy\", t = 2\nOutput: 7\nExplanation:\nFirst Transformation (t = 1):\n'a' becomes 'b'\n'b' becomes 'c'\n'c' becomes 'd'\n'y' becomes 'z'\n'y' becomes 'z'\nString after the first transformation: \"bcdzz\"\nSecond Transformation (t = 2):\n'b' becomes 'c'\n'c' becomes 'd'\n'd' becomes 'e'\n'z' becomes \"ab\"\n'z' becomes \"ab\"\nString after the second transformation: \"cdeabab\"\nFinal Length of the string: The string is \"cdeabab\", which has 7 characters.\nExample 2:\nInput: s = \"azbk\", t = 1\nOutput: 5\nExplanation:\nFirst Transformation (t = 1):\n'a' becomes 'b'\n'z' becomes \"ab\"\n'b' becomes 'c'\n'k' becomes 'l'\nString after the first transformation: \"babcl\"\nFinal Length of the string: The string is \"babcl\", which has 5 characters."
+    }
+}
