@@ -1,0 +1,19 @@
+{
+    "fuzzing_params": {
+        "Constraints": "1 <= s.length <= 3000, 1 <= k <= s.length, s consists only of lowercase English letters.",
+        "runs": 100
+    },
+    "problem_info": {
+        "contest": "Weekly Contest 420",
+        "problem_number": 2,
+        "title": "3325. Count Substrings With K-Frequency Characters I",
+        "difficulty": "Medium",
+        "source_url": "https://leetcode.com/problems/count-substrings-with-k-frequency-characters-i/",
+        "tags": [
+            "Hash Table",
+            "String",
+            "Sliding Window"
+        ],
+        "test_examples": "Example 1:\nInput: s = \"abacb\", k = 2\nOutput: 4\nExplanation:\nThe valid substrings are:\n\"aba\" (character 'a' appears 2 times).\n\"abac\" (character 'a' appears 2 times).\n\"abacb\" (character 'a' appears 2 times).\n\"bacb\" (character 'b' appears 2 times).\nExample 2:\nInput: s = \"abcde\", k = 1\nOutput: 15\nExplanation:\nAll substrings are valid because every character appears at least once."
+    }
+}
