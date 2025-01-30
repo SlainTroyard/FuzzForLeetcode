@@ -1,0 +1,20 @@
+{
+    "fuzzing_params": {
+        "Constraints": "1 <= nums.length <= 10^5, 1 <= nums[i] <= 10^6",
+        "runs": 20
+    },
+    "problem_info": {
+        "contest": "Weekly Contest 420",
+        "problem_number": 3,
+        "title": "3326. Minimum Division Operations to Make Array Non Decreasing",
+        "difficulty": "Medium",
+        "source_url": "https://leetcode.com/problems/minimum-division-operations-to-make-array-non-decreasing/",
+        "tags": [
+            "Array",
+            "Math",
+            "Greedy",
+            "Number Theory"
+        ],
+        "test_examples": "Example 1:\nInput: nums = [25,7]\nOutput: 1\nExplanation:\nUsing a single operation, 25 gets divided by 5 and nums becomes [5, 7].\nExample 2:\nInput: nums = [7,7,6]\nOutput: -1"
+    }
+}
