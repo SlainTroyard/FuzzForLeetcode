@@ -1,0 +1,18 @@
+{
+    "fuzzing_params": {
+        "Constraints": "1 <= target.length <= 400, target consists only of lowercase English letters.",
+        "runs": 100
+    },
+    "problem_info": {
+        "contest": "Weekly Contest 420",
+        "problem_number": 1,
+        "title": "3324. Find the Sequence of Strings Appeared on the Screen",
+        "difficulty": "Medium",
+        "source_url": "https://leetcode.com/problems/find-the-sequence-of-strings-appeared-on-the-screen/",
+        "tags": [
+            "String",
+            "Simulation"
+        ],
+        "test_examples": "Example 1:\nInput: target = \"abc\"\nOutput: [\"a\",\"aa\",\"ab\",\"aba\",\"abb\",\"abc\"]\nExplanation:\nThe sequence of key presses done by Alice are:\nPress key 1, and the string on the screen becomes \"a\".\nPress key 1, and the string on the screen becomes \"aa\".\nPress key 2, and the string on the screen becomes \"ab\".\nPress key 1, and the string on the screen becomes \"aba\".\nPress key 2, and the string on the screen becomes \"abb\".\nPress key 2, and the string on the screen becomes \"abc\".\nExample 2:\nInput: target = \"he\"\nOutput: [\"a\",\"b\",\"c\",\"d\",\"e\",\"f\",\"g\",\"h\",\"ha\",\"hb\",\"hc\",\"hd\",\"he\"]"
+    }
+}

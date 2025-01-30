@@ -1,0 +1,10 @@
+input:
+abd
+output:
+a aa ab aba abb abc
+-------------------------
+input:
+he
+output:
+a b c d e f g h ha hb hc hd he
+-------------------------
