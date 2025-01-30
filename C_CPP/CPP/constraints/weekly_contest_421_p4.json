@@ -1,0 +1,21 @@
+{
+    "fuzzing_params": {
+        "Constraints": "1 <= s.length <= 10^5, s consists only of lowercase English letters. 1 <= t <= 10^9, nums.length == 26, 1 <= nums[i] <= 25",
+        "runs": 20
+    },
+    "problem_info": {
+        "contest": "Weekly Contest 421",
+        "problem_number": 4,
+        "title": "3337. Total Characters in String After Transformations II",
+        "difficulty": "Hard",
+        "source_url": "https://leetcode.com/problems/total-characters-in-string-after-transformations-ii/",
+        "tags": [
+            "Hash Table",
+            "Math",
+            "String",
+            "Dynamic Programming",
+            "Counting"
+        ],
+        "test_examples": "Example 1:\nInput: s = \"abcyy\", t = 2, nums = [1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,2]\nOutput: 7\nExplanation:\nFirst Transformation (t = 1):\n'a' becomes 'b' as nums[0] == 1\n'b' becomes 'c' as nums[1] == 1\n'c' becomes 'd' as nums[2] == 1\n'y' becomes 'z' as nums[24] == 1\n'y' becomes 'z' as nums[24] == 1\nString after the first transformation: \"bcdzz\"\nSecond Transformation (t = 2):\n'b' becomes 'c' as nums[1] == 1\n'c' becomes 'd' as nums[2] == 1\n'd' becomes 'e' as nums[3] == 1\n'z' becomes 'ab' as nums[25] == 2\n'z' becomes 'ab' as nums[25] == 2\nString after the second transformation: \"cdeabab\"\nFinal Length of the string: The string is \"cdeabab\", which has 7 characters.\nExample 2:\nInput: s = \"azbk\", t = 1, nums = [2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2]\nOutput: 8\nExplanation:\nFirst Transformation (t = 1):\n'a' becomes 'bc' as nums[0] == 2\n'z' becomes 'ab' as nums[25] == 2\n'b' becomes 'cd' as nums[1] == 2\n'k' becomes 'lm' as nums[10] == 2\nString after the first transformation: \"bcabcdlm\"\nFinal Length of the string: The string is \"bcabcdlm\", which has 8 characters."
+    }
+}
