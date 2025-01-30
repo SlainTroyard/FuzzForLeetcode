@@ -1,0 +1,19 @@
+{
+    "fuzzing_params": {
+        "Constraints": "1 <= nums.length <= 100, 1 <= nums[i] <= 30",
+        "runs": 100
+    },
+    "problem_info": {
+        "contest": "Weekly Contest 421",
+        "problem_number": 1,
+        "title": "3334. Find the Maximum Factor Score of Array",
+        "difficulty": "Meduim",
+        "source_url": "https://leetcode.com/problems/find-the-maximum-factor-score-of-array/",
+        "tags": [
+            "Array",
+            "Math",
+            "Number Theory"
+        ],
+        "test_examples": "Example 1:\nInput: nums = [2,4,8,16]\nOutput: 64\nExplanation:\nOn removing 2, the GCD of the rest of the elements is 4 while the LCM is 16, which gives a maximum factor score of 4 * 16 = 64.\nExample 2:\nInput: nums = [1,2,3,4,5]\nOutput: 60\nExplanation:\nThe maximum factor score of 60 can be obtained without removing any elements."
+    }
+}
