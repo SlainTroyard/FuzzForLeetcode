@@ -4,7 +4,7 @@
 
 - 414 P4 UNSOLVED. solved
 - 415 P3/4 BAD CASES? solved.
-- 419 P4 C edition, src: Can't find a solution.
+- 419 P4 C edition, src: Can't find a solution in the C edition.
 
 ## add contests
 
