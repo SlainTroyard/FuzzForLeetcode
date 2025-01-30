@@ -1,0 +1,20 @@
+{
+    "fuzzing_params": {
+        "Constraints": "1 <= nums.length <= 200, 1 <= nums[i] <= 200",
+        "runs": 100
+    },
+    "problem_info": {
+        "contest": "Weekly Contest 421",
+        "problem_number": 3,
+        "title": "3336. Find the Number of Subsequences With Equal GCD",
+        "difficulty": "Hard",
+        "source_url": "https://leetcode.com/problems/find-the-number-of-subsequences-with-equal-gcd/",
+        "tags": [
+            "Array",
+            "Math",
+            "Dynamic Programming",
+            "Number Theory"
+        ],
+        "test_examples": "Example 1:\nInput: nums = [1,2,3,4]\nOutput: 10\nExplanation:\nThe subsequence pairs which have the GCD of their elements equal to 1 are:\n([1, 2, 3, 4], [1, 2, 3, 4])\n([1, 2, 3, 4], [1, 2, 3, 4])\n([1, 2, 3, 4], [1, 2, 3, 4])\n([1, 2, 3, 4], [1, 2, 3, 4])\n([1, 2, 3, 4], [1, 2, 3, 4])\n([1, 2, 3, 4], [1, 2, 3, 4])\n([1, 2, 3, 4], [1, 2, 3, 4])\n([1, 2, 3, 4], [1, 2, 3, 4])\n([1, 2, 3, 4], [1, 2, 3, 4])\n([1, 2, 3, 4], [1, 2, 3, 4])\nExample 2:\nInput: nums = [10,20,30]\nOutput: 2\nExplanation:\nThe subsequence pairs which have the GCD of their elements equal to 10 are:\n([10, 20, 30], [10, 20, 30])\n([10, 20, 30], [10, 20, 30])"
+    }
+}
