@@ -6,7 +6,10 @@ import time
 
 # TODO: Configure test case generation parameters
 test_cases = 100  # Number of test cases to generate
-
+max_length = 100  # Maximum length of the input string
+min_length = 2  # Minimum length of the input string
+max_value = 10  # Maximum value of the input integers
+min_value = 1  # Minimum value of the input integers
 
 # File Configs
 output_file = "../../../fuzz_outputs/CPP/weekly_contest_431_p1/outputs"  # Output file to store test cases and results
@@ -17,11 +20,17 @@ executable_name = "solution"  # Executable name
 # TODO: Generate a single test case
 def generate_test_input():
     random.seed(time.time())
-    pass
+    # 2 <= nums.length <= 100, 1 <= nums[i] <= 10
+    length = random.randint(min_length, max_length)
+    nums = [random.randint(min_value, max_value) for _ in range(length)]
+    return nums, length
 
 # TODO: Format test_input as a string for terminal input simulation
 def format_test_input(test_input):
-    pass
+    nums, length = test_input
+    formatted_input = f"{length}\n"
+    formatted_input += " ".join(map(str, nums))
+    return formatted_input
 
 # Compile the C++ program
 def compile_cpp():
