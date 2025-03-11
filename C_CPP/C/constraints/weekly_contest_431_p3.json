@@ -1,0 +1,25 @@
+{
+    "fuzzing_params": {
+        "Constraints": "1 <= coins.length <= 10^5, 1 <= k <= 10^9, coins[i] == [li, ri, ci], 1 <= li <= ri <= 10^9, 1 <= ci <= 1000. The given segments are non-overlapping.",
+        "runs": 10
+    },
+    "problem_info": {
+        "contest": "Weekly Contest 431",
+        "problem_number": 3,
+        "title": "3413. Maximum Coins From K Consecutive Bags",
+        "difficulty": "Medium",
+        "source_url": "https://leetcode.com/problems/maximum-coins-from-k-consecutive-bags/",
+        "tags": [
+            "Array",
+            "Binary Search",
+            "Greedy",
+            "Sliding Window",
+            "Sorting",
+            "Prefix Sum"
+        ],
+        "test_examples": [
+            "Example 1:  Input: coins = [[8,10,1],[1,3,2],[5,6,4]], k = 4  Output: 10  Explanation:  Selecting bags at positions [3, 4, 5, 6] gives the maximum number of coins: 2 + 0 + 4 + 4 = 10.",
+            "Example 2:  Input: coins = [[1,10,3]], k = 2  Output: 6  Explanation:  Selecting bags at positions [1, 2] gives the maximum number of coins: 3 + 3 = 6."
+        ]
+    }
+}
