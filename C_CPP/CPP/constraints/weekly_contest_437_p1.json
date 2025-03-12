@@ -1,0 +1,20 @@
+{
+    "fuzzing_params": {
+        "Constraints": "1 <= k <= s.length <= 100, s consists of lowercase English letters only.",
+        "runs": 200
+    },
+    "problem_info": {
+        "contest": "Weekly Contest 437",
+        "problem_number": 1,
+        "title": "3456. Find Special Substring of Length K",
+        "difficulty": "Easy",
+        "source_url": "https://leetcode.com/problems/find-special-substring-of-length-k/",
+        "tags": [
+            "String"
+        ],
+        "test_examples": [
+            "Example 1: Input: s = \"aaabaaa\", k = 3 Output: true Explanation: The substring s[4..6] == \"aaa\" satisfies the conditions. It has a length of 3. All characters are the same. The character before \"aaa\" is 'b', which is different from 'a'. There is no character after \"aaa\".",
+            "Example 2: Input: s = \"abc\", k = 2 Output: false Explanation: There is no substring of length 2 that consists of one distinct character and satisfies the conditions."
+        ]
+    }
+}
