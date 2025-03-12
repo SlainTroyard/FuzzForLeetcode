@@ -18,6 +18,7 @@
 - 435 P2 lacks C edition, src: Can't find a solution in the C edition.
 - 435 P3 lacks C edition, src: Can't find a solution in the C edition.
 - 435 P4 lacks C edition, src: Can't find a solution in the C edition.
+- 436 P3 lacks C edition, src: Can't find a solution in the C edition.
 
 ## add contests
 
