@@ -1,0 +1,19 @@
+{
+    "fuzzing_params": {
+        "Constraints": "max_len ==10 ",
+        "runs": 100
+    },
+    "problem_info": {
+        "contest": "Weekly Contest 433",
+        "problem_number": 3,
+        "title": "TODO: Add problem title",
+        "difficulty": "TODO: Add difficulty",
+        "source_url": "https://leetcode.com/problems/...",
+        "tags": [
+            "TODO",
+            "Add",
+            "Tags"
+        ],
+        "test_examples": " "
+    }
+}
