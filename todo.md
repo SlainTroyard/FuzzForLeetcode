@@ -15,6 +15,7 @@
 - 434 P2 generating test cases unsolved.
 - 434 P3 lacks C edition, src: Can't find a solution in the C edition.
 - 434 P4 lacks C edition, src: Can't find a solution in the C edition.
+- 435 P2 lacks C edition, src: Can't find a solution in the C edition.
 
 ## add contests
 
