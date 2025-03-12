@@ -1,0 +1,10 @@
+input:
+aaaaabbc
+output:
+3
+-------------------------
+input:
+abcabcab
+output:
+1
+-------------------------
