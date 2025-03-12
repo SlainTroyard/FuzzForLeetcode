@@ -1,0 +1,12 @@
+input:
+abcdbaefab
+2
+output:
+1
+-------------------------
+input:
+cdefdc
+3
+output:
+1
+-------------------------
