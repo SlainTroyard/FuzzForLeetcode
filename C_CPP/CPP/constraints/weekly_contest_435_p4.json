@@ -1,0 +1,24 @@
+{
+    "fuzzing_params": {
+        "Constraints": "3 <= s.length <= 3 * 10^4, s consists only of digits '0' to '4'. The input is generated that at least one substring has a character with an even frequency and a character with an odd frequency. 1 <= k <= s.length",
+        "runs": 20
+    },
+    "problem_info": {
+        "contest": "Weekly Contest 435",
+        "problem_number": 4,
+        "title": "3445. Maximum Difference Between Even and Odd Frequency II",
+        "difficulty": "Hard",
+        "source_url": "https://leetcode.com/problems/maximum-difference-between-even-and-odd-frequency-ii/",
+        "tags": [
+            "String",
+            "Sliding Window",
+            "Enumeration",
+            "Prefix Sum"
+        ],
+        "test_examples": [
+            "Example 1: Input: s = \"12233\", k = 4 Output: -1 Explanation: For the substring \"12233\", the frequency of '1' is 1 and the frequency of '3' is 2. The difference is 1 - 2 = -1.",
+            "Example 2: Input: s = \"1122211\", k = 3 Output: 1 Explanation: For the substring \"11222\", the frequency of '2' is 3 and the frequency of '1' is 2. The difference is 3 - 2 = 1.",
+            "Example 3: Input: s = \"110\", k = 3 Output: -1"
+        ]
+    }
+}
