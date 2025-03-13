@@ -1,0 +1,24 @@
+{
+    "fuzzing_params": {
+        "Constraints": "3 <= s.length <= 100, s consists of only digits.",
+        "runs": 100
+    },
+    "problem_info": {
+        "contest": "Weekly Contest 438",
+        "problem_number": 1,
+        "title": "3461. Check If Digits Are Equal in String After Operations I",
+        "difficulty": "Easy",
+        "source_url": "https://leetcode.com/problems/check-if-digits-are-equal-in-string-after-operations-i/",
+        "tags": [
+            "Math",
+            "String",
+            "Simulation",
+            "Combinatorics",
+            "Number Theory"
+        ],
+        "test_examples": [
+            "Example 1: Input: s = \"3902\" Output: true Explanation: Initially, s = \"3902\" First operation: (s[0] + s[1]) % 10 = (3 + 9) % 10 = 2 (s[1] + s[2]) % 10 = (9 + 0) % 10 = 9 (s[2] + s[3]) % 10 = (0 + 2) % 10 = 2 s becomes \"292\" Second operation: (s[0] + s[1]) % 10 = (2 + 9) % 10 = 1 (s[1] + s[2]) % 10 = (9 + 2) % 10 = 1 s becomes \"11\" Since the digits in \"11\" are the same, the output is true.",
+            "Example 2: Input: s = \"34789\" Output: false Explanation: Initially, s = \"34789\". After the first operation, s = \"7157\". After the second operation, s = \"862\". After the third operation, s = \"48\". Since '4' != '8', the output is false."
+        ]
+    }
+}
