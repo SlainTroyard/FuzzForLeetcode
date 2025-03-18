@@ -8,13 +8,13 @@ import time
 test_cases = 10  # Number of test cases to generate
 '''
 nums.length == n
-1 <= n <= 10^5
-1 <= nums[i] <= 10^9
+1 <= n <= 10^4
+1 <= nums[i] <= 10^8
 1 <= x <= k <= nums.length
 '''
-max_n = 10**5
+max_n = 10**4
 min_n = 1
-max_num = 10**9
+max_num = 10**8
 min_num = 1
 
 # File Configs
