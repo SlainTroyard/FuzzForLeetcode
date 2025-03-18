@@ -10,9 +10,13 @@
         "difficulty": "Easy",
         "source_url": "https://leetcode.com/problems/minimum-number-of-operations-to-make-elements-in-array-distinct/",
         "tags": [
-            "TODO",
-            "Add",
-            "Tags"
+            "Array",
+            "Hash Table"
+        ],
+        "test_examples": [
+            "Example 1: Input: nums = [1,2,3,4,2,3,3,5,7] Output: 2 Explanation: We can make nums = [1,2,3,4,2,3,3,5,7] in 1 operation. The array nums is now distinct.",
+            "Example 2: Input: nums = [4,5,6,4,4] Output: 2 Explanation: We can make nums = [4,5,6,4,4] in 2 operations. The array nums is now distinct.",
+            "Example 3: Input: nums = [6,7,8,9] Output: 0 Explanation: The array already contains distinct elements. Therefore, the answer is 0."
         ]
     }
 }

@@ -14,6 +14,9 @@
             "String",
             "Sliding Window"
         ],
-        "test_examples": "Example 1:\nInput: s = \"abacb\", k = 2\nOutput: 4\nExplanation:\nThe valid substrings are:\n\"aba\" (character 'a' appears 2 times).\n\"abac\" (character 'a' appears 2 times).\n\"abacb\" (character 'a' appears 2 times).\n\"bacb\" (character 'b' appears 2 times).\nExample 2:\nInput: s = \"abcde\", k = 1\nOutput: 15\nExplanation:\nAll substrings are valid because every character appears at least once."
+        "test_examples": [
+            "Example 1: Input: s = \"abacb\", k = 2 Output: 4 Explanation: The valid substrings are: \"aba\" (character 'a' appears 2 times). \"abac\" (character 'a' appears 2 times). \"abacb\" (character 'a' appears 2 times). \"bacb\" (character 'b' appears 2 times).",
+            "Example 2: Input: s = \"abcde\", k = 1 Output: 15 Explanation: All substrings are valid because every character appears at least once."
+        ]
     }
 }

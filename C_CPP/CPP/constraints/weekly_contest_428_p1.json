@@ -11,6 +11,10 @@
         "source_url": "https://leetcode.com/problems/button-with-longest-push-time/",
         "tags": [
             "Array"
+        ],
+        "test_examples": [
+            "Example 1: Input: events = [[1,2],[2,5],[3,9],[1,15]] Output: 1 Explanation: Button with index 1 is pressed at time 2. Button with index 2 is pressed at time 5, so it took 5 - 2 = 3 units of time. Button with index 3 is pressed at time 9, so it took 9 - 5 = 4 units of time. Button with index 1 is pressed again at time 15, so it took 15 - 9 = 6 units of time.",
+            "Example 2: Input: events = [[10,5],[1,7]] Output: 10 Explanation: Button with index 10 is pressed at time 5. Button with index 1 is pressed at time 7, so it took 7 - 5 = 2 units of time."
         ]
     }
 }

@@ -13,6 +13,8 @@
             "String",
             "Dynamic Programming"
         ],
-        "test_examples": "Example 1:\nInput: s = \"FFF\"\nOutput: 3\nExplanation:\nBob can beat Alice by making one of the following sequences of moves: \"WFW\", \"FWF\", or \"WEW\". Note that other winning sequences like \"WWE\" or \"EWW\" are invalid since Bob cannot make the same move twice in a row.\nExample 2:\nInput: s = \"FWEFW\"\nOutput: 18\nExplanation:\nBob can beat Alice by making one of the following sequences of moves: \"FWFWF\", \"FWFWE\", \"FWEFE\", \"FWEWE\", \"FEFWF\", \"FEFWE\", \"FEFEW\", \"FEWFE\", \"WFEFE\", \"WFEWE\", \"WEFWF\", \"WEFWE\", \"WEFEF\", \"WEFEW\", \"WEWFW\", \"WEWFE\", \"EWFWE\", or \"EWEWE\"."
+        "test_examples": [
+            "Example 1: Input: s = \"FFF\" Output: 3 Explanation: Bob can beat Alice by making one of the following sequences of moves: \"WFW\", \"FWF\", or \"WEW\". Note that other winning sequences like \"WWE\" or \"EWW\" are invalid since Bob cannot make the same move twice in a row.\nExample 2:\nInput: s = \"FWEFW\"\nOutput: 18\nExplanation:\nBob can beat Alice by making one of the following sequences of moves: \"FWFWF\", \"FWFWE\", \"FWEFE\", \"FWEWE\", \"FEFWF\", \"FEFWE\", \"FEFEW\", \"FEWFE\", \"WFEFE\", \"WFEWE\", \"WEFWF\", \"WEFWE\", \"WEFEF\", \"WEFEW\", \"WEWFW\", \"WEWFE\", \"EWFWE\", or \"EWEWE\"."
+        ]
     }
 }

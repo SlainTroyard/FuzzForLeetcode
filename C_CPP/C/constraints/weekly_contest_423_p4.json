@@ -14,6 +14,11 @@
             "String",
             "Dynamic Programming",
             "Combinatorics"
+        ],
+        "test_examples": [
+            "Example 1: Input: s = \"111\", k = 1 Output: 3 Explanation: n = 7. The 1-reducible integers less than 7 are 1, 2, and 4.",
+            "Example 2: Input: s = \"1000\", k = 2 Output: 6 Explanation: n = 8. The 2-reducible integers less than 8 are 1, 2, 3, 4, 5, and 6.",
+            "Example 3: Input: s = \"1\", k = 3 Output: 0 Explanation: There are no positive integers less than n = 1, so the answer is 0."
         ]
     }
 }

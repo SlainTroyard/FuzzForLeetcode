@@ -15,6 +15,9 @@
             "Greedy",
             "Number Theory"
         ],
-        "test_examples": "Example 1:\nInput: nums = [25,7]\nOutput: 1\nExplanation:\nUsing a single operation, 25 gets divided by 5 and nums becomes [5, 7].\nExample 2:\nInput: nums = [7,7,6]\nOutput: -1"
+        "test_examples": [
+            "Example 1: Input: nums = [25,7] Output: 1 Explanation: Using a single operation, 25 gets divided by 5 and nums becomes [5, 7].",
+            "Example 2: Input: nums = [7,7,6] Output: -1"
+        ]
     }
 }

@@ -13,6 +13,10 @@
             "Tree",
             "Depth-First Search",
             "Breadth-First Search"
+        ],
+        "test_examples": [
+            "Example 1: Input: edges1 = [[0,1],[0,2],[2,3],[2,4]], edges2 = [[0,1],[0,2],[0,3],[2,7],[1,4],[4,5],[4,6]], k = 2 Output: [9,7,9,8,8] Explanation: For i = 0, connect node 0 from the first tree to node 0 from the second tree. For i = 1, connect node 1 from the first tree to node 0 from the second tree. For i = 2, connect node 2 from the first tree to node 4 from the second tree. For i = 3, connect node 3 from the first tree to node 4 from the second tree. For i = 4, connect node 4 from the first tree to node 4 from the second tree.",
+            "Example 2: Input: edges1 = [[0,1],[0,2],[0,3],[0,4]], edges2 = [[0,1],[1,2],[2,3]], k = 1 Output: [6,3,3,3,3] Explanation: For every i, connect node i of the first tree with any node of the second tree."
         ]
     }
 }

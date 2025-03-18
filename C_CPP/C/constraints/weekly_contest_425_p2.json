@@ -13,6 +13,11 @@
             "Hash Table",
             "String",
             "Sorting"
+        ],
+        "test_examples": [
+            "Example 1: Input: s = \"abcd\", t = \"cdab\", k = 2 Output: true Explanation: Split s into 2 substrings of length 2: [\"ab\", \"cd\"]. Rearranging these substrings as [\"cd\", \"ab\"], and then concatenating them results in \"cdab\", which matches t.",
+            "Example 2: Input: s = \"aabbcc\", t = \"bbaacc\", k = 3 Output: true Explanation: Split s into 3 substrings of length 2: [\"aa\", \"bb\", \"cc\"]. Rearranging these substrings as [\"bb\", \"aa\", \"cc\"], and then concatenating them results in \"bbaacc\", which matches t.",
+            "Example 3: Input: s = \"aabbcc\", t = \"bbaacc\", k = 2 Output: false Explanation: Split s into 2 substrings of length 3: [\"aab\", \"bcc\"]. These substrings cannot be rearranged to form t = \"bbaacc\", so the output is false."
         ]
     }
 }

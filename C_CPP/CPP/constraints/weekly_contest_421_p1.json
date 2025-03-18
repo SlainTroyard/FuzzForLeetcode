@@ -14,6 +14,9 @@
             "Math",
             "Number Theory"
         ],
-        "test_examples": "Example 1:\nInput: nums = [2,4,8,16]\nOutput: 64\nExplanation:\nOn removing 2, the GCD of the rest of the elements is 4 while the LCM is 16, which gives a maximum factor score of 4 * 16 = 64.\nExample 2:\nInput: nums = [1,2,3,4,5]\nOutput: 60\nExplanation:\nThe maximum factor score of 60 can be obtained without removing any elements."
+        "test_examples": [
+            "Example 1: Input: nums = [2,4,8,16] Output: 64 Explanation: On removing 2, the GCD of the rest of the elements is 4 while the LCM is 16, which gives a maximum factor score of 4 * 16 = 64.",
+            "Example 2: Input: nums = [1,2,3,4,5] Output: 60 Explanation: The maximum factor score of 60 can be obtained without removing any elements."
+        ]
     }
 }

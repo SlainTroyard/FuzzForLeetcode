@@ -12,6 +12,10 @@
         "tags": [
             "Array",
             "Dynamic Programming"
+        ],
+        "test_examples": [
+            "Example 1: Input: nums = [2,8,3,19,3], k = 3, op1 = 1, op2 = 1 Output: 23 Explanation: Apply Operation 2 to nums[1] = 8, making nums[1] = 5. Apply Operation 1 to nums[3] = 19, making nums[3] = 10. The resulting array becomes [2, 5, 3, 10, 3], which has the minimum possible sum of 23 after applying the operations.",
+            "Example 2: Input: nums = [2,4,3], k = 3, op1 = 2, op2 = 1 Output: 3 Explanation: Apply Operation 1 to nums[0] = 2, making nums[0] = 1. Apply Operation 1 to nums[1] = 4, making nums[1] = 2. Apply Operation 2 to nums[2] = 3, making nums[2] = 0. The resulting array becomes [1, 2, 0], which has the minimum possible sum of 3 after applying the operations."
         ]
     }
 }

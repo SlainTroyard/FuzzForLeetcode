@@ -15,6 +15,11 @@
             "Depth-First Search",
             "Breadth-First Search",
             "Graph"
+        ],
+        "test_examples": [
+            "Example 1: Input: initialCurrency = \"EUR\", pairs1 = [[\"EUR\",\"USD\"],[\"USD\",\"JPY\"]], rates1 = [2.0,3.0], pairs2 = [[\"JPY\",\"USD\"],[\"USD\",\"CHF\"],[\"CHF\",\"EUR\"]], rates2 = [4.0,5.0,6.0] Output: 720.00000 Explanation: To get the maximum amount of EUR, starting with 1.0 EUR: On Day 1: Convert EUR to USD to get 2.0 USD. Convert USD to JPY to get 6.0 JPY. On Day 2: Convert JPY to USD to get 24.0 USD. Convert USD to CHF to get 120.0 CHF. Finally, convert CHF to EUR to get 720.0 EUR.",
+            "Example 2: Input: initialCurrency = \"NGN\", pairs1 = [[\"NGN\",\"EUR\"]], rates1 = [9.0], pairs2 = [[\"NGN\",\"EUR\"]], rates2 = [6.0] Output: 1.50000 Explanation: Converting NGN to EUR on day 1 and EUR to NGN using the inverse rate on day 2 gives the maximum amount.",
+            "Example 3: Input: initialCurrency = \"USD\", pairs1 = [[\"USD\",\"EUR\"]], rates1 = [1.0], pairs2 = [[\"EUR\",\"JPY\"]], rates2 = [10.0] Output: 1.00000 Explanation: In this example, there is no need to make any conversions on either day."
         ]
     }
 }

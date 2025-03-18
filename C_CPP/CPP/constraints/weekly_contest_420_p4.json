@@ -17,6 +17,9 @@
             "Depth-First Search",
             "Hash Function"
         ],
-        "test_examples": "Example 1:\nInput: parent = [-1,0,0,1,1,2], s = \"aababa\"\nOutput: [true,true,false,true,true,true]\nExplanation:\nCalling dfs(0) results in the string dfsStr = \"abaaba\", which is a palindrome.\nCalling dfs(1) results in the string dfsStr = \"aba\", which is a palindrome.\nCalling dfs(2) results in the string dfsStr = \"ab\", which is not a palindrome.\nCalling dfs(3) results in the string dfsStr = \"a\", which is a palindrome.\nCalling dfs(4) results in the string dfsStr = \"b\", which is a palindrome.\nCalling dfs(5) results in the string dfsStr = \"a\", which is a palindrome.\nExample 2:\nInput: parent = [-1,0,0,0,0], s = \"aabcb\"\nOutput: [true,true,true,true,true]\nExplanation:\nEvery call on dfs(x) results in a palindrome string."
+        "test_examples": [
+            "Example 1: Input: parent = [-1,0,0,1,1,2], s = \"aababa\" Output: [true,true,false,true,true,true] Explanation: Calling dfs(0) results in the string dfsStr = \"abaaba\", which is a palindrome. Calling dfs(1) results in the string dfsStr = \"aba\", which is a palindrome. Calling dfs(2) results in the string dfsStr = \"ab\", which is not a palindrome. Calling dfs(3) results in the string dfsStr = \"a\", which is a palindrome. Calling dfs(4) results in the string dfsStr = \"b\", which is a palindrome. Calling dfs(5) results in the string dfsStr = \"a\", which is a palindrome.",
+            "Example 2: Input: parent = [-1,0,0,0,0], s = \"aabcb\" Output: [true,true,true,true,true] Explanation: Every call on dfs(x) results in a palindrome string."
+        ]
     }
 }

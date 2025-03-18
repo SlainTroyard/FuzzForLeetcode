@@ -16,6 +16,9 @@
             "Dynamic Programming",
             "Counting"
         ],
-        "test_examples": "Example 1:\nInput: s = \"abcyy\", t = 2\nOutput: 7\nExplanation:\nFirst Transformation (t = 1):\n'a' becomes 'b'\n'b' becomes 'c'\n'c' becomes 'd'\n'y' becomes 'z'\n'y' becomes 'z'\nString after the first transformation: \"bcdzz\"\nSecond Transformation (t = 2):\n'b' becomes 'c'\n'c' becomes 'd'\n'd' becomes 'e'\n'z' becomes \"ab\"\n'z' becomes \"ab\"\nString after the second transformation: \"cdeabab\"\nFinal Length of the string: The string is \"cdeabab\", which has 7 characters.\nExample 2:\nInput: s = \"azbk\", t = 1\nOutput: 5\nExplanation:\nFirst Transformation (t = 1):\n'a' becomes 'b'\n'z' becomes \"ab\"\n'b' becomes 'c'\n'k' becomes 'l'\nString after the first transformation: \"babcl\"\nFinal Length of the string: The string is \"babcl\", which has 5 characters."
+        "test_examples": [
+            "Example 1: Input: s = \"abcyy\", t = 2 Output: 7 Explanation: First Transformation (t = 1): 'a' becomes 'b', 'b' becomes 'c', 'c' becomes 'd', 'y' becomes 'z', 'y' becomes 'z'. String after the first transformation: \"bcdzz\". Second Transformation (t = 2): 'b' becomes 'c', 'c' becomes 'd', 'd' becomes 'e', 'z' becomes \"ab\", 'z' becomes \"ab\". String after the second transformation: \"cdeabab\". Final Length of the string: The string is \"cdeabab\", which has 7 characters.",
+            "Example 2: Input: s = \"azbk\", t = 1 Output: 5 Explanation: First Transformation (t = 1): 'a' becomes 'b', 'z' becomes \"ab\", 'b' becomes 'c', 'k' becomes 'l'. String after the first transformation: \"babcl\". Final Length of the string: The string is \"babcl\", which has 5 characters."
+        ]
     }
 }
