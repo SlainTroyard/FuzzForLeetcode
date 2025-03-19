@@ -5,7 +5,7 @@ import string
 import time
 
 # TODO: Configure test case generation parameters
-test_cases = 10  # Number of test cases to generate
+test_cases = 20  # Number of test cases to generate
 max_coins = 10**5  # Maximum number of coins
 max_k = 10**9  # Maximum value of k
 max_li = 10**9  # Maximum value of li

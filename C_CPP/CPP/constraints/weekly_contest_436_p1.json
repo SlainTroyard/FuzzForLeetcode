@@ -1,7 +1,7 @@
 {
     "fuzzing_params": {
         "Constraints": "grid.length == grid[i].length == n, 1 <= n <= 10, -10^5 <= grid[i][j] <= 10^5",
-        "runs": 20
+        "runs": 100
     },
     "problem_info": {
         "contest": "Weekly Contest 436",

@@ -1,7 +1,7 @@
 {
     "fuzzing_params": {
         "Constraints": "1 <= n == nums.length <= 10^5, 1 <= nums[i] <= 50, 1 <= k <= 50",
-        "runs": 20
+        "runs": 100
     },
     "problem_info": {
         "contest": "Weekly Contest 434",

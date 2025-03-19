@@ -1,7 +1,7 @@
 {
     "fuzzing_params": {
         "Constraints": "2 <= n <= 10^5, n is even. cost.length == n, cost[i].length == 3, 0 <= cost[i][j] <= 10^5",
-        "runs": 10
+        "runs": 20
     },
     "problem_info": {
         "contest": "Weekly Contest 433",

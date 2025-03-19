@@ -1,7 +1,7 @@
 {
     "fuzzing_params": {
         "Constraints": "1 <= coins.length <= 10^5, 1 <= k <= 10^9, coins[i] == [li, ri, ci], 1 <= li <= ri <= 10^9, 1 <= ci <= 1000. The given segments are non-overlapping.",
-        "runs": 10
+        "runs": 20
     },
     "problem_info": {
         "contest": "Weekly Contest 431",
