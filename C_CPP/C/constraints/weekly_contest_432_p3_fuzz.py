@@ -3,9 +3,12 @@ import subprocess
 import random
 import string
 import time
+from collections import deque, defaultdict
 
 # TODO: Configure test case generation parameters
-test_cases = 100  # Number of test cases to generate
+test_cases = 10  # Number of test cases to generate
+max_n = 10**4  # Maximum number of nodes
+max_Wi = 10**5  # Maximum weight of an edge
 
 # File Configs
 output_file = "../../../fuzz_outputs/C/weekly_contest_432_p3/outputs"  # Output file to store test cases and results
@@ -16,16 +19,74 @@ executable_name = "solution"  # Executable name
 # TODO: Generate a single test case
 def generate_test_input():
     random.seed(time.time())
-    pass
+    # 2 <= n <= 10^5, 1 <= threshold <= n - 1, 1 <= edges.length <= min(105, n * (n - 1) / 2)., edges[i].length == 3, 0 <= Ai, Bi < n, Ai != Bi, 1 <= Wi <= 10^6. There may be multiple edges between a pair of nodes, but they must have unique weights.
+    # 生成节点数 n 和阈值 threshold
+    n = random.randint(2, 10000)
+    threshold = random.randint(1, n - 1)
+    
+    # 计算边的数量 m
+    max_m = min(10000, n * (n - 1) // 2)
+    m = random.randint(n - 1, max_m)
+    
+    # 初始化边列表和权重记录
+    edges = []
+    used_wi = defaultdict(set)
+    
+    # 生成反向树
+    parent = [-1] * n
+    visited = [False] * n
+    queue = deque([0])
+    visited[0] = True
+    
+    while queue:
+        current = queue.popleft()
+        unvisited = [i for i in range(n) if not visited[i]]
+        random.shuffle(unvisited)
+        num_children = random.randint(0, min(len(unvisited), threshold))
+        for i in range(num_children):
+            child = unvisited[i]
+            parent[child] = current
+            queue.append(child)
+            visited[child] = True
+    
+    # 添加树边
+    for child in range(1, n):
+        if parent[child] != -1:
+            Ai, Bi = child, parent[child]
+            Wi = random.randint(1, 100000)
+            while Wi in used_wi[(Ai, Bi)]:
+                Wi = random.randint(1, 100000)
+            used_wi[(Ai, Bi)].add(Wi)
+            edges.append([Ai, Bi, Wi])
+    
+    # 添加额外边
+    additional_m = m - len(edges)
+    for _ in range(additional_m):
+        while True:
+            Ai = random.randint(0, n - 1)
+            Bi = random.randint(0, n - 1)
+            if Ai != Bi and (Ai, Bi) not in [(e[0], e[1]) for e in edges]:
+                Wi = random.randint(1, 100000)
+                while Wi in used_wi[(Ai, Bi)]:
+                    Wi = random.randint(1, 100000)
+                used_wi[(Ai, Bi)].add(Wi)
+                edges.append([Ai, Bi, Wi])
+                break
+    
+    return n, threshold, edges
 
 # TODO: Format test_input as a string for terminal input simulation
 def format_test_input(test_input):
-    pass
+    n, threshold, edges = test_input
+    formatted_input = f"{n} {threshold}\n"
+    for edge in edges:
+        formatted_input += f"{edge[0]} {edge[1]} {edge[2]}\n"
+    return formatted_input
 
 # Compile the C program
 def compile_c():
     try:
-        compile_command = ["gcc", os.path.join(c_folder, c_file), "-o", os.path.join(c_folder, executable_name)] # sometimes need to add -lm for math library
+        compile_command = ["gcc", os.path.join(c_folder, c_file), "-o", os.path.join(c_folder, executable_name)]
         subprocess.run(compile_command, check=True)
         print("Compilation successful.")
     except subprocess.CalledProcessError as e:
@@ -44,7 +105,7 @@ def simulate_output(test_input):
     except subprocess.CalledProcessError as e:
         print(f"Error during execution: {e}")
         return "Error"
-    
+
 # Clean up the compiled executable
 def cleanup():
     executable_path = os.path.join(c_folder, executable_name)

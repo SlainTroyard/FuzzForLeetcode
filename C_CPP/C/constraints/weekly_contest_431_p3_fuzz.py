@@ -5,7 +5,13 @@ import string
 import time
 
 # TODO: Configure test case generation parameters
-test_cases = 100  # Number of test cases to generate
+test_cases = 10  # Number of test cases to generate
+max_coins = 10**5  # Maximum number of coins
+max_k = 10**9  # Maximum value of k
+max_li = 10**9  # Maximum value of li
+max_ri = 10**9  # Maximum value of ri
+max_ci = 1000  # Maximum value of ci
+
 
 # File Configs
 output_file = "../../../fuzz_outputs/C/weekly_contest_431_p3/outputs"  # Output file to store test cases and results
@@ -16,16 +22,34 @@ executable_name = "solution"  # Executable name
 # TODO: Generate a single test case
 def generate_test_input():
     random.seed(time.time())
-    pass
+    # 1 <= coins.length <= 10^5, 1 <= k <= 10^9, coins[i] == [li, ri, ci], 1 <= li <= ri <= 10^9, 1 <= ci <= 1000. The given segments are non-overlapping.
+    coins = []
+    n = random.randint(1, max_coins)
+    k = random.randint(1, max_k)
+    # 在1-10^9中随机取出n个不重复区间
+    ranges = random.sample(range(1, 10**9), n*2)
+    ranges.sort()
+    for i in range(n):
+        li = ranges[i*2]
+        ri = ranges[i*2+1]
+        ci = random.randint(1, max_ci)
+        coins.append([li, ri, ci])
+    # 打乱顺序
+    random.shuffle(coins)
+    return n, k, coins
 
 # TODO: Format test_input as a string for terminal input simulation
 def format_test_input(test_input):
-    pass
+    n, k, coins = test_input
+    formatted_input = f"{n} {k}\n"
+    for coin in coins:
+        formatted_input += f"{coin[0]} {coin[1]} {coin[2]}\n"
+    return formatted_input
 
 # Compile the C program
 def compile_c():
     try:
-        compile_command = ["gcc", os.path.join(c_folder, c_file), "-o", os.path.join(c_folder, executable_name)] # sometimes need to add -lm for math library
+        compile_command = ["gcc", os.path.join(c_folder, c_file), "-o", os.path.join(c_folder, executable_name)]
         subprocess.run(compile_command, check=True)
         print("Compilation successful.")
     except subprocess.CalledProcessError as e:
@@ -44,7 +68,7 @@ def simulate_output(test_input):
     except subprocess.CalledProcessError as e:
         print(f"Error during execution: {e}")
         return "Error"
-    
+
 # Clean up the compiled executable
 def cleanup():
     executable_path = os.path.join(c_folder, executable_name)

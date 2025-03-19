@@ -4,8 +4,11 @@ import random
 import string
 import time
 
-# TODO: Configure test case generation parameters
-test_cases = 100  # Number of test cases to generate
+# Configure test case generation parameters
+test_cases = 20  # Number of test cases to generate
+max_array_length = 10**5  # Maximum length of the array
+max_element_value = 10**9  # Maximum value of an element in the array
+max_k = 70  # Maximum value of k
 
 # File Configs
 output_file = "../../../fuzz_outputs/C/weekly_contest_433_p2/outputs"  # Output file to store test cases and results
@@ -13,19 +16,26 @@ c_folder = "../src"  # Folder containing the C source code
 c_file = "weekly_contest_433_p2.c"  # C source file name
 executable_name = "solution"  # Executable name
 
-# TODO: Generate a single test case
+# Generate a single test case
 def generate_test_input():
     random.seed(time.time())
-    pass
+    # 1 <= nums.length <= 10^5, 0 <= nums[i] <= 10^9, 1 <= k <= min(70, nums.length)
+    n = random.randint(1, max_array_length)
+    k = random.randint(1, min(max_k, n))
+    nums = [random.randint(0, max_element_value) for _ in range(n)]
+    return n, k, nums
 
-# TODO: Format test_input as a string for terminal input simulation
+# Format test_input as a string for terminal input simulation
 def format_test_input(test_input):
-    pass
+    n, k, nums = test_input
+    formatted_input = f"{n} {k}\n"
+    formatted_input += " ".join(map(str, nums)) + "\n"
+    return formatted_input
 
 # Compile the C program
 def compile_c():
     try:
-        compile_command = ["gcc", os.path.join(c_folder, c_file), "-o", os.path.join(c_folder, executable_name)] # sometimes need to add -lm for math library
+        compile_command = ["gcc", os.path.join(c_folder, c_file), "-o", os.path.join(c_folder, executable_name), "-lm"] # added -lm for math library
         subprocess.run(compile_command, check=True)
         print("Compilation successful.")
     except subprocess.CalledProcessError as e:

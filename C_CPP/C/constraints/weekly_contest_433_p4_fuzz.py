@@ -5,7 +5,9 @@ import string
 import time
 
 # TODO: Configure test case generation parameters
-test_cases = 100  # Number of test cases to generate
+test_cases = 20  # Number of test cases to generate
+max_length = 80000  # Maximum length of the input array
+max_value = 1000000  # Maximum value of an element in the input array
 
 # File Configs
 output_file = "../../../fuzz_outputs/C/weekly_contest_433_p4/outputs"  # Output file to store test cases and results
@@ -16,16 +18,23 @@ executable_name = "solution"  # Executable name
 # TODO: Generate a single test case
 def generate_test_input():
     random.seed(time.time())
-    pass
+    # 1 <= nums.length <= 80000, 1 <= k <= nums.length, -10^6 <= nums[i] <= 10^6
+    n = random.randint(1, max_length)
+    k = random.randint(1, n)
+    nums = [random.randint(-max_value, max_value) for _ in range(n)]
+    return n, k, nums
 
 # TODO: Format test_input as a string for terminal input simulation
 def format_test_input(test_input):
-    pass
+    n, k, nums = test_input
+    formatted_input = f"{n} {k}\n"
+    formatted_input += " ".join(map(str, nums)) + "\n"
+    return formatted_input
 
 # Compile the C program
 def compile_c():
     try:
-        compile_command = ["gcc", os.path.join(c_folder, c_file), "-o", os.path.join(c_folder, executable_name)] # sometimes need to add -lm for math library
+        compile_command = ["gcc", os.path.join(c_folder, c_file), "-o", os.path.join(c_folder, executable_name)]
         subprocess.run(compile_command, check=True)
         print("Compilation successful.")
     except subprocess.CalledProcessError as e:
@@ -44,7 +53,7 @@ def simulate_output(test_input):
     except subprocess.CalledProcessError as e:
         print(f"Error during execution: {e}")
         return "Error"
-    
+
 # Clean up the compiled executable
 def cleanup():
     executable_path = os.path.join(c_folder, executable_name)

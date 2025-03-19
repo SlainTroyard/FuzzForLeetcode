@@ -6,6 +6,9 @@ import time
 
 # TODO: Configure test case generation parameters
 test_cases = 100  # Number of test cases to generate
+max_points = 5 * 10**4  # Maximum number of points
+max_point_value = 10**6  # Maximum value of a point
+max_m = 10**9  # Maximum value of m
 
 # File Configs
 output_file = "../../../fuzz_outputs/C/weekly_contest_436_p4/outputs"  # Output file to store test cases and results
@@ -16,16 +19,23 @@ executable_name = "solution"  # Executable name
 # TODO: Generate a single test case
 def generate_test_input():
     random.seed(time.time())
-    pass
+    # 2 <= n == points.length <= 5 * 10^4, 1 <= points[i] <= 10^6, 1 <= m <= 10^9
+    n = random.randint(2, max_points)
+    points = [random.randint(1, max_point_value) for _ in range(n)]
+    m = random.randint(1, max_m)
+    return n, points, m
 
 # TODO: Format test_input as a string for terminal input simulation
 def format_test_input(test_input):
-    pass
+    n, points, m = test_input
+    formatted_input = f"{n} {m}\n"
+    formatted_input += " ".join(str(point) for point in points)
+    return formatted_input
 
 # Compile the C program
 def compile_c():
     try:
-        compile_command = ["gcc", os.path.join(c_folder, c_file), "-o", os.path.join(c_folder, executable_name)] # sometimes need to add -lm for math library
+        compile_command = ["gcc", os.path.join(c_folder, c_file), "-o", os.path.join(c_folder, executable_name)]
         subprocess.run(compile_command, check=True)
         print("Compilation successful.")
     except subprocess.CalledProcessError as e:
@@ -44,7 +54,7 @@ def simulate_output(test_input):
     except subprocess.CalledProcessError as e:
         print(f"Error during execution: {e}")
         return "Error"
-    
+
 # Clean up the compiled executable
 def cleanup():
     executable_path = os.path.join(c_folder, executable_name)

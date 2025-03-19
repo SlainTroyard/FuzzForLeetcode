@@ -6,6 +6,8 @@ import time
 
 # TODO: Configure test case generation parameters
 test_cases = 100  # Number of test cases to generate
+max_string_length = 10**5  # Maximum length of the string
+min_string_length = 1  # Minimum length of the string
 
 # File Configs
 output_file = "../../../fuzz_outputs/C/weekly_contest_431_p2/outputs"  # Output file to store test cases and results
@@ -16,16 +18,20 @@ executable_name = "solution"  # Executable name
 # TODO: Generate a single test case
 def generate_test_input():
     random.seed(time.time())
-    pass
+    # 1 <= s.length <= 10^5, s consists only of lowercase English letters.
+    s = "".join(random.choices(string.ascii_lowercase, k=random.randint(min_string_length, max_string_length)))
+    return s
 
 # TODO: Format test_input as a string for terminal input simulation
 def format_test_input(test_input):
-    pass
+    s = test_input
+    formatted_input = f"{s}\n"
+    return formatted_input
 
 # Compile the C program
 def compile_c():
     try:
-        compile_command = ["gcc", os.path.join(c_folder, c_file), "-o", os.path.join(c_folder, executable_name)] # sometimes need to add -lm for math library
+        compile_command = ["gcc", os.path.join(c_folder, c_file), "-o", os.path.join(c_folder, executable_name)]
         subprocess.run(compile_command, check=True)
         print("Compilation successful.")
     except subprocess.CalledProcessError as e:
