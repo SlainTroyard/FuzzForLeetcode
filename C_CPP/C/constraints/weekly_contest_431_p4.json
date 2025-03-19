@@ -1,7 +1,7 @@
 {
     "fuzzing_params": {
         "Constraints": "1 <= intevals.length <= 5 * 10^4, intervals[i].length == 3, intervals[i] = [li, ri, weighti], 1 <= li <= ri <= 10^9, 1 <= weighti <= 10^9",
-        "runs": 10
+        "runs": 20
     },
     "problem_info": {
         "contest": "Weekly Contest 431",

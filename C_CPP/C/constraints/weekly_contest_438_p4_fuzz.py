@@ -5,7 +5,7 @@ import string
 import time
 
 # TODO: Configure test case generation parameters
-test_cases = 20  # Number of test cases to generate
+test_cases = 100  # Number of test cases to generate
 max_side = 10**9  # Maximum side length of the square
 max_points = 15 * 10**3  # Maximum number of points
 max_k = 25  # Maximum number of points to select

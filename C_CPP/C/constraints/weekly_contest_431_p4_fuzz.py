@@ -5,7 +5,7 @@ import string
 import time
 
 # TODO: Configure test case generation parameters
-test_cases = 10  # Number of test cases to generate
+test_cases = 20  # Number of test cases to generate
 max_intervals = 5*10**4  # Maximum number of intervals
 max_li = 10**9  # Maximum value of li
 max_ri = 10**9  # Maximum value of ri

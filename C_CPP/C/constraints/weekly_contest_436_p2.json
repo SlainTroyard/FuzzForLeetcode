@@ -1,7 +1,7 @@
 {
     "fuzzing_params": {
         "Constraints": "1 <= groups.length <= 10^5, 1 <= elements.length <= 10^5, 1 <= groups[i] <= 10^5, 1 <= elements[i] <= 10^5",
-        "runs": 10
+        "runs": 20
     },
     "problem_info": {
         "contest": "Weekly Contest 436",

@@ -1,7 +1,7 @@
 {
     "fuzzing_params": {
         "Constraints": "1 <= side <= 10^9, 4 <= points.length <= min(4 * side, 15 * 10^3), points[i] == [xi, yi]. The input is generated such that: points[i] lies on the boundary of the square. All points[i] are unique. 4 <= k <= min(25, points.length)",
-        "runs": 20
+        "runs": 100
     },
     "problem_info": {
         "contest": "Weekly Contest 438",

@@ -5,7 +5,7 @@ import string
 import time
 
 # TODO: Configure test case generation parameters
-test_cases = 10  # Number of test cases to generate
+test_cases = 20  # Number of test cases to generate
 max_pizzas = 200000  # Maximum number of pizzas
 max_pizza_slices = 100000  # Maximum number of slices in a pizza
 

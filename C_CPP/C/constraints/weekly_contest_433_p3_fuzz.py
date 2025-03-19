@@ -5,7 +5,7 @@ import string
 import time
 
 # TODO: Configure test case generation parameters
-test_cases = 10  # Number of test cases to generate
+test_cases = 20  # Number of test cases to generate
 max_n = 10**5  # Maximum value of n
 max_cost = 10**5  # Maximum value of cost[i][j]
 
