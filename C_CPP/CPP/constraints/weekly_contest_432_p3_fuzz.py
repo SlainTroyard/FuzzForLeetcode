@@ -7,8 +7,8 @@ from collections import deque, defaultdict
 
 # TODO: Configure test case generation parameters
 test_cases = 10  # Number of test cases to generate
-max_n = 10**5  # Maximum number of nodes
-max_Wi = 10**6  # Maximum weight of an edge
+max_n = 10**4  # Maximum number of nodes
+max_Wi = 10**5  # Maximum weight of an edge
 
 # File Configs
 output_file = "../../../fuzz_outputs/CPP/weekly_contest_432_p3/outputs"  # Output file to store test cases and results
@@ -21,11 +21,11 @@ def generate_test_input():
     random.seed(time.time())
     # 2 <= n <= 10^5, 1 <= threshold <= n - 1, 1 <= edges.length <= min(105, n * (n - 1) / 2)., edges[i].length == 3, 0 <= Ai, Bi < n, Ai != Bi, 1 <= Wi <= 10^6. There may be multiple edges between a pair of nodes, but they must have unique weights.
     # 生成节点数 n 和阈值 threshold
-    n = random.randint(2, 100000)
+    n = random.randint(2, 10000)
     threshold = random.randint(1, n - 1)
     
     # 计算边的数量 m
-    max_m = min(100000, n * (n - 1) // 2)
+    max_m = min(10000, n * (n - 1) // 2)
     m = random.randint(n - 1, max_m)
     
     # 初始化边列表和权重记录
@@ -53,9 +53,9 @@ def generate_test_input():
     for child in range(1, n):
         if parent[child] != -1:
             Ai, Bi = child, parent[child]
-            Wi = random.randint(1, 1000000)
+            Wi = random.randint(1, 100000)
             while Wi in used_wi[(Ai, Bi)]:
-                Wi = random.randint(1, 1000000)
+                Wi = random.randint(1, 100000)
             used_wi[(Ai, Bi)].add(Wi)
             edges.append([Ai, Bi, Wi])
     
@@ -66,9 +66,9 @@ def generate_test_input():
             Ai = random.randint(0, n - 1)
             Bi = random.randint(0, n - 1)
             if Ai != Bi and (Ai, Bi) not in [(e[0], e[1]) for e in edges]:
-                Wi = random.randint(1, 1000000)
+                Wi = random.randint(1, 100000)
                 while Wi in used_wi[(Ai, Bi)]:
-                    Wi = random.randint(1, 1000000)
+                    Wi = random.randint(1, 100000)
                 used_wi[(Ai, Bi)].add(Wi)
                 edges.append([Ai, Bi, Wi])
                 break

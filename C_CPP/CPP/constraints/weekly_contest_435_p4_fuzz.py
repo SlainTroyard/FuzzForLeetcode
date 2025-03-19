@@ -5,7 +5,7 @@ import string
 import time
 
 # TODO: Configure test case generation parameters
-test_cases = 20  # Number of test cases to generate
+test_cases = 100   # Number of test cases to generate
 max_string_length = 30000  # Maximum length of the string
 min_string_length = 3  # Minimum length of the string
 

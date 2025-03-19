@@ -5,7 +5,7 @@ import string
 import time
 
 # TODO: Configure test case generation parameters
-test_cases = 20  # Number of test cases to generate
+test_cases = 100  # Number of test cases to generate
 max_n = 50000  # Maximum value of n
 max_k = 26  # Maximum value of k
 

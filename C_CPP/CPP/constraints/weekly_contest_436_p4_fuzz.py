@@ -5,7 +5,7 @@ import string
 import time
 
 # TODO: Configure test case generation parameters
-test_cases = 20  # Number of test cases to generate
+test_cases = 100  # Number of test cases to generate
 max_points = 5 * 10**4  # Maximum number of points
 max_point_value = 10**6  # Maximum value of a point
 max_m = 10**9  # Maximum value of m
