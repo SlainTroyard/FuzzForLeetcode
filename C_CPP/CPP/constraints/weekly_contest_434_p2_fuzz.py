@@ -17,10 +17,10 @@ executable_name = "solution"  # Executable name
 
 # 创建简单的测试样例，用于验证程序是否能正常运行
 def create_simple_test():
-    # 使用LeetCode提供的示例 - 确保使用数字ID而不是id前缀
+    # 使用LeetCode提供的示例 - 使用id前缀而不是纯数字ID
     return 2, [
-        ["MESSAGE", "10", "0 1"],  # 改为直接使用数字ID
-        ["OFFLINE", "11", "0"],
+        ["MESSAGE", "10", "id0 id1"],  # 使用id前缀
+        ["OFFLINE", "11", "id0"],
         ["MESSAGE", "71", "HERE"]
     ]
 
@@ -40,8 +40,9 @@ def generate_test_input():
         if len(online_users) > 0 and random.random() < 0.3:  # 30%的概率生成OFFLINE事件
             event_type = "OFFLINE"
             # 随机选择一个在线用户
-            user_id = str(random.choice(list(online_users)))
-            online_users.remove(int(user_id))  # 用户下线
+            user_num = random.choice(list(online_users))
+            user_id = f"id{user_num}"  # 使用id前缀
+            online_users.remove(user_num)  # 用户下线
             content = user_id
         else:
             event_type = "MESSAGE"
@@ -49,13 +50,13 @@ def generate_test_input():
             message_type = random.choice(["mention", "ALL", "HERE"])
             
             if message_type == "mention":
-                # 限制提及数量，避免过长输入，并使用纯数字ID
+                # 限制提及数量，避免过长输入，并使用id前缀
                 num_mentions = random.randint(1, min(5, number_of_users))
                 mentions = []
                 for _ in range(num_mentions):
                     user_num = random.randint(0, number_of_users - 1)
-                    # 使用纯数字ID
-                    mentions.append(str(user_num))
+                    # 使用id前缀
+                    mentions.append(f"id{user_num}")
                 content = " ".join(mentions)
             else:
                 content = message_type
@@ -87,7 +88,7 @@ def format_test_input(test_input):
     except Exception as e:
         print(f"Error formatting test input: {e}")
         # 返回一个简单的有效输入作为备用
-        return "2 3\nMESSAGE 10 0 1\nOFFLINE 11 0\nMESSAGE 71 HERE\n"
+        return "2 3\nMESSAGE 10 id0 id1\nOFFLINE 11 id0\nMESSAGE 71 HERE\n"  # 使用id前缀
 
 # Compile the C++ program
 def compile_cpp():
