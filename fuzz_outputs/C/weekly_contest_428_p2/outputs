@@ -1,4 +1,4 @@
-Input:
+input:
 EUR
 2
 EUR USD 2.0
@@ -7,10 +7,10 @@ USD JPY 3.0
 JPY USD 4.0
 USD CHF 5.0
 CHF EUR 6.0
-Output:
+output:
 720.00000
 -------------------------
-Input:
+input:
 WWI
 5
 WWI VWN 1.13
@@ -29,10 +29,10 @@ KU P 7.08
 P QC 3.58
 QC BY 2.15
 BY WWI 4.62
-Output:
+output:
 22396394.89740
 -------------------------
-Input:
+input:
 CXJ
 2
 CXJ SB 4.8
@@ -43,10 +43,10 @@ B TN 7.65
 TN Q 4.87
 Q NP 2.72
 NP CXJ 1.3
-Output:
+output:
 16349.46514
 -------------------------
-Input:
+input:
 IXT
 4
 IXT Q 1.62
@@ -57,10 +57,10 @@ X JCS 8.74
 JCS SG 6.48
 SG I 5.36
 I IXT 9.68
-Output:
+output:
 147152.85915
 -------------------------
-Input:
+input:
 BUM
 4
 BUM L 4.51
@@ -71,10 +71,10 @@ BL H 3.34
 H E 6.8
 E XQ 5.9
 XQ BUM 2.17
-Output:
+output:
 81663.78537
 -------------------------
-Input:
+input:
 KDQ
 4
 KDQ U 2.11
@@ -84,10 +84,10 @@ MHP RHG 5.77
 2
 RHG A 2.39
 A KDQ 5.57
-Output:
+output:
 9339.92534
 -------------------------
-Input:
+input:
 DR
 6
 DR NX 9.3
@@ -105,10 +105,10 @@ NU Q 5.45
 Q CCT 9.8
 CCT X 6.85
 X DR 8.26
-Output:
+output:
 133156402778.99298
 -------------------------
-Input:
+input:
 D
 2
 D TX 8.47
@@ -118,10 +118,10 @@ T G 6.54
 G A 6.66
 A T 4.51
 T D 1.02
-Output:
+output:
 7976.45573
 -------------------------
-Input:
+input:
 NHZ
 5
 NHZ ZSI 2.2
@@ -134,10 +134,10 @@ D MKZ 8.79
 MKZ R 2.47
 R PW 5.16
 PW NHZ 5.9
-Output:
+output:
 1471854.79924
 -------------------------
-Input:
+input:
 NNX
 4
 NNX MQ 7.93
@@ -147,10 +147,10 @@ FY YLJ 1.37
 2
 YLJ WR 6.06
 WR NNX 9.47
-Output:
+output:
 17269.02843
 -------------------------
-Input:
+input:
 FE
 2
 FE K 8.56
@@ -159,10 +159,10 @@ K F 2.89
 F HKB 2.02
 HKB EMT 6.81
 EMT FE 2.15
-Output:
+output:
 731.65871
 -------------------------
-Input:
+input:
 GN
 6
 GN P 9.54
@@ -173,10 +173,10 @@ L UT 5.19
 UT B 6.96
 1
 B GN 9.21
-Output:
+output:
 172961.21150
 -------------------------
-Input:
+input:
 MEN
 9
 MEN BN 4.44
@@ -191,10 +191,10 @@ HB J 4.56
 2
 J N 6.45
 N MEN 5.66
-Output:
+output:
 5444429.48063
 -------------------------
-Input:
+input:
 GXW
 8
 GXW FP 6.51
@@ -210,10 +210,10 @@ W SJ 4.84
 SJ EV 8.62
 EV LQ 1.82
 LQ GXW 4.9
-Output:
+output:
 10737309.35799
 -------------------------
-Input:
+input:
 FYW
 8
 FYW SFW 5.52
@@ -227,10 +227,10 @@ SB NR 5.25
 2
 NR M 2.49
 M FYW 1.49
-Output:
+output:
 1531094.49907
 -------------------------
-Input:
+input:
 OC
 10
 OC JMJ 4.55
@@ -250,10 +250,10 @@ ZO WSA 6.62
 WSA WDS 5.98
 WDS YDR 9.26
 YDR OC 1.34
-Output:
+output:
 660488497113.28174
 -------------------------
-Input:
+input:
 HHK
 1
 HHK GT 1.49
@@ -261,10 +261,10 @@ HHK GT 1.49
 GT WUJ 1.76
 WUJ K 6.65
 K HHK 5.8
-Output:
+output:
 101.14597
 -------------------------
-Input:
+input:
 WH
 8
 WH C 9.61
@@ -283,10 +283,10 @@ ASN TJA 2.22
 TJA R 3.86
 R R 6.13
 R WH 2.47
-Output:
+output:
 1161435029.69892
 -------------------------
-Input:
+input:
 CA
 7
 CA DYX 4.45
@@ -304,10 +304,10 @@ M SC 8.03
 SC XM 4.53
 XM J 5.63
 J CA 3.17
-Output:
+output:
 7103152818.98871
 -------------------------
-Input:
+input:
 IO
 3
 IO T 5.95
@@ -315,10 +315,10 @@ T MJ 4.25
 MJ PPR 4.94
 1
 PPR IO 2.06
-Output:
+output:
 257.33572
 -------------------------
-Input:
+input:
 NP
 6
 NP L 1.4
@@ -336,10 +336,10 @@ MRA UG 9.67
 UG ZIM 2.22
 ZIM O 5.85
 O NP 7.53
-Output:
+output:
 2182134623.45832
 -------------------------
-Input:
+input:
 O
 10
 O CX 6.29
@@ -355,10 +355,10 @@ WN H 5.31
 2
 H LN 3.79
 LN O 1.76
-Output:
+output:
 103247672.77343
 -------------------------
-Input:
+input:
 O
 4
 O U 6.06
@@ -372,10 +372,10 @@ JQH Q 1.04
 Q LH 5.65
 LH NC 8.73
 NC O 5.54
-Output:
+output:
 7103727.62171
 -------------------------
-Input:
+input:
 FOI
 7
 FOI MX 2.74
@@ -387,10 +387,10 @@ D WBY 1.19
 WBY V 3.44
 1
 V FOI 2.85
-Output:
+output:
 25249.15064
 -------------------------
-Input:
+input:
 IYC
 1
 IYC QIO 6.1
@@ -402,10 +402,10 @@ H HV 1.82
 HV M 9.43
 M GAC 8.18
 GAC IYC 4.3
-Output:
+output:
 772691.86365
 -------------------------
-Input:
+input:
 IT
 8
 IT Z 8.11
@@ -425,10 +425,10 @@ TCJ EI 4.9
 EI NVX 5.03
 NVX U 2.06
 U IT 9.1
-Output:
+output:
 102689788006.29854
 -------------------------
-Input:
+input:
 BYF
 10
 BYF UP 3.82
@@ -450,10 +450,10 @@ NO J 6.98
 J ETV 3.82
 ETV FT 2.73
 FT BYF 3.04
-Output:
+output:
 463747226145.56384
 -------------------------
-Input:
+input:
 KY
 4
 KY HFV 3.18
@@ -467,10 +467,10 @@ FVD V 8.49
 V OU 7.79
 OU NW 1.68
 NW KY 7.22
-Output:
+output:
 8987297.36608
 -------------------------
-Input:
+input:
 FUE
 8
 FUE DO 9.0
@@ -491,10 +491,10 @@ BNN QM 1.17
 QM X 4.56
 X MO 1.81
 MO FUE 7.78
-Output:
+output:
 74420252994.62299
 -------------------------
-Input:
+input:
 R
 3
 R F 1.72
@@ -506,10 +506,10 @@ GR MRX 9.35
 MRX WD 6.54
 WD KA 6.72
 KA R 7.78
-Output:
+output:
 326865.85687
 -------------------------
-Input:
+input:
 J
 8
 J XH 1.22
@@ -527,10 +527,10 @@ O A 5.41
 A YIW 2.11
 YIW X 7.55
 X J 4.3
-Output:
+output:
 993502569.17871
 -------------------------
-Input:
+input:
 GC
 5
 GC PIG 5.39
@@ -540,10 +540,10 @@ V F 7.95
 F T 4.08
 1
 T GC 9.65
-Output:
+output:
 32393.01594
 -------------------------
-Input:
+input:
 X
 3
 X AMU 6.58
@@ -556,10 +556,10 @@ K DW 8.58
 DW LE 9.5
 LE S 8.56
 S X 1.42
-Output:
+output:
 2417379.87956
 -------------------------
-Input:
+input:
 DTS
 4
 DTS OJO 6.81
@@ -575,10 +575,10 @@ E X 3.18
 X ZPS 9.96
 ZPS HBW 8.3
 HBW DTS 8.68
-Output:
+output:
 4841765159.23689
 -------------------------
-Input:
+input:
 KJ
 9
 KJ IY 7.77
@@ -599,10 +599,10 @@ E ZE 1.55
 ZE KJL 6.05
 KJL W 4.57
 W KJ 2.07
-Output:
+output:
 54018684540.37678
 -------------------------
-Input:
+input:
 VO
 3
 VO ON 1.96
@@ -613,10 +613,10 @@ L OLW 7.58
 OLW UYV 8.43
 UYV C 2.35
 C VO 3.32
-Output:
+output:
 29767.73044
 -------------------------
-Input:
+input:
 NTW
 5
 NTW D 8.44
@@ -627,10 +627,10 @@ P YP 4.24
 2
 YP C 3.85
 C NTW 7.93
-Output:
+output:
 55996.90879
 -------------------------
-Input:
+input:
 F
 8
 F KB 5.17
@@ -645,10 +645,10 @@ W B 1.08
 B CN 5.18
 CN Q 9.71
 Q F 8.69
-Output:
+output:
 4337730.67457
 -------------------------
-Input:
+input:
 QOR
 8
 QOR L 2.16
@@ -669,10 +669,10 @@ Z TF 6.18
 TF WT 3.68
 WT DT 4.63
 DT QOR 4.34
-Output:
+output:
 1682400885.61051
 -------------------------
-Input:
+input:
 C
 7
 C VG 6.13
@@ -687,10 +687,10 @@ TQ NQT 4.35
 NQT JE 1.33
 JE DC 9.08
 DC C 5.69
-Output:
+output:
 11876669.21456
 -------------------------
-Input:
+input:
 F
 9
 F E 9.5
@@ -704,10 +704,10 @@ OY U 7.97
 U Y 2.21
 1
 Y F 1.68
-Output:
+output:
 6195595.37702
 -------------------------
-Input:
+input:
 NT
 5
 NT C 9.99
@@ -726,10 +726,10 @@ QP PNM 9.71
 PNM QV 3.29
 QV WV 7.8
 WV NT 2.62
-Output:
+output:
 236398641698.88162
 -------------------------
-Input:
+input:
 C
 7
 C YZ 1.66
@@ -750,10 +750,10 @@ BJ D 2.92
 D N 6.69
 N TV 8.6
 TV C 9.73
-Output:
+output:
 24657329739.28603
 -------------------------
-Input:
+input:
 DMV
 6
 DMV TV 3.47
@@ -772,10 +772,10 @@ OUD GOY 6.45
 GOY AL 5.87
 AL IT 2.67
 IT DMV 9.38
-Output:
+output:
 5192632307.52568
 -------------------------
-Input:
+input:
 Q
 9
 Q DGX 8.42
@@ -797,20 +797,20 @@ VM RCH 8.33
 RCH T 6.92
 T MP 4.01
 MP Q 8.54
-Output:
+output:
 3072614678321.76514
 -------------------------
-Input:
+input:
 S
 2
 S NZI 4.77
 NZI LC 6.04
 1
 LC S 1.19
-Output:
+output:
 34.28485
 -------------------------
-Input:
+input:
 IO
 3
 IO EG 4.22
@@ -822,10 +822,10 @@ WR H 7.94
 H FHQ 7.66
 FHQ H 7.22
 H IO 3.02
-Output:
+output:
 15712.57095
 -------------------------
-Input:
+input:
 UV
 3
 UV SAM 8.79
@@ -835,10 +835,10 @@ G SN 4.98
 SN M 6.15
 M UL 2.19
 UL UV 6.25
-Output:
+output:
 3979.61649
 -------------------------
-Input:
+input:
 X
 7
 X WU 6.33
@@ -853,10 +853,10 @@ V TL 3.04
 TL O 6.97
 O PH 5.41
 PH X 4.03
-Output:
+output:
 6579045.93269
 -------------------------
-Input:
+input:
 E
 10
 E AGA 9.88
@@ -875,20 +875,20 @@ HI VE 5.53
 VE QLP 8.12
 QLP X 5.8
 X E 1.64
-Output:
+output:
 216788377857.09720
 -------------------------
-Input:
+input:
 IO
 2
 IO CN 7.38
 CN FE 7.18
 1
 FE IO 1.04
-Output:
+output:
 55.10794
 -------------------------
-Input:
+input:
 H
 10
 H TP 3.22
@@ -909,10 +909,10 @@ UUT UX 4.4
 UX CA 9.87
 CA NM 1.98
 NM H 7.82
-Output:
+output:
 25855041832.17191
 -------------------------
-Input:
+input:
 Z
 6
 Z ABW 5.68
@@ -930,10 +930,10 @@ B BAC 9.97
 BAC V 6.31
 V Q 4.15
 Q Z 5.93
-Output:
+output:
 405269985523.56879
 -------------------------
-Input:
+input:
 A
 7
 A LFI 4.7
@@ -945,10 +945,10 @@ U TRN 4.42
 TRN QBE 3.64
 1
 QBE A 9.68
-Output:
+output:
 283022.16686
 -------------------------
-Input:
+input:
 DMC
 5
 DMC KAL 3.43
@@ -958,10 +958,10 @@ NHU JC 7.15
 JC T 2.5
 1
 T DMC 4.54
-Output:
+output:
 8390.09055
 -------------------------
-Input:
+input:
 CAS
 4
 CAS COR 2.04
@@ -974,10 +974,10 @@ OM JIU 7.97
 JIU BM 9.93
 BM DA 5.72
 DA CAS 5.06
-Output:
+output:
 6868801.84004
 -------------------------
-Input:
+input:
 XRB
 10
 XRB SAZ 9.86
@@ -995,10 +995,10 @@ A X 7.62
 X Y 6.05
 Y XE 6.69
 XE XRB 2.59
-Output:
+output:
 26287022208.27726
 -------------------------
-Input:
+input:
 BKH
 2
 BKH QOH 6.55
@@ -1008,10 +1008,10 @@ L ISN 8.21
 ISN LC 6.82
 LC VM 2.4
 VM BKH 5.38
-Output:
+output:
 27939.22536
 -------------------------
-Input:
+input:
 TG
 3
 TG V 7.3
@@ -1028,10 +1028,10 @@ WQP B 9.67
 B DVD 3.97
 DVD LL 2.69
 LL TG 1.38
-Output:
+output:
 517093072.24372
 -------------------------
-Input:
+input:
 CJT
 6
 CJT J 6.64
@@ -1044,10 +1044,10 @@ YH PN 9.76
 PN NA 4.37
 NA AES 7.59
 AES CJT 6.8
-Output:
+output:
 9113128.89842
 -------------------------
-Input:
+input:
 JK
 3
 JK YDF 3.85
@@ -1061,10 +1061,10 @@ UCT UQ 4.77
 UQ N 9.91
 N I 6.56
 I JK 4.96
-Output:
+output:
 4666477.44451
 -------------------------
-Input:
+input:
 ZA
 1
 ZA R 4.02
@@ -1077,10 +1077,10 @@ D CC 4.06
 CC FT 8.65
 FT B 8.51
 B ZA 9.34
-Output:
+output:
 29950502.76186
 -------------------------
-Input:
+input:
 E
 5
 E Y 7.02
@@ -1092,10 +1092,10 @@ S LVH 7.7
 LVH YA 3.94
 YA OY 9.61
 OY E 2.76
-Output:
+output:
 315323.42420
 -------------------------
-Input:
+input:
 R
 6
 R Y 7.76
@@ -1113,10 +1113,10 @@ S AXH 9.47
 AXH YR 7.36
 YR HI 9.86
 HI R 7.59
-Output:
+output:
 62414455071.99985
 -------------------------
-Input:
+input:
 Q
 5
 Q O 8.92
@@ -1127,10 +1127,10 @@ M LB 2.63
 2
 LB A 1.84
 A Q 8.31
-Output:
+output:
 72564.72320
 -------------------------
-Input:
+input:
 U
 9
 U MSW 4.01
@@ -1147,10 +1147,10 @@ XT IGY 2.33
 IGY TR 3.12
 TR ZR 5.5
 ZR U 6.47
-Output:
+output:
 798319669.15584
 -------------------------
-Input:
+input:
 H
 3
 H X 7.83
@@ -1166,10 +1166,10 @@ BXV CBL 6.0
 CBL XR 8.26
 XR ZI 9.24
 ZI H 3.38
-Output:
+output:
 86842097.64918
 -------------------------
-Input:
+input:
 OBH
 2
 OBH P 5.06
@@ -1181,10 +1181,10 @@ PGR BQF 5.57
 BQF LJS 9.26
 LJS R 4.53
 R OBH 6.16
-Output:
+output:
 1812102.33855
 -------------------------
-Input:
+input:
 MPK
 7
 MPK UG 7.92
@@ -1202,10 +1202,10 @@ TVN CRL 4.36
 CRL DH 8.88
 DH D 9.18
 D MPK 7.11
-Output:
+output:
 3955272756.61779
 -------------------------
-Input:
+input:
 E
 3
 E RG 5.84
@@ -1216,10 +1216,10 @@ C FKN 2.75
 FKN FE 9.55
 FE M 5.44
 M E 1.16
-Output:
+output:
 27932.00610
 -------------------------
-Input:
+input:
 EUT
 9
 EUT YGP 6.42
@@ -1236,10 +1236,10 @@ QS AYN 3.59
 AYN HB 3.22
 HB B 6.12
 B EUT 8.83
-Output:
+output:
 5839682706.23561
 -------------------------
-Input:
+input:
 WOZ
 4
 WOZ Y 7.1
@@ -1254,10 +1254,10 @@ OS U 9.65
 U X 9.92
 X XF 5.63
 XF WOZ 4.91
-Output:
+output:
 968490019.28372
 -------------------------
-Input:
+input:
 VZL
 9
 VZL NUM 1.09
@@ -1273,10 +1273,10 @@ BB G 3.24
 G J 3.32
 J DLT 5.53
 DLT VZL 5.04
-Output:
+output:
 832411.42638
 -------------------------
-Input:
+input:
 WQE
 8
 WQE T 1.43
@@ -1289,10 +1289,10 @@ VRG GY 9.82
 GY KV 4.38
 1
 KV WQE 4.43
-Output:
+output:
 406029.09147
 -------------------------
-Input:
+input:
 RWI
 3
 RWI PC 5.84
@@ -1302,10 +1302,10 @@ MZE XIG 7.05
 XIG TEV 9.4
 TEV E 4.86
 E RWI 4.66
-Output:
+output:
 11657.45223
 -------------------------
-Input:
+input:
 EA
 1
 EA D 7.12
@@ -1318,10 +1318,10 @@ AIF QAD 9.26
 QAD UD 7.7
 UD N 9.59
 N EA 7.83
-Output:
+output:
 5205158.21267
 -------------------------
-Input:
+input:
 V
 2
 V Y 6.26
@@ -1332,10 +1332,10 @@ N W 6.73
 W E 2.28
 E ZBY 3.94
 ZBY V 5.76
-Output:
+output:
 87881.56128
 -------------------------
-Input:
+input:
 PC
 3
 PC F 2.26
@@ -1349,20 +1349,20 @@ IFD ZQM 6.36
 ZQM ZTN 1.66
 ZTN Q 8.87
 Q PC 9.36
-Output:
+output:
 12422599.26866
 -------------------------
-Input:
+input:
 N
 2
 N Z 7.13
 Z CE 9.55
 1
 CE N 2.66
-Output:
+output:
 181.12339
 -------------------------
-Input:
+input:
 E
 4
 E RYE 7.78
@@ -1379,10 +1379,10 @@ N SYM 8.48
 SYM RHS 7.34
 RHS JM 2.67
 JM E 5.94
-Output:
+output:
 22506176058.95958
 -------------------------
-Input:
+input:
 IWG
 6
 IWG BCZ 1.91
@@ -1398,10 +1398,10 @@ CCN L 8.6
 L P 5.05
 P MZ 9.52
 MZ IWG 8.4
-Output:
+output:
 314375656.13189
 -------------------------
-Input:
+input:
 JDO
 3
 JDO MK 5.2
@@ -1416,10 +1416,10 @@ OG ZR 5.42
 ZR I 5.31
 I QZF 3.82
 QZF JDO 4.73
-Output:
+output:
 5128611759.67908
 -------------------------
-Input:
+input:
 TEH
 9
 TEH TVV 3.49
@@ -1436,10 +1436,10 @@ RYW ZWL 9.37
 ZWL M 6.23
 M E 2.44
 E TEH 8.48
-Output:
+output:
 19831196.78313
 -------------------------
-Input:
+input:
 ME
 9
 ME M 9.34
@@ -1457,10 +1457,10 @@ VV BO 1.49
 BO Q 6.82
 Q ZHJ 9.46
 ZHJ ME 8.4
-Output:
+output:
 5615904057.69196
 -------------------------
-Input:
+input:
 RD
 4
 RD T 7.91
@@ -1469,10 +1469,10 @@ D I 1.64
 I TKZ 7.65
 1
 TKZ RD 6.69
-Output:
+output:
 3624.93753
 -------------------------
-Input:
+input:
 GGL
 10
 GGL E 4.02
@@ -1494,10 +1494,10 @@ W S 1.86
 S L 1.17
 L V 6.08
 V GGL 5.55
-Output:
+output:
 150518238863.34903
 -------------------------
-Input:
+input:
 JY
 6
 JY Z 7.14
@@ -1508,10 +1508,10 @@ O FBZ 9.56
 FBZ ZD 9.6
 1
 ZD JY 2.08
-Output:
+output:
 346906.84007
 -------------------------
-Input:
+input:
 YH
 3
 YH RJ 7.5
@@ -1525,10 +1525,10 @@ VM UWE 9.54
 UWE EBE 2.88
 EBE ULE 6.46
 ULE YH 2.95
-Output:
+output:
 194668.33447
 -------------------------
-Input:
+input:
 KF
 7
 KF DJ 2.12
@@ -1547,10 +1547,10 @@ B H 4.52
 H GB 3.56
 GB MG 8.49
 MG KF 4.05
-Output:
+output:
 4804972715.05797
 -------------------------
-Input:
+input:
 DVQ
 5
 DVQ FUN 9.17
@@ -1567,10 +1567,10 @@ ZP L 6.9
 L ZRX 8.61
 ZRX B 8.06
 B DVQ 8.92
-Output:
+output:
 39974789593.69331
 -------------------------
-Input:
+input:
 BBE
 9
 BBE SO 2.19
@@ -1587,10 +1587,10 @@ G URO 9.37
 URO I 4.74
 I ZD 5.21
 ZD BBE 2.23
-Output:
+output:
 1895415616.74093
 -------------------------
-Input:
+input:
 G
 8
 G A 8.15
@@ -1610,10 +1610,10 @@ NK U 3.87
 U T 7.33
 T S 2.5
 S G 8.5
-Output:
+output:
 149654035661.10379
 -------------------------
-Input:
+input:
 J
 2
 J YTB 3.83
@@ -1624,10 +1624,10 @@ D F 2.42
 F L 8.42
 L JYF 8.63
 JYF J 3.68
-Output:
+output:
 55212.53043
 -------------------------
-Input:
+input:
 U
 6
 U F 7.12
@@ -1639,10 +1639,10 @@ Q X 2.59
 2
 X DZH 5.4
 DZH U 1.15
-Output:
+output:
 53299.19635
 -------------------------
-Input:
+input:
 BP
 9
 BP JH 3.26
@@ -1657,10 +1657,10 @@ OZE TD 3.36
 2
 TD VWG 4.89
 VWG BP 2.29
-Output:
+output:
 334825.24244
 -------------------------
-Input:
+input:
 XXB
 9
 XXB M 4.6
@@ -1675,20 +1675,20 @@ XR MVL 6.32
 2
 MVL M 1.63
 M XXB 1.53
-Output:
+output:
 860497.26754
 -------------------------
-Input:
+input:
 YA
 1
 YA RTC 5.56
 2
 RTC LFN 6.16
 LFN YA 8.94
-Output:
+output:
 306.19142
 -------------------------
-Input:
+input:
 LZU
 4
 LZU F 7.97
@@ -1706,10 +1706,10 @@ MZV TG 4.51
 TG OU 2.5
 OU WYN 1.48
 WYN LZU 8.29
-Output:
+output:
 5003110018.89391
 -------------------------
-Input:
+input:
 WQP
 7
 WQP J 8.55
@@ -1728,10 +1728,10 @@ T YS 4.32
 YS XQK 3.99
 XQK FW 1.12
 FW WQP 9.57
-Output:
+output:
 11492326949.56775
 -------------------------
-Input:
+input:
 LFS
 7
 LFS P 3.98
@@ -1747,6 +1747,6 @@ AK EXE 3.92
 EXE OBY 5.52
 OBY L 5.29
 L LFS 8.26
-Output:
+output:
 154676736.24299
 -------------------------

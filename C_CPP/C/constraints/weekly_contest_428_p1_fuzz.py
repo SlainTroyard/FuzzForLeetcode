@@ -63,8 +63,8 @@ if __name__ == "__main__":
                 n, events = generate_test_input()
                 test_input = format_test_input(n, events)
                 expected_output = simulate_output(test_input)
-                f.write(f"Input:\n{test_input}\n")
-                f.write(f"Output:\n{expected_output}\n")
+                f.write(f"input:\n{test_input}\n")
+                f.write(f"output:\n{expected_output}\n")
                 f.write("-------------------------\n")
     finally:
         executable_path = os.path.join(c_folder, executable_name)

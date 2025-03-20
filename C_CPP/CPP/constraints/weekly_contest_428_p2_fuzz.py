@@ -98,8 +98,8 @@ if __name__ == "__main__":
 
                 test_input = format_test_input(initial_currency, pairs1, rates1, pairs2, rates2)
                 simulated_output = simulate_output(test_input)
-                f.write(f"Input:\n{test_input}\n")
-                f.write(f"Output:\n{simulated_output}\n")
+                f.write(f"input:\n{test_input}\n")
+                f.write(f"output:\n{simulated_output}\n")
                 f.write("-------------------------\n")
     finally:
         executable_path = os.path.join(cpp_folder, executable_name)
