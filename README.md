@@ -1,16 +1,13 @@
 # FuzzForLeetcode
-- LeetCode Contest Fuzzing Project
+LeetCode Contest Fuzzing Project
 
 这是一个针对LeetCode竞赛题目的自动化Fuzzing测试项目。
 该项目旨在通过模糊测试(Fuzzing)技术，为LeetCode竞赛题目生成大量有效的测试用例。
 
-## 未解决题目编号：
-
-
 ## 项目结构
 
 ```
-fuzz_test_project/
+FuzzForLeetcode/
 ├── C_CPP/
 │   ├── C/                     # C语言实现
 │   │   ├── src/              # C源文件
@@ -24,7 +21,8 @@ fuzz_test_project/
 ├── scripts/                  # 自动化脚本
 │   ├── template_generator.py # 模板生成器
 │   └── batch_runner.py      # 批量测试运行器
-├── CMakeLists.txt           # CMake构建配置
+├── missing_examples.txt      # 缺少测试用例的题目列表 
+├── find_missing_examples.sh  # 查找缺少测试用例的脚本
 └── README.md                # 项目文档
 ```
 
@@ -52,7 +50,7 @@ brew install cmake llvm python3
 
 ```bash
 git clone <repository_url>
-cd fuzz_test_project
+cd FuzzForLeetcode
 ```
 
 ### 2. 生成题目模板
@@ -102,16 +100,16 @@ python scripts/batch_runner.py --contest 413 --problem 1
 
 ```bash
 # 运行所有已实现题目的测试
-python scripts/batch_runner.py --batch or --all or no args
+python scripts/batch_runner.py --all
 
 # 使用特定数量的并行进程运行批量测试
-python scripts/batch_runner.py --batch --max-workers 8
+python scripts/batch_runner.py --all --max-workers 8
 ```
 
 ### 5. 查看结果
 
 测试结果将保存在`fuzz_outputs`目录下：
-VV
+
 ```bash
 # 查看C版本的测试结果
 cat fuzz_outputs/C/weekly_contest_413_p1/output/test_cases.txt
@@ -121,6 +119,18 @@ cat fuzz_outputs/CPP/weekly_contest_413_p1/output/test_cases.txt
 ```
 
 测试语料将保存在`corpus`目录下。
+
+### 6. 检查缺失的测试用例
+
+您可以使用`find_missing_examples.sh`脚本检查那些已实现但缺少测试用例的题目：
+
+```bash
+# 查找所有缺少测试用例的题目
+./find_missing_examples.sh
+
+# 结果将保存在missing_examples.txt文件中
+cat missing_examples.txt
+```
 
 ## 添加新的题目
 
@@ -176,7 +186,6 @@ python scripts/batch_runner.py --contest <contest_number> --problem <problem_num
 2. 运行Fuzzing测试前先检查配置文件参数
 3. 对于大型批量测试，建议适当调整并行进程数
 4. 定期检查和清理fuzz_outputs目录以节省磁盘空间
-5. 在提交代码前进行完整的测试运行
 
 ## 故障排除
 
