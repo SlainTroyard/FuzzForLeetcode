@@ -1,0 +1,30 @@
+input:
+EUR
+2
+EUR USD 2.0
+USD JPY 3.0
+3
+JPY USD 4.0
+USD CHF 5.0
+CHF EUR 6.0
+output:
+720.00000
+-------------------------
+input:
+NGN
+1
+NGN EUR 9.0
+1
+NGN EUR 6.0
+output:
+1.50000
+-------------------------
+input:
+USD
+1
+USD EUR 1.0
+1
+EUR JPY 10.0
+output:
+1.00000
+-------------------------
