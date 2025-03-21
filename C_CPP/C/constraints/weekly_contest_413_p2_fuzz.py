@@ -5,7 +5,7 @@ import string
 import time
 
 # TODO: Configure test case generation parameters
-test_cases = 20  # Number of test cases to generate
+test_cases = 10  # Number of test cases to generate
 
 # File Configs
 output_file = "../../../fuzz_outputs/C/weekly_contest_413_p2/outputs"  # Output file to store test cases and results

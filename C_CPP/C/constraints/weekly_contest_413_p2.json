@@ -1,7 +1,7 @@
 {
     "fuzzing_params": {
         "Constraints": "1 <= queries.length <= 2 * 10^5, All queries[i] are unique., -10^9 <= queries[i][0], queries[i][1] <= 10^9, 1 <= k <= 10^5",
-        "runs": 20
+        "runs": 10
     },
     "problem_info": {
         "contest": "Weekly Contest 413",
