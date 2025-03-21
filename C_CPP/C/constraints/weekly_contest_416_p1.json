@@ -7,7 +7,7 @@
         "contest": "Weekly Contest 416",
         "problem_number": 1,
         "title": "3295. Report Spam Message",
-        "difficulty": "TODO: Add difficulty",
+        "difficulty": "Easy",
         "source_url": "https://leetcode.com/problems/report-spam-message/",
         "tags": [
             "Array",

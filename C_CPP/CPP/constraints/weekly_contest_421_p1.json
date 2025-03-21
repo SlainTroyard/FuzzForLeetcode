@@ -7,7 +7,7 @@
         "contest": "Weekly Contest 421",
         "problem_number": 1,
         "title": "3334. Find the Maximum Factor Score of Array",
-        "difficulty": "Meduim",
+        "difficulty": "Medium",
         "source_url": "https://leetcode.com/problems/find-the-maximum-factor-score-of-array/",
         "tags": [
             "Array",
