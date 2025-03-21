@@ -4,7 +4,7 @@ Generated on: FuzzForLeetcode
 
 
 ============================================================
-Results for folder: /home/charmian/Code/FuzzForLeetcode/C_CPP
+Results for folder: FuzzForLeetcode/C_CPP
 ============================================================
 
 FOLDER SUMMARY (104 file pairs):
