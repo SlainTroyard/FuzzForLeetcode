@@ -1,0 +1,1 @@
+/usr/bin/cc CMakeFiles/weekly_contest_431_p2.dir/weekly_contest_431_p2.c.o -o weekly_contest_431_p2 

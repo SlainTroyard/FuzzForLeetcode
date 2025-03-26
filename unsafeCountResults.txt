@@ -1,0 +1,540 @@
+UNSAFE CODE ANALYSIS REPORT
+Generated on: FuzzForLeetcode
+------------------------------------------------------------
+
+
+============================================================
+Results for folder: FuzzForLeetcode/C_CPP
+============================================================
+
+FOLDER SUMMARY (104 file pairs):
+  Total lines: 319242
+  Unsafe lines: 312652 (97.94%)
+  Total characters: 5310262
+  Unsafe characters: 2609585 (49.14%)
+
+FILE DETAILS:
+  File pair: weekly_contest_413_p1.c and weekly_contest_413_p1.rs
+    Total lines: 34
+    Unsafe lines: 14 (41.18%)
+    Total characters: 1189
+    Unsafe characters: 474 (39.87%)
+  File pair: weekly_contest_426_p4.c and weekly_contest_426_p4.rs
+    Total lines: 304
+    Unsafe lines: 254 (83.55%)
+    Total characters: 10861
+    Unsafe characters: 7262 (66.86%)
+  File pair: weekly_contest_435_p1.c and weekly_contest_435_p1.rs
+    Total lines: 64
+    Unsafe lines: 19 (29.69%)
+    Total characters: 1572
+    Unsafe characters: 515 (32.76%)
+  File pair: weekly_contest_421_p1.c and weekly_contest_421_p1.rs
+    Total lines: 121
+    Unsafe lines: 89 (73.55%)
+    Total characters: 4041
+    Unsafe characters: 2443 (60.46%)
+  File pair: weekly_contest_423_p1.c and weekly_contest_423_p1.rs
+    Total lines: 71
+    Unsafe lines: 51 (71.83%)
+    Total characters: 2243
+    Unsafe characters: 1135 (50.60%)
+  File pair: weekly_contest_428_p1.c and weekly_contest_428_p1.rs
+    Total lines: 88
+    Unsafe lines: 65 (73.86%)
+    Total characters: 3308
+    Unsafe characters: 1981 (59.89%)
+  File pair: weekly_contest_423_p3.c and weekly_contest_423_p3.rs
+    Total lines: 200076
+    Unsafe lines: 200055 (99.99%)
+    Total characters: 2002580
+    Unsafe characters: 401487 (20.05%)
+  File pair: weekly_contest_429_p4.c and weekly_contest_429_p4.rs
+    Total lines: 174
+    Unsafe lines: 132 (75.86%)
+    Total characters: 5526
+    Unsafe characters: 3228 (58.41%)
+  File pair: weekly_contest_416_p2.c and weekly_contest_416_p2.rs
+    Total lines: 100
+    Unsafe lines: 65 (65.00%)
+    Total characters: 3604
+    Unsafe characters: 1912 (53.05%)
+  File pair: weekly_contest_423_p2.c and weekly_contest_423_p2.rs
+    Total lines: 68
+    Unsafe lines: 38 (55.88%)
+    Total characters: 2003
+    Unsafe characters: 866 (43.24%)
+  File pair: weekly_contest_419_p2.c and weekly_contest_419_p2.rs
+    Total lines: 232
+    Unsafe lines: 169 (72.84%)
+    Total characters: 8039
+    Unsafe characters: 4569 (56.84%)
+  File pair: weekly_contest_431_p3.c and weekly_contest_431_p3.rs
+    Total lines: 194
+    Unsafe lines: 141 (72.68%)
+    Total characters: 7104
+    Unsafe characters: 4039 (56.86%)
+  File pair: weekly_contest_438_p3.c and weekly_contest_438_p3.rs
+    Total lines: 179
+    Unsafe lines: 98 (54.75%)
+    Total characters: 5376
+    Unsafe characters: 2092 (38.91%)
+  File pair: weekly_contest_418_p2.c and weekly_contest_418_p2.rs
+    Total lines: 203
+    Unsafe lines: 158 (77.83%)
+    Total characters: 7101
+    Unsafe characters: 4128 (58.13%)
+  File pair: weekly_contest_418_p4.c and weekly_contest_418_p4.rs
+    Total lines: 156
+    Unsafe lines: 122 (78.21%)
+    Total characters: 5047
+    Unsafe characters: 3103 (61.48%)
+  File pair: weekly_contest_414_p1.c and weekly_contest_414_p1.rs
+    Total lines: 77
+    Unsafe lines: 50 (64.94%)
+    Total characters: 2657
+    Unsafe characters: 1401 (52.73%)
+  File pair: weekly_contest_428_p3.c and weekly_contest_428_p3.rs
+    Total lines: 122
+    Unsafe lines: 99 (81.15%)
+    Total characters: 4522
+    Unsafe characters: 2555 (56.50%)
+  File pair: weekly_contest_431_p1.c and weekly_contest_431_p1.rs
+    Total lines: 86
+    Unsafe lines: 54 (62.79%)
+    Total characters: 2732
+    Unsafe characters: 1297 (47.47%)
+  File pair: weekly_contest_416_p4.c and weekly_contest_416_p4.rs
+    Total lines: 127
+    Unsafe lines: 87 (68.50%)
+    Total characters: 3428
+    Unsafe characters: 1324 (38.62%)
+  File pair: weekly_contest_422_p3.c and weekly_contest_422_p3.rs
+    Total lines: 281
+    Unsafe lines: 242 (86.12%)
+    Total characters: 9745
+    Unsafe characters: 6807 (69.85%)
+  File pair: weekly_contest_433_p2.c and weekly_contest_433_p2.rs
+    Total lines: 216
+    Unsafe lines: 117 (54.17%)
+    Total characters: 6792
+    Unsafe characters: 2858 (42.08%)
+  File pair: weekly_contest_430_p1.c and weekly_contest_430_p1.rs
+    Total lines: 129
+    Unsafe lines: 97 (75.19%)
+    Total characters: 4619
+    Unsafe characters: 2583 (55.92%)
+  File pair: weekly_contest_427_p1.c and weekly_contest_427_p1.rs
+    Total lines: 77
+    Unsafe lines: 51 (66.23%)
+    Total characters: 2447
+    Unsafe characters: 1228 (50.18%)
+  File pair: weekly_contest_436_p2.c and weekly_contest_436_p2.rs
+    Total lines: 130
+    Unsafe lines: 94 (72.31%)
+    Total characters: 4279
+    Unsafe characters: 2173 (50.78%)
+  File pair: weekly_contest_421_p2.c and weekly_contest_421_p2.rs
+    Total lines: 86
+    Unsafe lines: 64 (74.42%)
+    Total characters: 2025
+    Unsafe characters: 871 (43.01%)
+  File pair: weekly_contest_438_p2.c and weekly_contest_438_p2.rs
+    Total lines: 158
+    Unsafe lines: 109 (68.99%)
+    Total characters: 4764
+    Unsafe characters: 2303 (48.34%)
+  File pair: weekly_contest_418_p3.c and weekly_contest_418_p3.rs
+    Total lines: 86
+    Unsafe lines: 60 (69.77%)
+    Total characters: 2897
+    Unsafe characters: 1474 (50.88%)
+  File pair: weekly_contest_416_p3.c and weekly_contest_416_p3.rs
+    Total lines: 155
+    Unsafe lines: 105 (67.74%)
+    Total characters: 4532
+    Unsafe characters: 1958 (43.20%)
+  File pair: weekly_contest_417_p2.c and weekly_contest_417_p2.rs
+    Total lines: 77
+    Unsafe lines: 47 (61.04%)
+    Total characters: 2966
+    Unsafe characters: 1400 (47.20%)
+  File pair: weekly_contest_413_p3.c and weekly_contest_413_p3.rs
+    Total lines: 194
+    Unsafe lines: 164 (84.54%)
+    Total characters: 6837
+    Unsafe characters: 3967 (58.02%)
+  File pair: weekly_contest_430_p2.c and weekly_contest_430_p2.rs
+    Total lines: 55
+    Unsafe lines: 26 (47.27%)
+    Total characters: 1660
+    Unsafe characters: 559 (33.67%)
+  File pair: weekly_contest_422_p4.c and weekly_contest_422_p4.rs
+    Total lines: 159
+    Unsafe lines: 108 (67.92%)
+    Total characters: 5358
+    Unsafe characters: 2952 (55.10%)
+  File pair: weekly_contest_425_p4.c and weekly_contest_425_p4.rs
+    Total lines: 286
+    Unsafe lines: 214 (74.83%)
+    Total characters: 10120
+    Unsafe characters: 5684 (56.17%)
+  File pair: weekly_contest_431_p2.c and weekly_contest_431_p2.rs
+    Total lines: 114
+    Unsafe lines: 87 (76.32%)
+    Total characters: 3606
+    Unsafe characters: 2256 (62.56%)
+  File pair: weekly_contest_436_p1.c and weekly_contest_436_p1.rs
+    Total lines: 206
+    Unsafe lines: 161 (78.16%)
+    Total characters: 6572
+    Unsafe characters: 3572 (54.35%)
+  File pair: weekly_contest_419_p3.c and weekly_contest_419_p3.rs
+    Total lines: 2151
+    Unsafe lines: 66 (3.07%)
+    Total characters: 41068
+    Unsafe characters: 1592 (3.88%)
+  File pair: weekly_contest_438_p1.c and weekly_contest_438_p1.rs
+    Total lines: 48
+    Unsafe lines: 27 (56.25%)
+    Total characters: 1515
+    Unsafe characters: 568 (37.49%)
+  File pair: weekly_contest_432_p3.c and weekly_contest_432_p3.rs
+    Total lines: 374
+    Unsafe lines: 296 (79.14%)
+    Total characters: 11710
+    Unsafe characters: 7186 (61.37%)
+  File pair: weekly_contest_437_p4.c and weekly_contest_437_p4.rs
+    Total lines: 209
+    Unsafe lines: 186 (89.00%)
+    Total characters: 6739
+    Unsafe characters: 4268 (63.33%)
+  File pair: weekly_contest_415_p2.c and weekly_contest_415_p2.rs
+    Total lines: 118
+    Unsafe lines: 90 (76.27%)
+    Total characters: 3817
+    Unsafe characters: 1834 (48.05%)
+  File pair: weekly_contest_423_p4.c and weekly_contest_423_p4.rs
+    Total lines: 101
+    Unsafe lines: 65 (64.36%)
+    Total characters: 3653
+    Unsafe characters: 1460 (39.97%)
+  File pair: weekly_contest_421_p4.c and weekly_contest_421_p4.rs
+    Total lines: 180
+    Unsafe lines: 132 (73.33%)
+    Total characters: 5953
+    Unsafe characters: 3266 (54.86%)
+  File pair: weekly_contest_414_p3.c and weekly_contest_414_p3.rs
+    Total lines: 56
+    Unsafe lines: 31 (55.36%)
+    Total characters: 1740
+    Unsafe characters: 731 (42.01%)
+  File pair: weekly_contest_415_p3.c and weekly_contest_415_p3.rs
+    Total lines: 419
+    Unsafe lines: 368 (87.83%)
+    Total characters: 14121
+    Unsafe characters: 9520 (67.42%)
+  File pair: weekly_contest_430_p4.c and weekly_contest_430_p4.rs
+    Total lines: 87
+    Unsafe lines: 66 (75.86%)
+    Total characters: 2511
+    Unsafe characters: 1533 (61.05%)
+  File pair: weekly_contest_428_p4.c and weekly_contest_428_p4.rs
+    Total lines: 174
+    Unsafe lines: 119 (68.39%)
+    Total characters: 5217
+    Unsafe characters: 2583 (49.51%)
+  File pair: weekly_contest_436_p3.c and weekly_contest_436_p3.rs
+    Total lines: 109
+    Unsafe lines: 36 (33.03%)
+    Total characters: 3597
+    Unsafe characters: 916 (25.47%)
+  File pair: weekly_contest_432_p4.c and weekly_contest_432_p4.rs
+    Total lines: 402
+    Unsafe lines: 317 (78.86%)
+    Total characters: 12735
+    Unsafe characters: 8172 (64.17%)
+  File pair: weekly_contest_413_p4.c and weekly_contest_413_p4.rs
+    Total lines: 238
+    Unsafe lines: 202 (84.87%)
+    Total characters: 8201
+    Unsafe characters: 5185 (63.22%)
+  File pair: weekly_contest_426_p2.c and weekly_contest_426_p2.rs
+    Total lines: 91
+    Unsafe lines: 61 (67.03%)
+    Total characters: 2979
+    Unsafe characters: 1580 (53.04%)
+  File pair: weekly_contest_424_p3.c and weekly_contest_424_p3.rs
+    Total lines: 143
+    Unsafe lines: 110 (76.92%)
+    Total characters: 4802
+    Unsafe characters: 2867 (59.70%)
+  File pair: weekly_contest_417_p3.c and weekly_contest_417_p3.rs
+    Total lines: 157
+    Unsafe lines: 127 (80.89%)
+    Total characters: 4425
+    Unsafe characters: 2186 (49.40%)
+  File pair: weekly_contest_414_p2.c and weekly_contest_414_p2.rs
+    Total lines: 93
+    Unsafe lines: 64 (68.82%)
+    Total characters: 3171
+    Unsafe characters: 1623 (51.18%)
+  File pair: weekly_contest_430_p3.c and weekly_contest_430_p3.rs
+    Total lines: 100093
+    Unsafe lines: 100064 (99.97%)
+    Total characters: 2703154
+    Unsafe characters: 1901755 (70.35%)
+  File pair: weekly_contest_438_p4.c and weekly_contest_438_p4.rs
+    Total lines: 195
+    Unsafe lines: 128 (65.64%)
+    Total characters: 6341
+    Unsafe characters: 3491 (55.05%)
+  File pair: weekly_contest_417_p1.c and weekly_contest_417_p1.rs
+    Total lines: 42
+    Unsafe lines: 18 (42.86%)
+    Total characters: 1416
+    Unsafe characters: 409 (28.88%)
+  File pair: weekly_contest_432_p2.c and weekly_contest_432_p2.rs
+    Total lines: 304
+    Unsafe lines: 276 (90.79%)
+    Total characters: 11449
+    Unsafe characters: 6758 (59.03%)
+  File pair: weekly_contest_431_p4.c and weekly_contest_431_p4.rs
+    Total lines: 328
+    Unsafe lines: 259 (78.96%)
+    Total characters: 12550
+    Unsafe characters: 7727 (61.57%)
+  File pair: weekly_contest_437_p2.c and weekly_contest_437_p2.rs
+    Total lines: 85
+    Unsafe lines: 50 (58.82%)
+    Total characters: 2602
+    Unsafe characters: 1158 (44.50%)
+  File pair: weekly_contest_433_p1.c and weekly_contest_433_p1.rs
+    Total lines: 63
+    Unsafe lines: 41 (65.08%)
+    Total characters: 2105
+    Unsafe characters: 938 (44.56%)
+  File pair: weekly_contest_420_p1.c and weekly_contest_420_p1.rs
+    Total lines: 77
+    Unsafe lines: 49 (63.64%)
+    Total characters: 2551
+    Unsafe characters: 1282 (50.25%)
+  File pair: weekly_contest_413_p2.c and weekly_contest_413_p2.rs
+    Total lines: 134
+    Unsafe lines: 98 (73.13%)
+    Total characters: 4421
+    Unsafe characters: 2404 (54.38%)
+  File pair: weekly_contest_425_p1.c and weekly_contest_425_p1.rs
+    Total lines: 74
+    Unsafe lines: 45 (60.81%)
+    Total characters: 2224
+    Unsafe characters: 962 (43.26%)
+  File pair: weekly_contest_433_p3.c and weekly_contest_433_p3.rs
+    Total lines: 272
+    Unsafe lines: 195 (71.69%)
+    Total characters: 9095
+    Unsafe characters: 4679 (51.45%)
+  File pair: weekly_contest_416_p1.c and weekly_contest_416_p1.rs
+    Total lines: 137
+    Unsafe lines: 86 (62.77%)
+    Total characters: 4466
+    Unsafe characters: 2078 (46.53%)
+  File pair: weekly_contest_425_p3.c and weekly_contest_425_p3.rs
+    Total lines: 218
+    Unsafe lines: 184 (84.40%)
+    Total characters: 9201
+    Unsafe characters: 4931 (53.59%)
+  File pair: weekly_contest_420_p4.c and weekly_contest_420_p4.rs
+    Total lines: 241
+    Unsafe lines: 185 (76.76%)
+    Total characters: 8851
+    Unsafe characters: 5701 (64.41%)
+  File pair: weekly_contest_425_p2.c and weekly_contest_425_p2.rs
+    Total lines: 83
+    Unsafe lines: 39 (46.99%)
+    Total characters: 2595
+    Unsafe characters: 816 (31.45%)
+  File pair: weekly_contest_435_p4.c and weekly_contest_435_p4.rs
+    Total lines: 140
+    Unsafe lines: 70 (50.00%)
+    Total characters: 5263
+    Unsafe characters: 1827 (34.71%)
+  File pair: weekly_contest_422_p1.c and weekly_contest_422_p1.rs
+    Total lines: 29
+    Unsafe lines: 15 (51.72%)
+    Total characters: 857
+    Unsafe characters: 288 (33.61%)
+  File pair: weekly_contest_418_p1.c and weekly_contest_418_p1.rs
+    Total lines: 127
+    Unsafe lines: 105 (82.68%)
+    Total characters: 4903
+    Unsafe characters: 2936 (59.88%)
+  File pair: weekly_contest_432_p1.c and weekly_contest_432_p1.rs
+    Total lines: 111
+    Unsafe lines: 80 (72.07%)
+    Total characters: 3625
+    Unsafe characters: 1777 (49.02%)
+  File pair: weekly_contest_427_p4.c and weekly_contest_427_p4.rs
+    Total lines: 356
+    Unsafe lines: 287 (80.62%)
+    Total characters: 13103
+    Unsafe characters: 7875 (60.10%)
+  File pair: weekly_contest_434_p4.c and weekly_contest_434_p4.rs
+    Total lines: 407
+    Unsafe lines: 333 (81.82%)
+    Total characters: 13292
+    Unsafe characters: 7308 (54.98%)
+  File pair: weekly_contest_424_p1.c and weekly_contest_424_p1.rs
+    Total lines: 57
+    Unsafe lines: 38 (66.67%)
+    Total characters: 1795
+    Unsafe characters: 914 (50.92%)
+  File pair: weekly_contest_435_p2.c and weekly_contest_435_p2.rs
+    Total lines: 114
+    Unsafe lines: 41 (35.96%)
+    Total characters: 3617
+    Unsafe characters: 940 (25.99%)
+  File pair: weekly_contest_428_p2.c and weekly_contest_428_p2.rs
+    Total lines: 319
+    Unsafe lines: 272 (85.27%)
+    Total characters: 11999
+    Unsafe characters: 7268 (60.57%)
+  File pair: weekly_contest_417_p4.c and weekly_contest_417_p4.rs
+    Total lines: 97
+    Unsafe lines: 63 (64.95%)
+    Total characters: 2974
+    Unsafe characters: 1467 (49.33%)
+  File pair: weekly_contest_429_p3.c and weekly_contest_429_p3.rs
+    Total lines: 193
+    Unsafe lines: 146 (75.65%)
+    Total characters: 6097
+    Unsafe characters: 3427 (56.21%)
+  File pair: weekly_contest_427_p2.c and weekly_contest_427_p2.rs
+    Total lines: 174
+    Unsafe lines: 139 (79.89%)
+    Total characters: 6597
+    Unsafe characters: 4143 (62.80%)
+  File pair: weekly_contest_420_p3.c and weekly_contest_420_p3.rs
+    Total lines: 96
+    Unsafe lines: 70 (72.92%)
+    Total characters: 3422
+    Unsafe characters: 1557 (45.50%)
+  File pair: weekly_contest_420_p2.c and weekly_contest_420_p2.rs
+    Total lines: 87
+    Unsafe lines: 61 (70.11%)
+    Total characters: 2132
+    Unsafe characters: 869 (40.76%)
+  File pair: weekly_contest_424_p4.c and weekly_contest_424_p4.rs
+    Total lines: 107
+    Unsafe lines: 84 (78.50%)
+    Total characters: 3749
+    Unsafe characters: 1897 (50.60%)
+  File pair: weekly_contest_429_p1.c and weekly_contest_429_p1.rs
+    Total lines: 151
+    Unsafe lines: 129 (85.43%)
+    Total characters: 2630
+    Unsafe characters: 897 (34.11%)
+  File pair: weekly_contest_414_p4.c and weekly_contest_414_p4.rs
+    Total lines: 424
+    Unsafe lines: 206 (48.58%)
+    Total characters: 14193
+    Unsafe characters: 3588 (25.28%)
+  File pair: weekly_contest_435_p3.c and weekly_contest_435_p3.rs
+    Total lines: 280
+    Unsafe lines: 203 (72.50%)
+    Total characters: 9230
+    Unsafe characters: 4905 (53.14%)
+  File pair: weekly_contest_434_p3.c and weekly_contest_434_p3.rs
+    Total lines: 182
+    Unsafe lines: 113 (62.09%)
+    Total characters: 4523
+    Unsafe characters: 1448 (32.01%)
+  File pair: weekly_contest_437_p1.c and weekly_contest_437_p1.rs
+    Total lines: 49
+    Unsafe lines: 23 (46.94%)
+    Total characters: 1403
+    Unsafe characters: 508 (36.21%)
+  File pair: weekly_contest_419_p1.c and weekly_contest_419_p1.rs
+    Total lines: 199
+    Unsafe lines: 146 (73.37%)
+    Total characters: 5324
+    Unsafe characters: 2377 (44.65%)
+  File pair: weekly_contest_421_p3.c and weekly_contest_421_p3.rs
+    Total lines: 213
+    Unsafe lines: 182 (85.45%)
+    Total characters: 7383
+    Unsafe characters: 4642 (62.87%)
+  File pair: weekly_contest_434_p1.c and weekly_contest_434_p1.rs
+    Total lines: 61
+    Unsafe lines: 39 (63.93%)
+    Total characters: 1886
+    Unsafe characters: 839 (44.49%)
+  File pair: weekly_contest_426_p3.c and weekly_contest_426_p3.rs
+    Total lines: 299
+    Unsafe lines: 262 (87.63%)
+    Total characters: 10607
+    Unsafe characters: 6921 (65.25%)
+  File pair: weekly_contest_427_p3.c and weekly_contest_427_p3.rs
+    Total lines: 78
+    Unsafe lines: 52 (66.67%)
+    Total characters: 2652
+    Unsafe characters: 1448 (54.60%)
+  File pair: weekly_contest_415_p1.c and weekly_contest_415_p1.rs
+    Total lines: 76
+    Unsafe lines: 52 (68.42%)
+    Total characters: 2357
+    Unsafe characters: 1101 (46.71%)
+  File pair: weekly_contest_422_p2.c and weekly_contest_422_p2.rs
+    Total lines: 285
+    Unsafe lines: 247 (86.67%)
+    Total characters: 9845
+    Unsafe characters: 6918 (70.27%)
+  File pair: weekly_contest_434_p2.c and weekly_contest_434_p2.rs
+    Total lines: 402
+    Unsafe lines: 302 (75.12%)
+    Total characters: 14930
+    Unsafe characters: 7499 (50.23%)
+  File pair: weekly_contest_419_p4.c and weekly_contest_419_p4.rs
+    Total lines: 362
+    Unsafe lines: 308 (85.08%)
+    Total characters: 12172
+    Unsafe characters: 7128 (58.56%)
+  File pair: weekly_contest_429_p2.c and weekly_contest_429_p2.rs
+    Total lines: 89
+    Unsafe lines: 49 (55.06%)
+    Total characters: 2724
+    Unsafe characters: 1043 (38.29%)
+  File pair: weekly_contest_437_p3.c and weekly_contest_437_p3.rs
+    Total lines: 306
+    Unsafe lines: 205 (66.99%)
+    Total characters: 9508
+    Unsafe characters: 4225 (44.44%)
+  File pair: weekly_contest_426_p1.c and weekly_contest_426_p1.rs
+    Total lines: 21
+    Unsafe lines: 9 (42.86%)
+    Total characters: 772
+    Unsafe characters: 291 (37.69%)
+  File pair: weekly_contest_424_p2.c and weekly_contest_424_p2.rs
+    Total lines: 123
+    Unsafe lines: 93 (75.61%)
+    Total characters: 4187
+    Unsafe characters: 2494 (59.57%)
+  File pair: weekly_contest_415_p4.c and weekly_contest_415_p4.rs
+    Total lines: 419
+    Unsafe lines: 368 (87.83%)
+    Total characters: 14121
+    Unsafe characters: 9520 (67.42%)
+  File pair: weekly_contest_433_p4.c and weekly_contest_433_p4.rs
+    Total lines: 253
+    Unsafe lines: 180 (71.15%)
+    Total characters: 7845
+    Unsafe characters: 4464 (56.90%)
+  File pair: weekly_contest_436_p4.c and weekly_contest_436_p4.rs
+    Total lines: 175
+    Unsafe lines: 94 (53.71%)
+    Total characters: 5418
+    Unsafe characters: 2221 (40.99%)
+
+============================================================
+Analysis complete. Processed 1 folders.
+============================================================
