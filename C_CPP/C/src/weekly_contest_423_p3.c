@@ -15,27 +15,22 @@ int sumOfGoodSubsequences(int* nums, int numsSize) {
 }
 
 int main() {
-    // Read the size of the array
     int n;
     scanf("%d", &n);
      
-    // Dynamically allocate memory for the array using malloc
     int* nums = (int*) malloc(n * sizeof(int));
-    if (nums == NULL) { // Check for memory allocation failure
+    if (nums == NULL) { 
         printf("Memory allocation failed!\n");
-        return 1; // Exit if malloc fails
+        return 1; 
     }
     
-    // Read the elements of the array
     for (int i = 0; i < n; ++i) {
         scanf("%d", &nums[i]);
     }
     
-    // Call the function and output the result
     int result = sumOfGoodSubsequences(nums, n);
     printf("%d\n", result);
     
-    // Free the dynamically allocated memory
     free(nums);
     
     return 0;

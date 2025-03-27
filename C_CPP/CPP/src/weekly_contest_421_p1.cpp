@@ -18,10 +18,10 @@ public:
             suf_lcm[i] = lcm(suf_lcm[i + 1], nums[i]);
         }
 
-        long long ans = suf_gcd[0] * suf_lcm[0]; // 不移除元素
+        long long ans = suf_gcd[0] * suf_lcm[0]; 
         int pre_gcd = 0;
         long long pre_lcm = 1;
-        for (int i = 0; i < n; i++) { // 枚举移除 nums[i]
+        for (int i = 0; i < n; i++) { 
             ans = max(ans, gcd(pre_gcd, suf_gcd[i + 1]) * lcm(pre_lcm, suf_lcm[i + 1]));
             pre_gcd = gcd(pre_gcd, nums[i]);
             pre_lcm = lcm(pre_lcm, nums[i]);

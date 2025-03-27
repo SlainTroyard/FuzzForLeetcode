@@ -4,9 +4,7 @@
 #include <string.h>
 #include <stdio.h>
 
-/**
- * Note: The returned array must be malloced, assume caller calls free().
- */
+
 static void dfs(int x, int** adj, int* adjSize, int* visited) {
     visited[x] = 1;
     for(int i = 0; i < adjSize[x]; i++) {

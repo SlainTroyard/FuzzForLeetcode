@@ -40,19 +40,16 @@ long long maxSubarraySum(int* nums, int n, int k) {
 int main() {
     int n, k;
 
-    // Input size of the array and the value of k
     scanf("%d", &n);
 
     scanf("%d", &k);
 
-    // Input the array elements
     int nums[n];
 
     for (int i = 0; i < n; i++) {
         scanf("%d", &nums[i]);
     }
 
-    // Calculate and print the result
     long long result = maxSubarraySum(nums, n, k);
     printf("%lld\n", result);
 

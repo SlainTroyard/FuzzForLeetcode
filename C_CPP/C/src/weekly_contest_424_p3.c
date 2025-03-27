@@ -42,7 +42,6 @@ int minZeroArray(int* nums, int numsSize, int** queries, int queriesSize, int* q
 }
 
 int main() {
-    // Reading input for nums
     int numsSize;
     scanf("%d", &numsSize);
 
@@ -51,7 +50,6 @@ int main() {
         scanf("%d", &nums[i]);
     }
 
-    // Reading input for queries
     int queriesSize;
     scanf("%d", &queriesSize);
 
@@ -66,13 +64,10 @@ int main() {
         queriesColSize[i] = 3;
     }
 
-    // Calling the function
     int result = minZeroArray(nums, numsSize, queries, queriesSize, queriesColSize);
 
-    // Output the result
     printf("%d\n", result);
 
-    // Clean up allocated memory
     free(nums);
     for (int i = 0; i < queriesSize; i++) {
         free(queries[i]);

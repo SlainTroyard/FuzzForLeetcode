@@ -37,10 +37,8 @@ public:
         int n = edges1.size() + 1, m = edges2.size() + 1;
         nodeColor1.assign(n, 0); nodeColor2.assign(m, 0);
         color1.assign(2, 0); color2.assign(2, 0);
-        // build trees
         build(edges1, tree1);
         build(edges2, tree2);
-        // color trees using bfs
         bfs(tree1, color1, nodeColor1);
         bfs(tree2, color2, nodeColor2);
         vector<int> arr(n);
@@ -53,7 +51,6 @@ public:
 int main() {
     Solution solution;
 
-    // Input for edges1
     int n1;
     cin >> n1;
     vector<vector<int>> edges1(n1 - 1, vector<int>(2));
@@ -61,7 +58,6 @@ int main() {
         cin >> edges1[i][0] >> edges1[i][1];
     }
 
-    // Input for edges2
     int n2;
     cin >> n2;
     vector<vector<int>> edges2(n2 - 1, vector<int>(2));
@@ -69,10 +65,8 @@ int main() {
         cin >> edges2[i][0] >> edges2[i][1];
     }
 
-    // Call the solution method
     vector<int> result = solution.maxTargetNodes(edges1, edges2);
 
-    // Output the result
     for (int val : result) {
         cout << val << " ";
     }

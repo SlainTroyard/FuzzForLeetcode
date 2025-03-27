@@ -13,9 +13,9 @@ public:
         vector<vector<vector<long long>>> memo(n / 2, vector<vector<long long>>(4, vector<long long>(4, -1)));
 
         struct DFS {
-            const vector<vector<vector<long long>>>& memo;  // 引用 memo
-            const vector<vector<int>>& cost;                // 引用 cost
-            int n;                                          // 保存 n
+            const vector<vector<vector<long long>>>& memo;  
+            const vector<vector<int>>& cost;                
+            int n;                                          
 
             DFS(const vector<vector<vector<long long>>>& m, const vector<vector<int>>& c, int nn)
                 : memo(m), cost(c), n(nn) {}
@@ -55,7 +55,6 @@ public:
 
 
 int main() {
-    // TODO: Add the base I/O interface here
     int n;
     cin >> n;
     vector<vector<int>> cost(n, vector<int>(3));

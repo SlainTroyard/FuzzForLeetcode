@@ -10,7 +10,7 @@ public:
         vector<string> ans;
         string s;
         for (int c : target) {
-            s += 'a'; // 占位
+            s += 'a'; 
             for (char j = 'a'; j <= c; j++) {
                 s.back() = j;
                 ans.push_back(s);

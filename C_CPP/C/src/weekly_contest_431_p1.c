@@ -5,12 +5,6 @@
 #include <stdio.h>
 #include <limits.h>
 
-// TODO: Add your function declaration here
-// Example:
-// bool solutionFunction(type1 param1, type2 param2) {
-//     // Implementation
-// }
-// 计算两个数的最大公因数
 long long gcd(int a, int b) {
     while (b != 0) {
         int temp = b;
@@ -20,18 +14,16 @@ long long gcd(int a, int b) {
     return a;
 }
 
-// 计算两个数的最小公倍数
 long long lcm(int a, int b) {
     return (a / gcd(a, b)) * b;
 }
 
-// 返回最长乘积等价子数组的长度
 int maxLength(int* nums, int numsSize) {
     int maxLength = 0;
     for (int i = 0; i < numsSize; i++) {
         long long prod = 1, g = nums[i], l = nums[i];
         for (int j = i; j < numsSize; j++) {
-            if (prod > LLONG_MAX / nums[j]) break; // 防止溢出
+            if (prod > LLONG_MAX / nums[j]) break; 
             prod *= nums[j];
             g = gcd(g, nums[j]);
             l = lcm(l, nums[j]);
@@ -48,7 +40,6 @@ int maxLength(int* nums, int numsSize) {
 
 
 int main() {
-    // TODO: Add the base I/O interface here
     int numSize;
     scanf("%d", &numSize);
     int* nums = (int*)malloc(numSize * sizeof(int));
@@ -56,7 +47,6 @@ int main() {
         scanf("%d", &nums[i]);
     }
 
-    // Calculate the result
     int result = maxLength(nums, numSize);
     printf("%d\n", result);
 

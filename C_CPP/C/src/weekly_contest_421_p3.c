@@ -24,21 +24,18 @@ int subsequencePairCount(int* nums, int numsSize) {
     static int mu[201];
 
     if (!initialized) {
-        // Initialize lcms
         for (int i = 1; i < MX; i++) {
             for (int j = 1; j < MX; j++) {
                 int g = gcd(i, j);
                 lcms[i][j] = (i * j) / g;
             }
         }
-        // Initialize pow2 and pow3
         pow2[0] = 1;
         pow3[0] = 1;
         for (int i = 1; i < MX; i++) {
             pow2[i] = (pow2[i - 1] * 2) % MOD;
             pow3[i] = (pow3[i - 1] * 3LL) % MOD;
         }
-        // Initialize mu
         memset(mu, 0, sizeof(mu));
         mu[1] = 1;
         for (int i = 1; i < MX; i++) {
@@ -49,13 +46,11 @@ int subsequencePairCount(int* nums, int numsSize) {
         initialized = 1;
     }
 
-    // Find maximum value in nums
     int m = 0;
     for (int i = 0; i < numsSize; i++) {
         if (nums[i] > m) m = nums[i];
     }
 
-    // Count occurrences and their multiples
     int* cnt = (int*)calloc(m + 1, sizeof(int));
     for (int i = 0; i < numsSize; i++) {
         cnt[nums[i]]++;
@@ -66,13 +61,11 @@ int subsequencePairCount(int* nums, int numsSize) {
         }
     }
 
-    // Initialize f array
     int** f = (int**)malloc((m + 1) * sizeof(int*));
     for (int i = 0; i <= m; i++) {
         f[i] = (int*)malloc((m + 1) * sizeof(int));
     }
 
-    // Fill f array
     for (int g1 = 1; g1 <= m; g1++) {
         for (int g2 = 1; g2 <= m; g2++) {
             int l = lcms[g1][g2];
@@ -85,7 +78,6 @@ int subsequencePairCount(int* nums, int numsSize) {
         }
     }
 
-    // Calculate answer using inclusion-exclusion
     long long ans = 0;
     for (int i = 1; i <= m; i++) {
         int max_jk = m / i;
@@ -99,7 +91,6 @@ int subsequencePairCount(int* nums, int numsSize) {
     }
     ans = (ans % MOD + MOD) % MOD;
 
-    // Free allocated memory
     free(cnt);
     for (int i = 0; i <= m; i++) {
         free(f[i]);

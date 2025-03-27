@@ -14,12 +14,12 @@ public:
         for(int l = 0, r = 0; r < nums.size(); ++r) {
             mp[nums[r]]++;
             if(r - l + 1 == k) {
-                vector<pair<int, int>> vec(mp.begin(), mp.end());// num - cnt
+                vector<pair<int, int>> vec(mp.begin(), mp.end());
                 sort(vec.begin(), vec.end(), [&](pair<int, int> lhs, pair<int, int> rhs) {
                     if(lhs.second == rhs.second) {
-                        return lhs.first > rhs.first; // 出现次数相同，num大的放前边
+                        return lhs.first > rhs.first; 
                     }
-                    return lhs.second > rhs.second; // 出现次数不同，cnt大的在前边
+                    return lhs.second > rhs.second; 
                 });
 
                 int sum = 0;

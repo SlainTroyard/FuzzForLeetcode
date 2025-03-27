@@ -3,24 +3,19 @@
 #include <stdlib.h>
 #include <string.h>
 
-// Helper function to compare coins for sorting
 int compare(const void* a, const void* b) {
     int* coin1 = *(int**)a;
     int* coin2 = *(int**)b;
-    return coin1[0] - coin2[0]; // Compare by left boundary
+    return coin1[0] - coin2[0]; 
 }
 
-// Function to find the maximum value between two long long values
 long long max_ll(long long a, long long b) {
     return (a > b) ? a : b;
 }
 
-// Main solution function
 long long maximumCoins(int** coins, int coinsSize, int* coinsColSize, int k) {
-    // Sort coins by the left boundary (coins[i][0])
     qsort(coins, coinsSize, sizeof(int*), compare);
     
-    // Calculate prefix sum of the coins' values
     long long* presum = (long long*)malloc((coinsSize + 1) * sizeof(long long));
     presum[0] = 0;
     for (int i = 1; i <= coinsSize; i++) {
@@ -30,7 +25,6 @@ long long maximumCoins(int** coins, int coinsSize, int* coinsColSize, int k) {
     long long ans = 0;
     int left = 0, right = 0;
     
-    // First pass: moving right pointer forward
     while (right < coinsSize && left < coinsSize) {
         while (left < coinsSize && coins[right][1] - coins[left][0] + 1 > k) {
             long long tamp = k - (coins[right][0] - coins[left][0]);
@@ -42,7 +36,6 @@ long long maximumCoins(int** coins, int coinsSize, int* coinsColSize, int k) {
         right += 1;
     }
     
-    // Second pass: moving left pointer backward
     left = coinsSize - 1;
     right = coinsSize - 1;
     while (right >= 0 && left >= 0) {
@@ -64,21 +57,17 @@ int main() {
     int n, k;
     scanf("%d %d", &n, &k);
     
-    // Allocate memory for coins array
     int** coins = (int**)malloc(n * sizeof(int*));
     int* coinsColSize = (int*)malloc(n * sizeof(int));
     
-    // Initialize each coin entry
     for (int i = 0; i < n; i++) {
         coins[i] = (int*)malloc(3 * sizeof(int));
         coinsColSize[i] = 3;
         scanf("%d %d %d", &coins[i][0], &coins[i][1], &coins[i][2]);
     }
     
-    // Call the solution function
     printf("%lld\n", maximumCoins(coins, n, coinsColSize, k));
     
-    // Free allocated memory
     for (int i = 0; i < n; i++) {
         free(coins[i]);
     }

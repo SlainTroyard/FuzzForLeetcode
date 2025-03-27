@@ -20,14 +20,11 @@ int main() {
     char word[5001];
     int numFriends;
 
-    // Input word and numFriends
     scanf("%s", word);
     scanf("%d", &numFriends);
 
-    // Call answerString function
     char* result = answerString(word, numFriends);
 
-    // Print the result
     printf("%s\n", result);
     return 0;
 }

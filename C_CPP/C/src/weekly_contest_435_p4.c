@@ -4,17 +4,14 @@
 #include <string.h>
 #include <limits.h>
 
-// 返回两个数中的较大值
 int max(int a, int b) {
     return a > b ? a : b;
 }
 
-// 返回两个数中的较小值
 int min(int a, int b) {
     return a < b ? a : b;
 }
 
-// 主函数实现
 int maxDifference(char* s, int k) {
     const int inf = INT_MAX / 2;
     int ans = -inf;
@@ -26,24 +23,22 @@ int maxDifference(char* s, int k) {
                 continue;
             }
             
-            int cur_s[5] = {0}; // 当前窗口中各数字的出现次数
-            int pre_s[5] = {0}; // 窗口左边部分的数字出现次数
-            int min_s[2][2] = {{inf, inf}, {inf, inf}}; // 最小的差值
+            int cur_s[5] = {0}; 
+            int pre_s[5] = {0}; 
+            int min_s[2][2] = {{inf, inf}, {inf, inf}}; 
             int left = 0;
             
             for (int i = 0; i < len; i++) {
-                cur_s[s[i] - '0']++; // 更新当前窗口中数字的出现次数
+                cur_s[s[i] - '0']++; 
                 int r = i + 1;
                 
-                // 当窗口大小 >= k 且满足其他条件时，尝试缩小窗口左边界
                 while (r - left >= k && cur_s[x] > pre_s[x] && cur_s[y] > pre_s[y]) {
                     int* p = &min_s[pre_s[x] & 1][pre_s[y] & 1];
-                    *p = min(*p, pre_s[x] - pre_s[y]); // 更新最小差值
-                    pre_s[s[left] - '0']++; // 更新窗口左边部分的数字出现次数
+                    *p = min(*p, pre_s[x] - pre_s[y]); 
+                    pre_s[s[left] - '0']++; 
                     left++;
                 }
                 
-                // 更新答案
                 ans = max(ans, cur_s[x] - cur_s[y] - min_s[(cur_s[x] & 1) ^ 1][cur_s[y] & 1]);
             }
         }
@@ -53,8 +48,7 @@ int maxDifference(char* s, int k) {
 }
 
 int main() {
-    // 读取输入
-    char s[100001]; // 假设字符串最大长度为100000
+    char s[100001]; 
     int k;
     
     if (scanf("%s %d", s, &k) != 2) {
@@ -62,10 +56,8 @@ int main() {
         return 1;
     }
     
-    // 调用函数计算结果
     int result = maxDifference(s, k);
     
-    // 输出结果
     printf("%d\n", result);
     
     return 0;

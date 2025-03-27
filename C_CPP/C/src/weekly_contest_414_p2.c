@@ -7,7 +7,6 @@
 #include <math.h>
 
 int maxPossibleScore(int* start, int startSize, int d) {
-    // Sort array
     for(int i = 0; i < startSize - 1; i++) {
         for(int j = 0; j < startSize - i - 1; j++) {
             if(start[j] > start[j+1]) {
@@ -18,14 +17,12 @@ int maxPossibleScore(int* start, int startSize, int d) {
         }
     }
     
-    // Binary search
     int left = 0;
     int right = (start[startSize - 1] + d - start[0])/(startSize - 1) + 1;
     
     while(left + 1 < right) {
         int mid = left + (right - left) / 2;
         
-        // Check function
         long long sum = LLONG_MIN;
         bool valid = true;
         for(int i = 0; i < startSize; i++) {

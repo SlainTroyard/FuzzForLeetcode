@@ -2,7 +2,6 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-// Function to construct the transformed array
 int* constructTransformedArray(int* nums, int numsSize, int* returnSize) {
     int *result = (int *)malloc(numsSize * sizeof(int));
     *returnSize = numsSize;
@@ -15,7 +14,7 @@ int* constructTransformedArray(int* nums, int numsSize, int* returnSize) {
             int targetIndex = (i + steps) % numsSize;
 
             if (targetIndex < 0) {
-                targetIndex += numsSize; // Handle negative wrapping
+                targetIndex += numsSize; 
             }
 
             result[i] = nums[targetIndex];
@@ -25,7 +24,6 @@ int* constructTransformedArray(int* nums, int numsSize, int* returnSize) {
     return result;
 }
 
-// Main function
 int main() {
     int numsSize;
     scanf("%d", &numsSize);
@@ -43,7 +41,6 @@ int main() {
     }
     printf("\n");
 
-    // Free allocated memory
     free(nums);
     free(transformedArray);
 

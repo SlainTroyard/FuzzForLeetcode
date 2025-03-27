@@ -4,14 +4,12 @@
 #include <string.h>
 #include <stdio.h>
 
-// 交换两个整数
 void swap(int* a, int* b) {
     int temp = *a;
     *a = *b;
     *b = temp;
 }
 
-// 向下调整堆
 void heapifyDown(int* heap, int size, int idx) {
     int largest = idx;
     int left = 2 * idx + 1;
@@ -28,7 +26,6 @@ void heapifyDown(int* heap, int size, int idx) {
     }
 }
 
-// 向上调整堆
 void heapifyUp(int* heap, int idx) {
     while (idx > 0) {
         int parent = (idx - 1) / 2;
@@ -41,14 +38,12 @@ void heapifyUp(int* heap, int idx) {
     }
 }
 
-// 插入元素到堆中
 void heapInsert(int* heap, int* size, int val) {
     heap[*size] = val;
     heapifyUp(heap, *size);
     (*size)++;
 }
 
-// 移除堆顶元素
 void heapRemoveTop(int* heap, int* size) {
     if (*size <= 1) {
         *size = 0;
@@ -63,27 +58,22 @@ int* resultsArray(int** queries, int queriesSize, int* queriesColSize, int k, in
     int* result = (int*)malloc(sizeof(int) * queriesSize);
     *returnSize = queriesSize;
     
-    // 使用数组实现大顶堆，直接存储正距离
     int* heap = (int*)malloc(sizeof(int) * (k + 1));
     int heapSize = 0;
     
     for (int i = 0; i < queriesSize; i++) {
-        // 计算正距离
         int distance = abs(queries[i][0]) + abs(queries[i][1]);
         
-        // 将当前距离加入大顶堆
         heapInsert(heap, &heapSize, distance);
         
-        // 如果堆的大小超过k，移除最大的元素
         if (heapSize > k) {
             heapRemoveTop(heap, &heapSize);
         }
         
-        // 如果堆的大小等于k，返回堆顶元素（第k大的距离）
         if (heapSize == k) {
             result[i] = heap[0];
         } else {
-            result[i] = -1;  // 堆中元素少于k个
+            result[i] = -1;  
         }
     }
     

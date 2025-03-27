@@ -4,13 +4,11 @@
 #include <string.h>
 #include <stdbool.h>
 
-// Graph node for adjacency list
 typedef struct Node {
     int vertex;
     struct Node* next;
 } Node;
 
-// Queue implementation for BFS
 typedef struct {
     int* data;
     int front;
@@ -62,9 +60,7 @@ void destroyQueue(Queue* queue) {
     free(queue);
 }
 
-// Add a node to the adjacency list
 void addEdge(Node** adjList, int src, int dest) {
-    // Create a new node
     Node* newNode = (Node*)malloc(sizeof(Node));
     if (!newNode) {
         fprintf(stderr, "Memory allocation failed for new node\n");
@@ -75,9 +71,7 @@ void addEdge(Node** adjList, int src, int dest) {
     adjList[src] = newNode;
 }
 
-// Check if all nodes can be reached from node 0 with edges of weight <= limit
 bool check(int n, int** edges, int edgesSize, int limit) {
-    // Create adjacency list - using only edges with weight <= limit
     Node** adjList = (Node**)malloc(n * sizeof(Node*));
     if (!adjList) {
         fprintf(stderr, "Memory allocation failed for adjacency list\n");
@@ -89,15 +83,13 @@ bool check(int n, int** edges, int edgesSize, int limit) {
     
     for (int i = 0; i < edgesSize; i++) {
         if (edges[i][2] <= limit) {
-            addEdge(adjList, edges[i][1], edges[i][0]); // Reverse edge as in C++ code
+            addEdge(adjList, edges[i][1], edges[i][0]); 
         }
     }
     
-    // BFS to check if all nodes can be reached from node 0
     bool* visited = (bool*)calloc(n, sizeof(bool));
     if (!visited) {
         fprintf(stderr, "Memory allocation failed for visited array\n");
-        // Free adjacency list before exiting
         for (int i = 0; i < n; i++) {
             Node* current = adjList[i];
             while (current != NULL) {
@@ -129,7 +121,6 @@ bool check(int n, int** edges, int edgesSize, int limit) {
         }
     }
     
-    // Check if all nodes were visited
     bool allVisited = true;
     for (int i = 0; i < n; i++) {
         if (!visited[i]) {
@@ -138,7 +129,6 @@ bool check(int n, int** edges, int edgesSize, int limit) {
         }
     }
     
-    // Free allocated memory
     for (int i = 0; i < n; i++) {
         Node* current = adjList[i];
         while (current != NULL) {
@@ -154,7 +144,6 @@ bool check(int n, int** edges, int edgesSize, int limit) {
     return allVisited;
 }
 
-// Find the maximum weight among all edges
 int findMaxWeight(int** edges, int edgesSize) {
     int maxWeight = 0;
     for (int i = 0; i < edgesSize; i++) {
@@ -165,16 +154,13 @@ int findMaxWeight(int** edges, int edgesSize) {
     return maxWeight;
 }
 
-// Main solution function
 int minMaxWeight(int n, int** edges, int edgesSize, int* edgesColSize, int threshold) {
     int maxWeight = findMaxWeight(edges, edgesSize);
     
-    // Check if it's possible to reach all nodes even with max weight
     if (!check(n, edges, edgesSize, maxWeight)) {
         return -1;
     }
     
-    // Binary search for the minimal maximum weight
     int left = 0;
     int right = maxWeight;
     
@@ -197,9 +183,8 @@ int main() {
         return 1;
     }
     
-    // Initialize edges array with a larger dynamic capacity
     int edgesSize = 0;
-    int capacity = 100000; // Initial capacity for edges - set to max possible edges count
+    int capacity = 100000; 
     
     int** edges = (int**)malloc(capacity * sizeof(int*));
 
@@ -207,20 +192,16 @@ int main() {
     int* edgesColSize = (int*)malloc(capacity * sizeof(int));
 
     
-    // Read all the edges from the input until EOF
     int src, dest, weight;
     while (scanf("%d %d %d", &src, &dest, &weight) == 3) {
-        // Safety check for array bounds
         if (edgesSize >= capacity) {
             fprintf(stderr, "Warning: Maximum edge capacity reached (%d edges)\n", capacity);
             break;
         }
         
-        // Allocate and store the edge
         edges[edgesSize] = (int*)malloc(3 * sizeof(int));
 
         
-        // Store edge data
         edges[edgesSize][0] = src;
         edges[edgesSize][1] = dest;
         edges[edgesSize][2] = weight;
@@ -228,11 +209,9 @@ int main() {
         edgesSize++;
     }
     
-    // Call the solution function
     int result = minMaxWeight(n, edges, edgesSize, edgesColSize, threshold);
     printf("%d\n", result);
     
-    // Free allocated memory
     for (int i = 0; i < edgesSize; i++) {
         free(edges[i]);
     }

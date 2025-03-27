@@ -10,7 +10,7 @@ class Solution {
     long long f(string& word, int k) {
         long long ans = 0;
         int cnt1['u' - 'a' + 1]{};
-        int size1 = 0; // 元音种类数
+        int size1 = 0; 
         int cnt2 = 0;
         int left = 0;
         for (char b : word) {

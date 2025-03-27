@@ -4,13 +4,11 @@
 #include <string.h>
 #include <stdbool.h>
 
-// 频率和值对
 typedef struct {
-    int val;   // 元素值
-    int freq;  // 频率
+    int val;   
+    int freq;  
 } Pair;
 
-// 比较函数: 优先按频率降序，然后按值降序
 int cmp(const void* a, const void* b) {
     Pair* pa = (Pair*)a;
     Pair* pb = (Pair*)b;
@@ -18,18 +16,14 @@ int cmp(const void* a, const void* b) {
     return pb->val - pa->val;
 }
 
-/**
- * Note: The returned array must be malloced, assume caller calls free().
- */
+
 long long* findXSum(int* nums, int numsSize, int k, int x, int* returnSize) {
-    // 分配结果数组
     *returnSize = numsSize - k + 1;
     long long* result = (long long*)malloc(*returnSize * sizeof(long long));
     if (!result) return NULL;
     
-    // 使用二维数组作为简单哈希表，处理冲突
-    #define TABLE_SIZE 1031  // 质数，减少冲突
-    #define MAX_CHAIN 32     // 链表最大长度
+    #define TABLE_SIZE 1031  
+    #define MAX_CHAIN 32     
     
     Pair** hashTable = (Pair**)malloc(TABLE_SIZE * sizeof(Pair*));
     if (!hashTable) {
@@ -37,11 +31,9 @@ long long* findXSum(int* nums, int numsSize, int k, int x, int* returnSize) {
         return NULL;
     }
     
-    // 初始化哈希表
     for (int i = 0; i < TABLE_SIZE; i++) {
         hashTable[i] = (Pair*)calloc(MAX_CHAIN, sizeof(Pair));
         if (!hashTable[i]) {
-            // 清理已分配的内存
             for (int j = 0; j < i; j++) free(hashTable[j]);
             free(hashTable);
             free(result);
@@ -49,19 +41,16 @@ long long* findXSum(int* nums, int numsSize, int k, int x, int* returnSize) {
         }
     }
     
-    // 跟踪哈希表中实际元素
     Pair* activeElements = (Pair*)malloc(k * sizeof(Pair));
     int activeCount = 0;
 
-    // 处理第一个窗口
     for (int i = 0; i < k; i++) {
         int val = nums[i];
         unsigned int hash = (unsigned int)val % TABLE_SIZE;
         bool found = false;
         
-        // 查找链表中是否存在
         for (int j = 0; j < MAX_CHAIN; j++) {
-            if (hashTable[hash][j].freq == 0) break; // 到达链表末尾
+            if (hashTable[hash][j].freq == 0) break; 
             if (hashTable[hash][j].val == val) {
                 hashTable[hash][j].freq++;
                 found = true;
@@ -69,7 +58,6 @@ long long* findXSum(int* nums, int numsSize, int k, int x, int* returnSize) {
             }
         }
         
-        // 如果未找到，添加新元素
         if (!found) {
             for (int j = 0; j < MAX_CHAIN; j++) {
                 if (hashTable[hash][j].freq == 0) {
@@ -81,21 +69,18 @@ long long* findXSum(int* nums, int numsSize, int k, int x, int* returnSize) {
         }
     }
     
-    // 收集所有活跃元素
     for (int i = 0; i < TABLE_SIZE; i++) {
         for (int j = 0; j < MAX_CHAIN; j++) {
             if (hashTable[i][j].freq > 0) {
                 activeElements[activeCount++] = hashTable[i][j];
-                if (activeCount >= k) break; // 活跃元素不会超过k个
+                if (activeCount >= k) break; 
             }
         }
         if (activeCount >= k) break;
     }
     
-    // 对活跃元素排序
     qsort(activeElements, activeCount, sizeof(Pair), cmp);
     
-    // 计算第一个窗口的结果
     long long sum = 0;
     int countToSum = (activeCount < x) ? activeCount : x;
     for (int i = 0; i < countToSum; i++) {
@@ -103,12 +88,10 @@ long long* findXSum(int* nums, int numsSize, int k, int x, int* returnSize) {
     }
     result[0] = sum;
     
-    // 滑动窗口
     for (int i = 1; i <= numsSize - k; i++) {
-        int outVal = nums[i-1];  // 移出窗口的元素
-        int inVal = nums[i+k-1]; // 移入窗口的元素
+        int outVal = nums[i-1];  
+        int inVal = nums[i+k-1]; 
         
-        // 更新哈希表 - 减少移出元素的频率
         unsigned int outHash = (unsigned int)outVal % TABLE_SIZE;
         for (int j = 0; j < MAX_CHAIN; j++) {
             if (hashTable[outHash][j].freq == 0) break;
@@ -118,7 +101,6 @@ long long* findXSum(int* nums, int numsSize, int k, int x, int* returnSize) {
             }
         }
         
-        // 更新哈希表 - 增加移入元素的频率
         unsigned int inHash = (unsigned int)inVal % TABLE_SIZE;
         bool found = false;
         for (int j = 0; j < MAX_CHAIN; j++) {
@@ -130,7 +112,6 @@ long long* findXSum(int* nums, int numsSize, int k, int x, int* returnSize) {
             }
         }
         
-        // 如果是新元素，添加它
         if (!found) {
             for (int j = 0; j < MAX_CHAIN; j++) {
                 if (hashTable[inHash][j].freq == 0) {
@@ -141,10 +122,8 @@ long long* findXSum(int* nums, int numsSize, int k, int x, int* returnSize) {
             }
         }
         
-        // 重置活跃元素计数
         activeCount = 0;
         
-        // 重新收集所有活跃元素
         for (int h = 0; h < TABLE_SIZE; h++) {
             for (int j = 0; j < MAX_CHAIN; j++) {
                 if (hashTable[h][j].freq > 0) {
@@ -155,10 +134,8 @@ long long* findXSum(int* nums, int numsSize, int k, int x, int* returnSize) {
             if (activeCount >= k) break;
         }
         
-        // 对活跃元素排序
         qsort(activeElements, activeCount, sizeof(Pair), cmp);
         
-        // 计算当前窗口的结果
         sum = 0;
         countToSum = (activeCount < x) ? activeCount : x;
         for (int j = 0; j < countToSum; j++) {
@@ -167,7 +144,6 @@ long long* findXSum(int* nums, int numsSize, int k, int x, int* returnSize) {
         result[i] = sum;
     }
     
-    // 清理内存
     for (int i = 0; i < TABLE_SIZE; i++) {
         free(hashTable[i]);
     }

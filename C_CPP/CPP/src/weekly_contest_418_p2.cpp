@@ -13,29 +13,25 @@ public:
             g[e[0]].push_back(e[1]);
         }
 
-        // 标记所有可疑方法
         vector<int> is_suspicious(n);
         auto dfs = [&](auto&& dfs, int x) -> void {
             is_suspicious[x] = true;
             for (int y : g[x]) {
-                if (!is_suspicious[y]) { // 避免无限递归
+                if (!is_suspicious[y]) { 
                     dfs(dfs, y);
                 }
             }
         };
         dfs(dfs, k);
 
-        // 检查是否有【非可疑方法】->【可疑方法】的边
         for (auto& e : invocations) {
             if (!is_suspicious[e[0]] && is_suspicious[e[1]]) {
-                // 无法移除可疑方法
                 vector<int> ans(n);
                 iota(ans.begin(), ans.end(), 0);
                 return ans;
             }
         }
 
-        // 移除所有可疑方法
         vector<int> ans;
         for (int i = 0; i < n; i++) {
             if (!is_suspicious[i]) {

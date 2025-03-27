@@ -30,7 +30,7 @@ public:
                         f[i + 1][j + n][ban] = pow2;
                         continue;
                     }
-                    int& res = f[i + 1][j + n][ban]; // 注意这里是引用
+                    int& res = f[i + 1][j + n][ban]; 
                     for (int k = 0; k < 3; k++) {
                         if (i == n - 1 || k != ban) {
                             int score = (k - x + 3) % 3;

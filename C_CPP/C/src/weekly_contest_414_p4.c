@@ -6,7 +6,7 @@
 
 #define INF INT_MAX
 #define N 50
-#define MAX_STATE (1LL << N)  // 使用long long
+#define MAX_STATE (1LL << N)  
 
 typedef struct {
     int x, y;
@@ -81,7 +81,6 @@ void calculateDistances(Solution *sol) {
     }
 }
 
-// 使用动态分配的memo数组
 int ***memo;
 
 int dfs(Solution *sol, int i, long long m, int turn) {
@@ -113,7 +112,6 @@ int maxMoves(int kx, int ky, int** positions, int positionsSize, int* positionsC
 
     memset(sol.dist, 0, sizeof(sol.dist));
 
-    // 动态分配memo数组
     memo = (int ***)malloc((N + 1) * sizeof(int **));
     for (int i = 0; i <= N; ++i) {
         memo[i] = (int **)malloc((1LL << positionsSize) * sizeof(int *));
@@ -126,7 +124,6 @@ int maxMoves(int kx, int ky, int** positions, int positionsSize, int* positionsC
     calculateDistances(&sol);
     int result = dfs(&sol, sol.n, 0, 0);
 
-    // 释放内存
     for (int i = 0; i <= N; ++i) {
         for (long long j = 0; j < (1LL << positionsSize); ++j) {
             free(memo[i][j]);

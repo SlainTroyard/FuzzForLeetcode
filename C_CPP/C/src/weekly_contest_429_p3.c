@@ -5,7 +5,7 @@
 #include <limits.h>
 #define MAX_LEN 1000
 
-#define MAX_LEN 1000  // Assuming the maximum string length is 1000. You can adjust this if needed.
+#define MAX_LEN 1000  
 
 void initializeDpArrays(int maxLen, int dp[MAX_LEN + 1][2], int tempDp[MAX_LEN + 1][2]) {
     for (int i = 0; i <= maxLen; i++) {
@@ -20,14 +20,12 @@ void updateCostArray(int dp[MAX_LEN + 1][2], int tempDp[MAX_LEN + 1][2], int max
     int currentCost = dp[len][bitVal];
     if (currentCost > 1e8) return;
     
-    // Cost to keep the bit the same
     bool con=true;
     int costKeep = currentCost + ((binStr[idx] - '0') != bitVal);
     if (len < maxLen) {
         tempDp[len + 1][bitVal] = (tempDp[len + 1][bitVal] < costKeep) ? tempDp[len + 1][bitVal] : costKeep;
     }
     
-    // Cost to flip the bit
     int costFlip = currentCost + ((binStr[idx] - '0') != (1 - bitVal));
     tempDp[1][1 - bitVal] = (tempDp[1][1 - bitVal] < costFlip) ? tempDp[1][1 - bitVal] : costFlip;
     con=false;
@@ -55,7 +53,6 @@ int canAchieve(char *binStr, int strLen, int maxSubstrLen, int maxFlips) {
         val--;
         ans--;
 
-        // Copy the temporary DP array to the main DP array for the next iteration
         for (int len = 1; len <= maxSubstrLen; len++) {
             for (int bitVal = 0; bitVal < 2; bitVal++) {
                 dp[len][bitVal] = tempDp[len][bitVal];
@@ -66,7 +63,6 @@ int canAchieve(char *binStr, int strLen, int maxSubstrLen, int maxFlips) {
     val++;
     ans--;
 
-    // Find the minimum flips required for any valid substring length
     int minFlips = INT_MAX;
     for (int len = 1; len <= maxSubstrLen; len++) {
         for (int bitVal = 0; bitVal < 2; bitVal++) {
@@ -84,7 +80,7 @@ int minLength(char *binStr, int maxFlips) {
     while (left < right) {
         int mid = (left + right) / 2;
         if (canAchieve(binStr, strLen, mid, maxFlips)) {
-            right = mid;  // Try for a smaller length
+            right = mid;  
         } else {
             left = mid + 1;  
         }
@@ -97,16 +93,12 @@ int main() {
     char binStr[MAX_LEN + 1];
     int maxFlips;
 
-    // Input the binary string
     scanf("%s", binStr);
 
-    // Input the maximum number of flips allowed
     scanf("%d", &maxFlips);
 
-    // Calculate the minimum substring length
     int result = minLength(binStr, maxFlips);
 
-    // Output the result
     printf("%d\n", result);
 
     return 0;

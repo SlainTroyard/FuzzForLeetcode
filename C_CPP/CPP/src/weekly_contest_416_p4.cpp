@@ -18,10 +18,8 @@ public:
         auto update = [&](int c, int add) {
             diff[c] += add;
             if (add == 1 && diff[c] == 0) {
-                // 表明 diff[c] 由 -1 变为 0
                 cnt--;
             } else if (add == -1 && diff[c] == -1) {
-                // 表明 diff[c] 由 0 变为 -1
                 cnt++;
             }
         };

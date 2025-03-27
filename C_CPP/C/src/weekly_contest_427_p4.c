@@ -13,8 +13,7 @@
 #define MER_LONG(i, j)      ((long long)(i) << 32 | (long long)(j))
 #define MAX_VAL(i, j)       ((i) > (j) ? (i) : (j))
 
-/* Priority queue. Used for discretization and listing coordinate points 
-   from left to right and bottom to top. */
+
 typedef struct
 {
     long long *arr;
@@ -22,8 +21,7 @@ typedef struct
 }
 PriorityQueue;
 
-/* Binary tree. Used to calculate the number of values in a given interval 
-   and to add values into it. */
+
 typedef struct
 {
     int *arr;
@@ -37,19 +35,7 @@ static int binarySearch(int *map, int mapSize, int value);
 static void treeHighestBit(BinaryTree *tree, int max);
 static int treePushCount(BinaryTree *tree, int value);
 
-/* Main function. Several arrays are defined as follows:
-  xMap:        The horizontal coordinate values of each column from left to right.
-  yMap:        The vertical coordinate values after discretization.
-  listsSize:   The number of points in each vertical column.
-  listsBuff:   To avoid exceeding space limits with a direct 2D array, 
-               a buffer is used for the actual total space.
-  prefixBuff:  Similar to listsBuff, this is for the prefix sum array's actual total space.
-  xLast:       The latest horizontal coordinate position for each discretized vertical coordinate on the left.
-  lists:       The list of coordinate points recorded for each sequence. Uses memory space from listsBuff.
-  prefix:      The total number of points in the rectangular area from the bottom-left corner 
-               to the current position. Uses memory space from prefixBuff.
-  arr1:        Space for the binary tree's array.
-  arr2:        Space for the priority queue's array. */
+
 long long maxRectangleArea(int *xCoord, int xCoordSize, int *yCoord, int yCoordSize)
 {
     const int n = xCoordSize, treeSize = n * 3;
@@ -61,22 +47,21 @@ long long maxRectangleArea(int *xCoord, int xCoordSize, int *yCoord, int yCoordS
     BinaryTree tree;
     PriorityQueue queue;
     long long t = 0, result = -1;
-    /* Initialization. xLast is initialized to an invalid value -1. 
-       Binary tree's array space is initialized to 0. */
+    
     memset(xLast, -1, sizeof(xLast));
     memset(arr1, 0, sizeof(arr1));
     queue.arr = arr2;
     queue.arrSize = 0;
     tree.arr = arr1;
     treeHighestBit(&tree, n - 1);
-    /* Discretize all vertical coordinates. */
+    
     for (j = 0; n > j; j++)
     {
         queuePush(&queue, yCoord[j]);
     }
     while (0 < queue.arrSize)
     {
-        /* Ensure no duplicate values in yMap by comparing with the previous value. */
+        
         if (k < queue.arr[0])
         {
             k = queue.arr[0];
@@ -85,54 +70,47 @@ long long maxRectangleArea(int *xCoord, int xCoordSize, int *yCoord, int yCoordS
         }
         queuePop(&queue);
     }
-    /* Enqueue all coordinate points, recording the mapped discretized vertical coordinates. */
+    
     for (j = 0; n > j; j++)
     {
         y = binarySearch(yMap, yMapSize, yCoord[j]);
         queuePush(&queue, MER_LONG(xCoord[j], y));
     }
-    /* Dequeue column by column. Here, i represents the i-th column from left to right, 
-       and j represents the j-th point from bottom to top in each column. */
+    
     while (0 < queue.arrSize)
     {
         j = 0;
         lists[i] = &listsBuff[buffSize];
         prefix[i] = &prefixBuff[buffSize];
         xMap[i] = HIGH_INT(queue.arr[0]);
-        /* Points with the same horizontal coordinate are treated as column xMap[i]. */
+        
         while (0 < queue.arrSize && xMap[i] == HIGH_INT(queue.arr[0]))
         {
-            /* Record the mapped values (ascending order) of vertical coordinates 
-               for this column and the interval prefix sum. */
+            
             lists[i][j] = LOW_INT(queue.arr[0]);
             prefix[i][j] = treePushCount(&tree, lists[i][j]);
-            /* If it can serve as the top-right corner of a rectangle. 
-               This condition ensures that the two vertices on the left exist 
-               and are in the same column. */
+            
             if (0 < j && -1 != xLast[lists[i][j]] && xLast[lists[i][j]] == k)
             {
-                /* x and y represent the array indices of the two vertices on the left 
-                   in column xMap[k]. */
+                
                 x = binarySearch(lists[k], listsSize[k], lists[i][j]);
                 y = binarySearch(lists[k], listsSize[k], lists[i][j - 1]);
                 number = prefix[i][j] - prefix[i][j - 1] - prefix[k][x] + prefix[k][y];
-                /* If x and y are adjacent, and the interval only contains one vertex 
-                   (i.e., the top-right corner), the condition is satisfied. */
+                
                 if (x - 1 == y && 1 == number)
                 {
                     t = (long long)(xMap[i] - xMap[k]) * (yMap[lists[i][j]] - yMap[lists[i][j - 1]]);
                     result = MAX_VAL(result, t);
                 }
             }
-            /* Update xLast of the current point's vertical coordinate to the current column index i. 
-               Here, k records the xLast value of the point below it. */
+            
             k = xLast[lists[i][j]];
             xLast[lists[i][j]] = i;
-            /* Dequeue and increment counter. */
+            
             queuePop(&queue);
             j++;
         }
-        /* Update buffer space and index. */
+        
         listsSize[i] = j;
         buffSize += j;
         i++;
@@ -140,7 +118,7 @@ long long maxRectangleArea(int *xCoord, int xCoordSize, int *yCoord, int yCoordS
     return result;
 }
 
-/* Push into the priority queue. */
+
 static void queuePush(PriorityQueue *queue, long long value)
 {
     int son = queue->arrSize, father = FATHER_NODE(son);
@@ -155,7 +133,7 @@ static void queuePush(PriorityQueue *queue, long long value)
     return;
 }
 
-/* Pop from the priority queue. */
+
 static void queuePop(PriorityQueue *queue)
 {
     int father = 0, left = LEFT_NODE(father), right = RIGHT_NODE(father), son = 0;
@@ -173,8 +151,7 @@ static void queuePop(PriorityQueue *queue)
     return;
 }
 
-/* In a sorted array (without duplicates), find the largest index less than or equal to value. 
-   Return -1 if it doesn't exist. */
+
 static int binarySearch(int *map, int mapSize, int value)
 {
     int mid = -1, left = 0, right = mapSize - 1;
@@ -197,8 +174,7 @@ static int binarySearch(int *map, int mapSize, int value)
     return left;
 }
 
-/* Calculate the highest bit needed for storing values in the binary tree. 
-   If the input is 0, record as the first bit from the right. */
+
 static void treeHighestBit(BinaryTree *tree, int max)
 {
     int i = 1;
@@ -215,11 +191,11 @@ static void treeHighestBit(BinaryTree *tree, int max)
     return;
 }
 
-/* Add a value to the binary tree and return the count of values less than or equal to it. */
+
 static int treePushCount(BinaryTree *tree, int value)
 {
     int i = 0, bit = tree->highestBit, result = 0;
-    /* Add the value to the tree while recording the count of values less than it. */
+    
     while (0 != bit)
     {
         if (bit & value)
@@ -234,7 +210,7 @@ static int treePushCount(BinaryTree *tree, int value)
         tree->arr[i]++;
         bit = bit >> 1;
     }
-    /* Add the count of the value itself to get the total count of values less than or equal to it. */
+    
     result += tree->arr[i];
     return result;
 }
@@ -242,23 +218,19 @@ static int treePushCount(BinaryTree *tree, int value)
 
 
 int main() {
-    // Input the number of points
     int n;
 
     scanf("%d", &n);
 
     int xCoord[n], yCoord[n];
 
-    // Input the coordinates of the points
 
     for (int i = 0; i < n; i++) {
         scanf("%d %d", &xCoord[i], &yCoord[i]);
     }
 
-    // Calculate the maximum rectangle area
     long long maxArea = maxRectangleArea(xCoord, n, yCoord, n);
 
-    // Output the result
     printf("%lld\n", maxArea);
 
     return 0;

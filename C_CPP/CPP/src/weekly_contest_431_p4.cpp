@@ -23,15 +23,12 @@ public:
 
         n = vec.size();
         const long long INF = 1e18;
-        // 使用类型别名和 std::vector 替换 VLA
         using LLArray = std::array<long long, 5>;
         std::vector<std::array<LLArray, 5>> f(n);
 
-        // 初始化 f[0]
         for (int j = 1; j <= 4; j++) f[0][j] = {INF, INF, INF, INF, INF};
         f[0][0] = {0, INF, INF, INF, INF};
 
-        // 动态规划
         for (int i = 1; i < n; i++) {
             for (int j = 0; j <= 4; j++) f[i][j] = f[i - 1][j];
             int idx = vec[i].second;
@@ -49,12 +46,11 @@ public:
                     tmp[0] -= intervals[idx][2];
                     tmp[j] = idx;
                     sort(tmp.begin(), tmp.end());
-                    f[i][j] = min(f[i][j], tmp); // std::array 支持 lexicographical 比较
+                    f[i][j] = min(f[i][j], tmp); 
                 }
             }
         }
 
-        // 计算答案
         array<long long, 5> ans = {INF, INF, INF, INF, INF};
         for (int j = 1; j <= 4; j++) ans = min(ans, f[n - 1][j]);
         vector<int> ret;

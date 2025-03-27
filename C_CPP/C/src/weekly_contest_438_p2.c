@@ -22,7 +22,6 @@ long long maxSum(int** grid, int gridSize, int* gridColSize, int* limits, int li
 }
 
 int main() {
-    // TODO: Add the base I/O interface here
     int n, m, k;
     scanf("%d %d %d", &n, &m, &k);
     int ** grid = (int **)malloc(n * sizeof(int *));

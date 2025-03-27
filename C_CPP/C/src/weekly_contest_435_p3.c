@@ -5,7 +5,6 @@
 #include <stdbool.h>
 #include <limits.h>
 
-// 计算最大公约数
 long long gcd(long long a, long long b) {
     while (b) {
         long long temp = b;
@@ -15,19 +14,16 @@ long long gcd(long long a, long long b) {
     return a;
 }
 
-// 返回两个数中的较小值
 long long min(long long a, long long b) {
     return a < b ? a : b;
 }
 
-// 主函数实现
 int minimumIncrements(int* nums, int numsSize, int* target, int targetSize) {
     int n = numsSize;
     int m = targetSize;
     
-    // 计算g数组 - 用于计算可整除性
     long long* g = (long long*)malloc((1 << m) * sizeof(long long));
-    if (!g) return -1; // 内存分配失败
+    if (!g) return -1; 
     
     for (int i = 0; i < (1 << m); i++) {
         g[i] = 1;
@@ -38,12 +34,11 @@ int minimumIncrements(int* nums, int numsSize, int* target, int targetSize) {
         }
     }
     
-    // 动态规划数组
     const long long INF = 1e18;
     long long** f = (long long**)malloc(2 * sizeof(long long*));
     if (!f) {
         free(g);
-        return -1; // 内存分配失败
+        return -1; 
     }
     
     for (int i = 0; i < 2; i++) {
@@ -52,17 +47,15 @@ int minimumIncrements(int* nums, int numsSize, int* target, int targetSize) {
             if (i > 0) free(f[0]);
             free(f);
             free(g);
-            return -1; // 内存分配失败
+            return -1; 
         }
     }
     
-    // 初始化DP数组
     for (int j = 0; j < (1 << m); j++) {
         f[0][j] = INF;
     }
     f[0][0] = 0;
     
-    // 动态规划过程
     for (int i = 1; i <= n; i++) {
         for (int j = 0; j < (1 << m); j++) {
             f[i & 1][j] = f[(i & 1) ^ 1][j];
@@ -76,10 +69,8 @@ int minimumIncrements(int* nums, int numsSize, int* target, int targetSize) {
         }
     }
     
-    // 获取结果
     int result = (int)f[n & 1][(1 << m) - 1];
     
-    // 释放内存
     for (int i = 0; i < 2; i++) {
         free(f[i]);
     }
@@ -90,14 +81,12 @@ int minimumIncrements(int* nums, int numsSize, int* target, int targetSize) {
 }
 
 int main() {
-    // 读取输入
     int n, m;
     if (scanf("%d %d", &n, &m) != 2) {
         fprintf(stderr, "Error reading input for n and m\n");
         return 1;
     }
     
-    // 分配内存并读取数组
     int* nums = (int*)malloc(n * sizeof(int));
     int* target = (int*)malloc(m * sizeof(int));
     
@@ -126,13 +115,10 @@ int main() {
         }
     }
     
-    // 调用函数计算结果
     int result = minimumIncrements(nums, n, target, m);
     
-    // 输出结果
     printf("%d\n", result);
     
-    // 释放内存
     free(nums);
     free(target);
     

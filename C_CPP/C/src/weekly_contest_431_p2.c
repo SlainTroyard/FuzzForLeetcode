@@ -3,7 +3,6 @@
 #include <stdlib.h>
 #include <string.h>
 
-// Stack implementation for storing positions
 typedef struct {
     int* data;
     int size;
@@ -26,14 +25,14 @@ int popStack(Stack* s) {
     if (s->size > 0) {
         return s->data[--s->size];
     }
-    return -1; // Error case, shouldn't happen
+    return -1; 
 }
 
 int topStack(Stack* s) {
     if (s->size > 0) {
         return s->data[s->size - 1];
     }
-    return -1; // Empty stack
+    return -1; 
 }
 
 int isEmptyStack(Stack* s) {
@@ -46,30 +45,25 @@ void freeStack(Stack* s) {
     s->capacity = 0;
 }
 
-// Main solution function
 long long calculateScore(char* s) {
     int len = strlen(s);
-    Stack stacks[26]; // One stack for each letter
+    Stack stacks[26]; 
     long long ans = 0;
     
-    // Initialize all stacks
     for (int i = 0; i < 26; i++) {
-        initStack(&stacks[i], len); // Maximum possible size is the length of the string
+        initStack(&stacks[i], len); 
     }
     
     for (int i = 0; i < len; i++) {
         int c = s[i] - 'a';
         if (!isEmptyStack(&stacks[25 - c])) {
-            // Found a match - calculate score and pop
             ans += i - topStack(&stacks[25 - c]);
             popStack(&stacks[25 - c]);
         } else {
-            // No match - push current position
             pushStack(&stacks[c], i);
         }
     }
     
-    // Clean up
     for (int i = 0; i < 26; i++) {
         freeStack(&stacks[i]);
     }
@@ -78,7 +72,7 @@ long long calculateScore(char* s) {
 }
 
 int main() {
-    char s[100001]; // Maximum length of the string plus 1 for null terminator
+    char s[100001]; 
     scanf("%s", s);
     
     printf("%lld\n", calculateScore(s));

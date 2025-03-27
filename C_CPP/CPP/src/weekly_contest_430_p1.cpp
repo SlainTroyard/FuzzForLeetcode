@@ -29,16 +29,16 @@ int main() {
     Solution solution;
 
     int m, n;
-    cin >> m >> n; // m rows and n columns
+    cin >> m >> n; 
 
     vector<vector<int>> grid(m, vector<int>(n));
     for (int i = 0; i < m; i++) {
         for (int j = 0; j < n; j++) {
-            cin >> grid[i][j]; // input matrix element
+            cin >> grid[i][j]; 
         }
     }
 
-    cout << solution.minimumOperations(grid) << endl; // result
+    cout << solution.minimumOperations(grid) << endl; 
     return 0;
 }
 

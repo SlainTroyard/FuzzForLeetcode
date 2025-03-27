@@ -75,7 +75,6 @@ int maxDistance(int side, int** points, int pointsSize, int* pointsColSize, int 
 }
 
 int main() {
-    // TODO: Add the base I/O interface here
     int side, n, k;
     scanf("%d %d %d", &side, &n, &k);
     int **points = (int **)malloc(sizeof(int *) * n);

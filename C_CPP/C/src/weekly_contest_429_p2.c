@@ -28,26 +28,20 @@ int maxDistinctElements(int* arr, int arrSize, int diff) {
 int main() {
     int n, diff;
 
-    // Input array size and difference
     scanf("%d", &n);
 
     scanf("%d", &diff);
 
-    // Allocate memory for the array
     int* arr = (int*)malloc(n * sizeof(int));
 
-    // Input array elements
     for (int i = 0; i < n; i++) {
         scanf("%d", &arr[i]);
     }
 
-    // Compute the result
     int result = maxDistinctElements(arr, n, diff);
 
-    // Output the result
     printf("%d\n", result);
 
-    // Free allocated memory
     free(arr);
 
     return 0;

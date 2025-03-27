@@ -6,7 +6,6 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-// tweak for performance
 int block_size = 512;
 
 struct Query {
@@ -24,7 +23,6 @@ public:
     long long maxRectangleArea(vector<int>& xCoord, vector<int>& yCoord) {
         long long ans = -1;
         int n = xCoord.size();
-        // Coordinate compression
         unordered_map<int, int> toCompressed, toOriginal;
         {
         	set<int> p;
@@ -55,27 +53,21 @@ public:
 
     		auto it = upper_bound(byY[ay].begin(), byY[ay].end(), ax);
     		if(it == byY[ay].end()) continue;
-    		auto rx = *it, ry = ay; // this is bottom right point
+    		auto rx = *it, ry = ay; 
 
     		it = upper_bound(byX[ax].begin(), byX[ax].end(), ay);
     		if(it == byX[ax].end()) continue;
-    		auto tx = ax, ty = *it; // this is top left point
+    		auto tx = ax, ty = *it; 
 
-    		// check existence of top right point
     		auto itR = upper_bound(byX[rx].begin(), byX[rx].end(), ry);
     		auto itT = upper_bound(byY[ty].begin(), byY[ty].end(), tx);
     		if(itR == byX[rx].end() || itT == byY[ty].end()) continue;
     		if(*itR != ty || *itT != rx) continue;
 
-    		// dx/dy = down x/y,
-    		// ux/uy = up x/y
-    		// we +1 and -1 so we only get the inside (excluding border)
     		int dx = ax+1, dy = ay+1;
     		int ux = rx-1, uy = ty-1;
     		long long area = 1LL * (toOriginal[ty]-toOriginal[ay]) * (toOriginal[rx]-toOriginal[ax]);
     		if(dx <= ux && dy <= uy) {
-    			// check if any point is in [dx, dy] [ux, uy] rectangle
-    			// if yes, then this isnt valid
     			queries.emplace_back(dx, ux, dy, uy, area);
     		}else {
     			ans = max(ans, area);
@@ -84,8 +76,6 @@ public:
 
     	sort(queries.begin(), queries.end());
 
-    	// Mo's algorithm at play
-        // Copied from CP-A
     	int cur_l = 0;
 	    int cur_r = -1;
 	    multiset<int> ms;
@@ -107,7 +97,7 @@ public:
 	            cur_r--;
 	        }
 	        if(auto it = ms.lower_bound(q.ly); it != ms.end()) {
-	        	if(*it <= q.ry) continue; // there is a point that lies inside
+	        	if(*it <= q.ry) continue; 
 	        }
 	    	ans = max(ans, q.area);
 	    }
@@ -118,23 +108,19 @@ public:
 int main() {
     Solution solution;
 
-    // Input the number of points
     int n;
 
     cin >> n;
 
     vector<int> xCoord(n), yCoord(n);
 
-    // Input the coordinates of the points
 
     for (int i = 0; i < n; ++i) {
         cin >> xCoord[i] >> yCoord[i];
     }
 
-    // Calculate the maximum rectangle area
     long long maxArea = solution.maxRectangleArea(xCoord, yCoord);
 
-    // Output the result
     cout << maxArea << endl;
 
     return 0;

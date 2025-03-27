@@ -26,27 +26,20 @@ int minimumSumSubarray(int* nums, int numsSize, int l, int r) {
 int main() {
     int numsSize, l, r;
 
-    // Input the size of the array
     scanf("%d", &numsSize);
 
-    // Allocate memory for the array
     int* nums = (int*)malloc(numsSize * sizeof(int));
 
-    // Input the array elements
     for (int i = 0; i < numsSize; i++) {
         scanf("%d", &nums[i]);
     }
 
-    // Input the range [l, r]
     scanf("%d %d", &l, &r);
 
-    // Call the function
     int result = minimumSumSubarray(nums, numsSize, l, r);
 
-    // Output the result
     printf("%d\n", result);
 
-    // Free allocated memory
     free(nums);
 
     return 0;

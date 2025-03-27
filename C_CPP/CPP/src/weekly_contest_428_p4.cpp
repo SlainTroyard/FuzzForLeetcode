@@ -69,10 +69,8 @@ int main() {
     Solution solution;
     string s;
 
-    // Input the string
     cin >> s;
 
-    // Call makeStringGood and output the result
     int result = solution.makeStringGood(s);
     cout << result << endl;
 

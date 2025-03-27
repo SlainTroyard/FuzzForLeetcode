@@ -24,14 +24,11 @@ public:
 int main() {
     string num;
     
-    // Input the number as a string
     cin >> num;
     
-    // Create a Solution object and call the isBalanced function
     Solution solution;
     bool result = solution.isBalanced(num);
     
-    // Output the result
     if (result) {
         cout << "true" << endl;
     } else {

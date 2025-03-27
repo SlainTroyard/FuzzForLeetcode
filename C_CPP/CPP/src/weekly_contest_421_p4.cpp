@@ -13,7 +13,6 @@ class Solution {
 
     using Matrix = array<array<int, SIZE>, SIZE>;
 
-    // 返回矩阵 a 和矩阵 b 相乘的结果
     Matrix mul(Matrix& a, Matrix& b) {
         Matrix c{};
         for (int i = 0; i < SIZE; i++) {
@@ -29,11 +28,10 @@ class Solution {
         return c;
     }
 
-    // 返回 n 个矩阵 a 相乘的结果
     Matrix pow(Matrix a, int n) {
         Matrix res = {};
         for (int i = 0; i < SIZE; i++) {
-            res[i][i] = 1; // 单位矩阵
+            res[i][i] = 1; 
         }
         while (n) {
             if (n & 1) {
@@ -62,7 +60,6 @@ public:
 
         long long ans = 0;
         for (int i = 0; i < SIZE; i++) {
-            // m 第 i 行的和就是 f[t][i]
             ans += std::accumulate(m[i].begin(), m[i].end(), 0LL) * cnt[i];
         }
         return ans % MOD;

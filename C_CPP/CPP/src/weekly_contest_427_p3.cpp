@@ -32,7 +32,6 @@ int main() {
     Solution solution;
     int n, k;
 
-    // Input array size and k value
     cin >> n;
     cin >> k;
 
@@ -41,7 +40,6 @@ int main() {
         cin >> nums[i];
     }
 
-    // Call the maxSubarraySum function and print the result
     long long result = solution.maxSubarraySum(nums, k);
     cout << result << endl;
 

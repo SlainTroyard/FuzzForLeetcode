@@ -28,20 +28,16 @@ int main() {
     Solution solution;
     int n, diff;
 
-    // Input array size and difference
     cin >> n;
     cin >> diff;
 
-    // Input array elements
     vector<int> arr(n);
     for (int i = 0; i < n; i++) {
         cin >> arr[i];
     }
 
-    // Compute the result
     int result = solution.maxDistinctElements(arr, diff);
 
-    // Output the result
     cout << result << endl;
 
     return 0;

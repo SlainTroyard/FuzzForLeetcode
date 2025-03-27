@@ -18,7 +18,6 @@ bool isPossibleToRearrange(char* s, char* t, int k) {
 }
 
 int main() {
-    // Input the strings s, t, and the integer k
     char s[200001], t[200001];
     int k;
 
@@ -28,7 +27,6 @@ int main() {
 
     scanf("%d", &k);
 
-    // Check if it is possible to rearrange the strings
     if (isPossibleToRearrange(s, t, k)) {
         printf("true\n");
     } else {

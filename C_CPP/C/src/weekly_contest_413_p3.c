@@ -33,7 +33,6 @@ int maxScore(int** grid, int gridSize, int* gridColSize) {
     for(int i = 1; i <= maxnum;i++){
         for(int j = 0; j < (1 << m);j++){
             dp[i][j] = fmax(dp[i][j], dp[i-1][j]);
-            //选第k行元素
             for(int k = 0; k < m; k++){
                 if((numsRaw[i] >> k & 1) && (j >> k & 1)){
                     dp[i][j] = fmax(dp[i][j], dp[i-1][j ^ (1 << k)] + i);
@@ -46,7 +45,6 @@ int maxScore(int** grid, int gridSize, int* gridColSize) {
 }
 
 int main() {
-    // TODO: Add the base I/O interface here
     int gridSize;
     scanf("%d", &gridSize);
     int gridColSize[gridSize];

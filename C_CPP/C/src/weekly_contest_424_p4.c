@@ -5,11 +5,9 @@
 #include <stdio.h>
 #include <limits.h>
 
-// Function to calculate the minimum difference as in the C++ solution
 int minDifference(int* nums, int n) {
     int min_l = INT_MAX, max_r = 0;
     
-    // Find min_l and max_r by checking for the adjacent '-1' elements
     for (int i = 0; i < n; i++) {
         if (nums[i] != -1 && 
             ((i > 0 && nums[i - 1] == -1) || (i < n - 1 && nums[i + 1] == -1))) {
@@ -20,7 +18,6 @@ int minDifference(int* nums, int n) {
 
     int ans = 0;
 
-    // Helper function to update the result (same logic as the C++ lambda function)
     void update_ans(int l, int r, int big) {
         int d = (r - min_l < max_r - l ? r - min_l : max_r - l) + 1;
         d /= 2;
@@ -30,7 +27,6 @@ int minDifference(int* nums, int n) {
         if (d > ans) ans = d;
     }
 
-    // Calculate the answer by iterating through the elements
     int pre_i = -1;
     for (int i = 0; i < n; i++) {
         if (nums[i] == -1) {

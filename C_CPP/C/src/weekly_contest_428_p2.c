@@ -6,14 +6,12 @@
 #include <math.h>
 
 double maxAmount(char* initialCurrency, char*** pairs1, int pairs1Size, int* pairs1ColSize, double* rates1, int rates1Size, char*** pairs2, int pairs2Size, int* pairs2ColSize, double* rates2, int rates2Size) {
-    // Define maximum number of currencies (from constraints)
     const int MAX_CURRENCIES = 20;
     double graph1[MAX_CURRENCIES][MAX_CURRENCIES];
     double graph2[MAX_CURRENCIES][MAX_CURRENCIES];
     char* currencies[MAX_CURRENCIES];
     int currencyCount = 0;
 
-    // Helper function to find or add currency index
     int getCurrencyIndex(char* currency) {
         for (int i = 0; i < currencyCount; i++) {
             if (strcmp(currencies[i], currency) == 0) {
@@ -24,7 +22,6 @@ double maxAmount(char* initialCurrency, char*** pairs1, int pairs1Size, int* pai
         return currencyCount++;
     }
 
-    // Initialize graphs
     for (int i = 0; i < MAX_CURRENCIES; i++) {
         for (int j = 0; j < MAX_CURRENCIES; j++) {
             graph1[i][j] = (i == j) ? 1.0 : 0.0;
@@ -32,7 +29,6 @@ double maxAmount(char* initialCurrency, char*** pairs1, int pairs1Size, int* pai
         }
     }
 
-    // Fill graphs for Day 1
     for (int i = 0; i < pairs1Size; i++) {
         int from = getCurrencyIndex(pairs1[i][0]);
         int to = getCurrencyIndex(pairs1[i][1]);
@@ -40,7 +36,6 @@ double maxAmount(char* initialCurrency, char*** pairs1, int pairs1Size, int* pai
         graph1[to][from] = 1.0 / rates1[i];
     }
 
-    // Fill graphs for Day 2
     for (int i = 0; i < pairs2Size; i++) {
         int from = getCurrencyIndex(pairs2[i][0]);
         int to = getCurrencyIndex(pairs2[i][1]);
@@ -48,7 +43,6 @@ double maxAmount(char* initialCurrency, char*** pairs1, int pairs1Size, int* pai
         graph2[to][from] = 1.0 / rates2[i];
     }
 
-    // Apply Floyd-Warshall algorithm on both graphs
     for (int k = 0; k < currencyCount; k++) {
         for (int i = 0; i < currencyCount; i++) {
             for (int j = 0; j < currencyCount; j++) {
@@ -58,10 +52,8 @@ double maxAmount(char* initialCurrency, char*** pairs1, int pairs1Size, int* pai
         }
     }
 
-    // Find the initial currency index
     int startIndex = getCurrencyIndex(initialCurrency);
 
-    // Calculate the maximum amount
     double maxAmount = 1.0;
     for (int i = 0; i < currencyCount; i++) {
         double amountDay1 = graph1[startIndex][i];
@@ -73,11 +65,9 @@ double maxAmount(char* initialCurrency, char*** pairs1, int pairs1Size, int* pai
 }
 
 int main() {
-    // Input: initialCurrency
     char initialCurrency[4];
     scanf("%s", initialCurrency);
 
-    // Input: pairs1 and rates1
     int pairs1Size;
     scanf("%d", &pairs1Size);
 
@@ -90,10 +80,9 @@ int main() {
         pairs1[i][0] = (char*)malloc(4 * sizeof(char));
         pairs1[i][1] = (char*)malloc(4 * sizeof(char));
         scanf("%s %s %lf", pairs1[i][0], pairs1[i][1], &rates1[i]);
-        pairs1ColSize[i] = 2; // Each pair has 2 columns
+        pairs1ColSize[i] = 2; 
     }
 
-    // Input: pairs2 and rates2
     int pairs2Size;
     scanf("%d", &pairs2Size);
 
@@ -106,16 +95,13 @@ int main() {
         pairs2[i][0] = (char*)malloc(4 * sizeof(char));
         pairs2[i][1] = (char*)malloc(4 * sizeof(char));
         scanf("%s %s %lf", pairs2[i][0], pairs2[i][1], &rates2[i]);
-        pairs2ColSize[i] = 2; // Each pair has 2 columns
+        pairs2ColSize[i] = 2; 
     }
 
-    // Call the function and get the result
     double result = maxAmount(initialCurrency, pairs1, pairs1Size, pairs1ColSize, rates1, pairs1Size, pairs2, pairs2Size, pairs2ColSize, rates2, pairs2Size);
 
-    // Output the result
     printf("%.5lf\n", result);
 
-    // Free allocated memory
     for (int i = 0; i < pairs1Size; i++) {
         free(pairs1[i][0]);
         free(pairs1[i][1]);

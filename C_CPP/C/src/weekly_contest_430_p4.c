@@ -43,10 +43,8 @@ int main() {
     int n, m, k;
     scanf("%d %d %d", &n, &m, &k);
 
-    // Calculate the result
     long long result = countGoodArrays(n, m, k);
 
-    // Output the result
     printf("%lld\n", result);
 
     return 0;

@@ -86,23 +86,18 @@ int minArraySum(int* nums, int numsSize, int k, int op1, int op2) {
 }
 
 int main() {
-    // Read input: number of elements, k, op1, op2
     int n, k, op1, op2;
     scanf("%d %d %d %d", &n, &k, &op1, &op2);
     
-    // Read the nums array
     int* nums = (int*)malloc(n * sizeof(int));
     for (int i = 0; i < n; i++) {
         scanf("%d", &nums[i]);
     }
     
-    // Call the minArraySum function
     int result = minArraySum(nums, n, k, op1, op2);
 
-    // Output the result
     printf("%d\n", result);
 
-    // Free the nums array
     free(nums);
 
     return 0;

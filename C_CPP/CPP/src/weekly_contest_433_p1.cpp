@@ -22,7 +22,6 @@ public:
 };
 
 int main() {
-    // TODO: Add the base I/O interface here
     int n;
     cin >> n;
     vector<int> nums(n);

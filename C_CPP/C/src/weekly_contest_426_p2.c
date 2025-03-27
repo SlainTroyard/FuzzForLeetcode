@@ -18,7 +18,7 @@ int getLargestOutlier(int* nums, int numsSize) {
     int ans = -1001;
     for(int i = 0; i < numsSize; i++) {
         curr_sum = total_sum - nums[i];
-        if((curr_sum & 1) == 0) { // curr_sum is even
+        if((curr_sum & 1) == 0) { 
             half = curr_sum / 2;
             if(half == nums[i]) threshold = 1;
             else threshold = 0;
@@ -36,20 +36,16 @@ int getLargestOutlier(int* nums, int numsSize) {
 int main() {
     int numsSize;
 
-    // Input the size of the array.
     scanf("%d", &numsSize);
 
     int* nums = (int*)malloc(numsSize * sizeof(int));
 
-    // Input the elements of the array.
     for (int i = 0; i < numsSize; i++) {
         scanf("%d", &nums[i]);
     }
 
-    // Calculate the largest outlier.
     int result = getLargestOutlier(nums, numsSize);
 
-    // Output the result.
     printf("%d\n", result);
 
     free(nums);

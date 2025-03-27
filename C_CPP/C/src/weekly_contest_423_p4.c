@@ -7,30 +7,26 @@
 #define MOST_CNT    801
 #define MODULO_VAL  1000000007
 
-/* Global variables are used to ensure that the preprocessing only needs to be done once for all test cases.
-  hasCalc:        Used to check if preprocessing has been executed. After execution, it is set to 1.
-  digitsCnt:      The number of 1's in the binary representation of values in the range [0, 800].
-  reducibleCnt:   The number of steps needed for each number to be reduced to 1.
-  combVal:        The binomial coefficients C(m,n), where C(m,n) = C(m-1,n) + C(m-1,n-1). */
+
 static int hasCalc = 0;
 static int digitsCnt[MOST_CNT];
 static int reducibleCnt[MOST_CNT];
 static int combVal[MOST_CNT][MOST_CNT];
 
-/* Preprocessing function. */
+
 static void preProcess(void);
 
-/* Main function. */
+
 int countKReducibleNumbers(char *s, int k)
 {
     int i = 0, j = 0, m = 0, len = 0, one = 0, result = 0;
-    /* Preprocess. After processing, set hasCalc to 1 so no need to repeat the preprocessing. */
+    
     if(0 == hasCalc)
     {
         preProcess();
         hasCalc = 1;
     }
-    /* Count the total number of 1's in the string and calculate its length. */
+    
     for(i = 0; '\0' != s[i]; i++)
     {
         if('1' == s[i])
@@ -39,17 +35,17 @@ int countKReducibleNumbers(char *s, int k)
         }
     }
     len = i;
-    /* Check from right to left. When a bit is 1, changing it to 0 and freely combining the remaining bits will result in a number smaller than n. */
+    
     for(i = len - 1; 0 <= i; i--)
     {
         if('1' == s[i])
         {
             one--;
-            /* Now, there are 'one' number of 1's to the left, this bit becomes 0, and there are 'j' bits available to the right, which means there could be [0, j] 1's. */
+            
             j = len - i - 1;
             for(m = 0; j >= m; m++)
             {
-                /* The "one + m" 1's need to be reduced to "one + m", which should be greater than 0 (the problem requires positive integers, so it can't be 0). */
+                
                 if(0 < one + m && k > reducibleCnt[one + m])
                 {
                     result = (result + combVal[j][m]) % MODULO_VAL;
@@ -60,11 +56,11 @@ int countKReducibleNumbers(char *s, int k)
     return result;
 }
 
-/* Preprocessing function. */
+
 static void preProcess(void)
 {
     int i = 0, j = 0;
-    /* Calculate the number of 1's in each value and their reducibility count, as well as the combination numbers C(i, j). */
+    
     digitsCnt[0] = 0;
     reducibleCnt[0] = 0;
     digitsCnt[1] = 1;
@@ -88,16 +84,13 @@ static void preProcess(void)
 
 int main()
 {
-    // Read the input string and the integer k.
     char s[1001];
     int k;
     scanf("%s", s);
     scanf("%d", &k);
     
-    // Call the function to compute the result
     int result = countKReducibleNumbers(s, k);
     
-    // Output the result
     printf("%d\n", result);
     
     return 0;

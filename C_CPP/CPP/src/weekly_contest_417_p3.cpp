@@ -10,7 +10,7 @@ public:
         const int VOWEL_MASK = 1065233;
         long long ans = 0;
         int cnt_vowel1['u' - 'a' + 1]{}, cnt_vowel2['u' - 'a' + 1]{};
-        int size_vowel1 = 0, size_vowel2 = 0; // 元音种类数
+        int size_vowel1 = 0, size_vowel2 = 0; 
         int cnt_consonant1 = 0, cnt_consonant2 = 0;
         int left1 = 0, left2 = 0;
         for (int b : word) {

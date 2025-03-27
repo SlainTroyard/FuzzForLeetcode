@@ -39,17 +39,14 @@ int main() {
     Solution solution;
     int n;
 
-    // Input the number of elements
     cin >> n;
 
     vector<int> nums(n);
 
-    // Input the elements of the array
     for (int i = 0; i < n; ++i) {
         cin >> nums[i];
     }
 
-    // Call the method and output the result
     int result = solution.getLargestOutlier(nums);
     cout << result << endl;
 

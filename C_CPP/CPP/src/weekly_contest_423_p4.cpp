@@ -42,15 +42,12 @@ public:
 };
 
 int main() {
-    // Read input
     std::string s;
     int k;
     std::cin >> s >> k;
     
-    // Create solution object
     Solution sol;
     
-    // Get the result and print it
     int result = sol.countKReducibleNumbers(s, k);
     std::cout << result << std::endl;
 

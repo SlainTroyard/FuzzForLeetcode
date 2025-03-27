@@ -5,7 +5,7 @@
 #include <unordered_set>
 #include <algorithm>
 #include <numeric>
-#include <functional> // 添加此头文件以使用std::function
+#include <functional> 
 
 using namespace std;
 
@@ -26,7 +26,7 @@ public:
         auto has_cycle = [&](int sub) -> bool {
             int color[26] = {0};
             function<bool(int)> dfs;
-            dfs = [&](int x) -> bool { // 修改后的lambda定义
+            dfs = [&](int x) -> bool { 
                 color[x] = 1;
                 for (int y : g[x]) {
                     if ((sub >> y & 1) == 0) {
@@ -52,7 +52,7 @@ public:
         int mask1 = all ^ mask2;
         int sub = mask1;
         do {
-            int size = __builtin_popcount(sub); // 使用GCC内置函数
+            int size = __builtin_popcount(sub); 
             if (size >= max_size && !has_cycle(sub)) {
                 if (size > max_size) {
                     max_size = size;
@@ -76,7 +76,6 @@ public:
 };
 
 int main() {
-    // TODO: Add the base I/O interface here
     int n;
     cin >> n;
     vector<string> words(n);

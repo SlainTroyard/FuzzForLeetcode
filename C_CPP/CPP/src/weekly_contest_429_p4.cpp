@@ -91,14 +91,11 @@ int main() {
     string s;
     int numOps;
 
-    // Input the binary string and the number of operations
     cin >> s;
     cin >> numOps;
 
-    // Compute the result
     int result = solution.minLength(s, numOps);
 
-    // Output the result
     cout << result << endl;
 
     return 0;

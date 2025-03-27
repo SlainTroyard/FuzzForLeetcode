@@ -71,10 +71,8 @@ int makeStringGood(const char* s) {
 int main() {
     char s[20001];
 
-    // Input the string
     scanf("%s", s);
 
-    // Call makeStringGood and output the result
     int result = makeStringGood(s);
     printf("%d\n", result);
 

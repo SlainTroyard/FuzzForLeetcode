@@ -32,27 +32,22 @@ public:
 int main() {
     Solution sol;
     
-    // Read the size of the nums array
     int n;
     cin >> n;
     
-    // Read the nums array
     vector<int> nums(n);
     for (int i = 0; i < n; i++) {
         cin >> nums[i];
     }
     
-    // Read the number of queries
     int m;
     cin >> m;
     
-    // Read the queries
     vector<vector<int>> queries(m, vector<int>(2));
     for (int i = 0; i < m; i++) {
         cin >> queries[i][0] >> queries[i][1];
     }
     
-    // Call the solution function and print the result
     if (sol.isZeroArray(nums, queries)) {
         cout << "true" << endl;
     } else {

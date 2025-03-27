@@ -23,7 +23,6 @@ public:
 };
 
 int main() {
-    // TODO: Add the base I/O interface here
     string s;
     int k;
     cin >> s >> k;

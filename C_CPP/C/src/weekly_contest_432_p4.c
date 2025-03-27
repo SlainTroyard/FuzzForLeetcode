@@ -4,7 +4,6 @@
 #include <string.h>
 #include <stdbool.h>
 
-// 简单的整数栈实现
 typedef struct {
     int* data;
     int top;
@@ -29,17 +28,17 @@ bool stackIsEmpty(Stack* stack) {
 }
 
 void stackPush(Stack* stack, int item) {
-    if (stack->top == stack->capacity - 1) return; // 栈满
+    if (stack->top == stack->capacity - 1) return; 
     stack->data[++stack->top] = item;
 }
 
 int stackPop(Stack* stack) {
-    if (stackIsEmpty(stack)) return -1; // 栈空
+    if (stackIsEmpty(stack)) return -1; 
     return stack->data[stack->top--];
 }
 
 int stackTop(Stack* stack) {
-    if (stackIsEmpty(stack)) return -1; // 栈空
+    if (stackIsEmpty(stack)) return -1; 
     return stack->data[stack->top];
 }
 
@@ -48,7 +47,6 @@ void destroyStack(Stack* stack) {
     free(stack);
 }
 
-// 简单的整数双端队列实现
 typedef struct {
     int* data;
     int front;
@@ -77,14 +75,14 @@ bool dequeIsEmpty(Deque* deque) {
 }
 
 void dequePushBack(Deque* deque, int item) {
-    if (deque->size == deque->capacity) return; // 队列满
+    if (deque->size == deque->capacity) return; 
     deque->rear = (deque->rear + 1) % deque->capacity;
     deque->data[deque->rear] = item;
     deque->size++;
 }
 
 int dequePopBack(Deque* deque) {
-    if (dequeIsEmpty(deque)) return -1; // 队列空
+    if (dequeIsEmpty(deque)) return -1; 
     int item = deque->data[deque->rear];
     deque->rear = (deque->rear - 1 + deque->capacity) % deque->capacity;
     deque->size--;
@@ -92,7 +90,7 @@ int dequePopBack(Deque* deque) {
 }
 
 int dequePopFront(Deque* deque) {
-    if (dequeIsEmpty(deque)) return -1; // 队列空
+    if (dequeIsEmpty(deque)) return -1; 
     int item = deque->data[deque->front];
     deque->front = (deque->front + 1) % deque->capacity;
     deque->size--;
@@ -100,12 +98,12 @@ int dequePopFront(Deque* deque) {
 }
 
 int dequeFront(Deque* deque) {
-    if (dequeIsEmpty(deque)) return -1; // 队列空
+    if (dequeIsEmpty(deque)) return -1; 
     return deque->data[deque->front];
 }
 
 int dequeBack(Deque* deque) {
-    if (dequeIsEmpty(deque)) return -1; // 队列空
+    if (dequeIsEmpty(deque)) return -1; 
     return deque->data[deque->rear];
 }
 
@@ -114,7 +112,6 @@ void destroyDeque(Deque* deque) {
     free(deque);
 }
 
-// 动态数组实现
 typedef struct {
     int* data;
     int size;
@@ -136,7 +133,6 @@ Vector* createVector(int capacity) {
 
 void vectorPushBack(Vector* vector, int item) {
     if (vector->size == vector->capacity) {
-        // 扩容
         int newCapacity = vector->capacity * 2;
         int* newData = (int*)realloc(vector->data, newCapacity * sizeof(int));
         if (!newData) return;
@@ -151,12 +147,10 @@ void destroyVector(Vector* vector) {
     free(vector);
 }
 
-// 计算非递减子数组中和至少为k的子数组数量
 long long countNonDecreasingSubarrays(int* nums, int numsSize, int k) {
-    // 创建图g和pos_r数组
     Vector** g = (Vector**)malloc(numsSize * sizeof(Vector*));
     for (int i = 0; i < numsSize; i++) {
-        g[i] = createVector(10); // 初始容量为10
+        g[i] = createVector(10); 
     }
     
     int* pos_r = (int*)malloc(numsSize * sizeof(int));
@@ -164,7 +158,6 @@ long long countNonDecreasingSubarrays(int* nums, int numsSize, int k) {
         pos_r[i] = numsSize;
     }
     
-    // 使用栈找到每个位置的下一个更大或相等的元素
     Stack* st = createStack(numsSize);
     for (int i = 0; i < numsSize; i++) {
         int x = nums[i];
@@ -178,7 +171,6 @@ long long countNonDecreasingSubarrays(int* nums, int numsSize, int k) {
         stackPush(st, i);
     }
     
-    // 计算结果
     long long ans = 0;
     int cnt = 0, l = 0;
     Deque* q = createDeque(numsSize);
@@ -209,7 +201,6 @@ long long countNonDecreasingSubarrays(int* nums, int numsSize, int k) {
         ans += r - l + 1;
     }
     
-    // 释放内存
     for (int i = 0; i < numsSize; i++) {
         destroyVector(g[i]);
     }
@@ -222,14 +213,12 @@ long long countNonDecreasingSubarrays(int* nums, int numsSize, int k) {
 }
 
 int main() {
-    // 读取输入
     int numsSize, k;
     if (scanf("%d %d", &numsSize, &k) != 2) {
         fprintf(stderr, "Error reading input for numsSize and k\n");
         return 1;
     }
     
-    // 分配内存并读取数组
     int* nums = (int*)malloc(numsSize * sizeof(int));
     if (!nums) {
         fprintf(stderr, "Memory allocation failed for nums array\n");
@@ -244,13 +233,10 @@ int main() {
         }
     }
     
-    // 调用函数计算结果
     long long result = countNonDecreasingSubarrays(nums, numsSize, k);
     
-    // 输出结果
     printf("%lld\n", result);
     
-    // 释放内存
     free(nums);
     
     return 0;

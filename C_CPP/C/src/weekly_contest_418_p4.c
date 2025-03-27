@@ -4,9 +4,7 @@
 #include <string.h>
 #include <stdio.h>
 
-/**
- * Note: The returned array must be malloced, assume caller calls free().
- */
+
  #define MAX_SIZE 50001
 
 int cmp(const void* a, const void* b) {

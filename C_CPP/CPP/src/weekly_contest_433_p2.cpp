@@ -9,8 +9,8 @@ using namespace std;
 const int MOD = 1'000'000'007;
 const int MX = 100'000;
 
-long long F[MX]; // F[i] = i!
-long long INV_F[MX]; // INV_F[i] = i!^-1
+long long F[MX]; 
+long long INV_F[MX]; 
 
 long long pow(long long x, int n) {
     long long res = 1;
@@ -55,7 +55,6 @@ public:
 };
 
 int main() {
-    // TODO: Add the base I/O interface here
     int n, k;
     cin >> n >> k;
     vector<int> nums(n);

@@ -2,14 +2,14 @@
 #include <iostream>
 #include <string>
 #include <vector>
-#include <cstring> // for memset
+#include <cstring> 
 using namespace std;
 
 class Solution {
     const static int M=1e9+7;
     int n;
     int cnt[10], left_s[10], left_c[10];
-    long dp[10][721][81];  // 改为721和81，支持80长度的输入
+    long dp[10][721][81];  
     long r1[11];
     long dfs(int i, int s, int c) {
         if (s==0 and c==0) return r1[i];
@@ -65,17 +65,14 @@ int main() {
     Solution sol;
     string num;
     
-    // 读取输入字符串
     cin >> num;
     
-    // 添加输入长度检查
     const int MAX_LENGTH = 80;
     if (num.length() > MAX_LENGTH) {
         cout << "Input too long, maximum allowed length is " << MAX_LENGTH << endl;
         return 1;
     }
     
-    // 计算结果
     int result = sol.countBalancedPermutations(num);
     cout << result << endl;
     return 0;

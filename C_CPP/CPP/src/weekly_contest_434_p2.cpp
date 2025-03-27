@@ -16,23 +16,20 @@ private:
         return (time_a == time_b && a[0] != b[0]) ? a[0] == "OFFLINE" : time_a < time_b;
     }
 
-    // 提取ID中的数字部分
     int extractId(const string& idStr) {
-        // 检查是否以"id"开头
         if (idStr.substr(0, 2) == "id") {
             try {
                 return stoi(idStr.substr(2));
             } catch (const std::exception& e) {
                 cerr << "Error parsing ID: " << idStr << endl;
-                return 0; // 返回默认值
+                return 0; 
             }
         } else {
-            // 尝试直接转换整个字符串
             try {
                 return stoi(idStr);
             } catch (const std::exception& e) {
                 cerr << "Error parsing ID: " << idStr << endl;
-                return 0; // 返回默认值
+                return 0; 
             }
         }
     }
@@ -41,7 +38,6 @@ private:
         istringstream iss(mentions);
         string idStr;
         
-        // 用空格分割字符串
         while (iss >> idStr) {
             try {
                 int id = extractId(idStr);
@@ -106,7 +102,6 @@ int main() {
     for (int i = 0; i < numberOfEvents; i++) {
         cin >> events[i][0] >> events[i][1];
         
-        // 单独处理第三个参数，可能包含空格
         if (events[i][0] == "MESSAGE") {
             string messageType;
             cin >> messageType;
@@ -114,7 +109,6 @@ int main() {
             if (messageType == "ALL" || messageType == "HERE") {
                 events[i][2] = messageType;
             } else {
-                // 这是提及用户的情况，需要读取整行
                 events[i][2] = messageType;
                 string restOfLine;
                 getline(cin, restOfLine);

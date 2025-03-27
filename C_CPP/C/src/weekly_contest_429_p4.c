@@ -102,16 +102,12 @@ int main() {
     char s[MAX_LEN + 1];
     int numOps;
 
-    // Input the binary string
     scanf("%s", s);
 
-    // Input the number of operations allowed
     scanf("%d", &numOps);
 
-    // Compute the minimum length
     int result = minLength(s, numOps);
 
-    // Output the result
     printf("%d\n", result);
 
     return 0;

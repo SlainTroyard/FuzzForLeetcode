@@ -27,7 +27,6 @@ int* assignElements(int* groups, int groupsSize, int* elements, int elementsSize
 }
 
 int main() {
-    // TODO: Add the base I/O interface here
     int n, m;
     scanf("%d %d", &n, &m);
     int* groups = (int*)malloc(n*sizeof(int));

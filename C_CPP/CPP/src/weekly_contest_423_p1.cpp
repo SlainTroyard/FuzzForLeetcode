@@ -26,20 +26,16 @@ public:
 int main() {
     int n, k;
     
-    // Read the size of the array and the subarray length
     cin >> n;
     
     vector<int> nums(n);
     
-    // Read the elements of the array
     for (int i = 0; i < n; ++i) {
         cin >> nums[i];
     }
 
-    // Read the length of the subarray
     cin >> k;
 
-    // Create a Solution object and call the function
     Solution sol;
     if (sol.hasIncreasingSubarrays(nums, k)) {
         cout << "true" << endl;

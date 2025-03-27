@@ -139,7 +139,6 @@ struct TreeNode *create_tree(int *arr, int size)
     return root;
 }
 
-// 用于释放二叉树的内存
 void free_tree(struct TreeNode *root)
 {
     if(root == NULL)
@@ -152,7 +151,6 @@ void free_tree(struct TreeNode *root)
     free(root);
 }
 
-// 用于调试打印二叉树，使用层次格式打印
 void print_tree(struct TreeNode *root)
 {
     struct TreeNode **queue = (struct TreeNode **)malloc(10000 * sizeof(struct TreeNode *));

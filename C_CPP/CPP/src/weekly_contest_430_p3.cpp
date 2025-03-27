@@ -2,7 +2,7 @@
 #include <iostream>
 #include <vector>
 #include <unordered_map>
-#include <numeric> // For gcd
+#include <numeric> 
 using namespace std;
 
 class Solution {
@@ -41,16 +41,12 @@ public:
 int main() {
     Solution solution;
     int n;
-    // Input the size of the array
     cin >> n;
-    // Input the elements of the array
     vector<int> nums(n);
     for (int i = 0; i < n; ++i) {
         cin >> nums[i];
     }
-    // Call the numberOfSubsequences function
     long long result = solution.numberOfSubsequences(nums);
-    // Output the result
     cout << result << endl;
     return 0;
 }

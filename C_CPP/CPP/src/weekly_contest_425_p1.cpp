@@ -26,24 +26,19 @@ public:
 int main() {
     Solution solution;
 
-    // Input the size of the array
     int n;
     cin >> n;
 
-    // Input the array elements
     vector<int> nums(n);
     for (int i = 0; i < n; i++) {
         cin >> nums[i];
     }
 
-    // Input the range [l, r]
     int l, r;
     cin >> l >> r;
 
-    // Compute the minimum sum subarray
     int result = solution.minimumSumSubarray(nums, l, r);
 
-    // Output the result
     cout << result << endl;
 
     return 0;

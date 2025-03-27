@@ -31,7 +31,6 @@ long long maxWeight(int* pizzas, int pizzasSize) {
 }
 
 int main() {
-    // TODO: Add the base I/O interface here
     int n;
     scanf("%d", &n);
     int* arr = (int*)malloc(n * sizeof(int));

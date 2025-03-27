@@ -2,7 +2,6 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-// Function to calculate the button with the longest press time
 int buttonWithLongestTime(int** events, int eventsSize, int* eventsColSize) {
     int longest_time = events[0][1];
     int prev = events[0][1];

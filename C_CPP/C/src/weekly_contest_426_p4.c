@@ -4,24 +4,21 @@
 #include <string.h>
 #include <stdio.h>
 
-/* Function to build adjacency list for a tree */
+
 void buildAdjacencyList(int** edges, int edgesSize, int* edgesColSize, int n, int*** adjList, int** adjLen) {
     *adjList = (int**)malloc(n * sizeof(int*));
     *adjLen = (int*)calloc(n, sizeof(int));
 
-    // Count the degree of each node
     for (int i = 0; i < edgesSize; i++) {
         (*adjLen)[edges[i][0]]++;
         (*adjLen)[edges[i][1]]++;
     }
 
-    // Allocate memory for adjacency list
     for (int i = 0; i < n; i++) {
         (*adjList)[i] = (int*)malloc((*adjLen)[i] * sizeof(int));
-        (*adjLen)[i] = 0; // Reset to use as an index
+        (*adjLen)[i] = 0; 
     }
 
-    // Fill adjacency list
     for (int i = 0; i < edgesSize; i++) {
         int u = edges[i][0];
         int v = edges[i][1];
@@ -30,14 +27,14 @@ void buildAdjacencyList(int** edges, int edgesSize, int* edgesColSize, int n, in
     }
 }
 
-/* BFS to count nodes of each color */
+
 void bfsCount(int** adjList, int* adjLen, int n, int* colorCount, int* nodeColor) {
     bool* visited = (bool*)calloc(n, sizeof(bool));
     int* queue = (int*)malloc(n * sizeof(int));
     int front = 0, rear = 0;
 
-    queue[rear++] = 0; // Start BFS from node 0
-    nodeColor[0] = 0;  // Color of root is 0
+    queue[rear++] = 0; 
+    nodeColor[0] = 0;  
     visited[0] = true;
 
     while (front < rear) {
@@ -49,7 +46,7 @@ void bfsCount(int** adjList, int* adjLen, int n, int* colorCount, int* nodeColor
             int neighbor = adjList[curr][i];
             if (!visited[neighbor]) {
                 visited[neighbor] = true;
-                nodeColor[neighbor] = 1 - color; // Alternate color
+                nodeColor[neighbor] = 1 - color; 
                 queue[rear++] = neighbor;
             }
         }
@@ -59,28 +56,24 @@ void bfsCount(int** adjList, int* adjLen, int n, int* colorCount, int* nodeColor
     free(queue);
 }
 
-/* Main solution function */
+
 int* maxTargetNodes(int** edges1, int edges1Size, int* edges1ColSize, 
                     int** edges2, int edges2Size, int* edges2ColSize, 
                     int* returnSize) {
-    int n1 = edges1Size + 1; // Number of nodes in tree 1
-    int n2 = edges2Size + 1; // Number of nodes in tree 2
+    int n1 = edges1Size + 1; 
+    int n2 = edges2Size + 1; 
 
-    // Build adjacency lists
     int **adjList1, **adjList2, *adjLen1, *adjLen2;
     buildAdjacencyList(edges1, edges1Size, edges1ColSize, n1, &adjList1, &adjLen1);
     buildAdjacencyList(edges2, edges2Size, edges2ColSize, n2, &adjList2, &adjLen2);
 
-    // Color count and node color arrays
     int colorCount1[2] = {0}, colorCount2[2] = {0};
     int* nodeColor1 = (int*)calloc(n1, sizeof(int));
     int* nodeColor2 = (int*)calloc(n2, sizeof(int));
 
-    // Perform BFS to calculate color distribution
     bfsCount(adjList1, adjLen1, n1, colorCount1, nodeColor1);
     bfsCount(adjList2, adjLen2, n2, colorCount2, nodeColor2);
 
-    // Calculate results for tree 1
     int* result = (int*)malloc(n1 * sizeof(int));
     int maxColorInTree2 = (colorCount2[0] > colorCount2[1]) ? colorCount2[0] : colorCount2[1];
 
@@ -90,7 +83,6 @@ int* maxTargetNodes(int** edges1, int edges1Size, int* edges1ColSize,
 
     *returnSize = n1;
 
-    // Free memory
     for (int i = 0; i < n1; i++) free(adjList1[i]);
     for (int i = 0; i < n2; i++) free(adjList2[i]);
     free(adjList1);
@@ -106,7 +98,6 @@ int* maxTargetNodes(int** edges1, int edges1Size, int* edges1ColSize,
 int main() {
     int n1, n2;
 
-    // Input number of edges for tree 1
 
     scanf("%d", &n1);
     int** edges1 = (int**)malloc(n1 * sizeof(int*));
@@ -118,7 +109,6 @@ int main() {
         scanf("%d %d", &edges1[i][0], &edges1[i][1]);
     }
 
-    // Input number of edges for tree 2
 
     scanf("%d", &n2);
     int** edges2 = (int**)malloc(n2 * sizeof(int*));
@@ -130,17 +120,14 @@ int main() {
         scanf("%d %d", &edges2[i][0], &edges2[i][1]);
     }
 
-    // Call the solution function
     int returnSize;
     int* result = maxTargetNodes(edges1, n1, edges1ColSize, edges2, n2, edges2ColSize, &returnSize);
 
-    // Output the result
     for (int i = 0; i < returnSize; i++) {
         printf("%d ", result[i]);
     }
     printf("\n");
 
-    // Free allocated memory
     for (int i = 0; i < n1; i++) free(edges1[i]);
     for (int i = 0; i < n2; i++) free(edges2[i]);
     free(edges1);

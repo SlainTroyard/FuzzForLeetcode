@@ -17,7 +17,6 @@ int* zigzagTraversal(int** grid, int gridSize, int* gridColSize, int* returnSize
 }
 
 int main() {
-    // TODO: Add the base I/O interface here
     int gridSize, gridColSize, returnSize;
     scanf("%d %d", &gridSize, &gridColSize);
     int ** grid = (int **)malloc(gridSize * sizeof(int *));

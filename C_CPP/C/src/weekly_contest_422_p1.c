@@ -4,7 +4,6 @@
 #include <string.h>
 #include <stdio.h>
 
-// Function to check if the number is balanced
 bool isBalanced(char* num) {
     int total = 0;
     while (*num) {
@@ -16,12 +15,10 @@ bool isBalanced(char* num) {
 }
 
 int main() {
-    char num[101];  // Assuming the number is no longer than 100 digits
+    char num[101];  
     
-    // Input the number as a string
     scanf("%s", num);
     
-    // Check if the number is balanced
     if (isBalanced(num)) {
         printf("true\n");
     } else {

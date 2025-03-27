@@ -7,10 +7,9 @@
 #define MOD 1000000007
 #define MAX_NUM_LENGTH 81
 #define MAX_DIGITS 10
-#define MAX_SUM 721  // 增加到80*9=720再加1
+#define MAX_SUM 721  
 #define MAX_COUNT 81
 
-// Global variables
 int n;
 int cnt[MAX_DIGITS];
 int left_s[MAX_DIGITS];
@@ -19,7 +18,6 @@ long dp[MAX_DIGITS][MAX_SUM][MAX_COUNT];
 long r1[MAX_DIGITS + 1];
 int cb[81][81];
 
-// Function to initialize the Pascal's triangle for combination calculation
 void pascal() {
     memset(cb, 0, sizeof(cb));
     cb[0][0] = 1;
@@ -31,7 +29,6 @@ void pascal() {
     }
 }
 
-// Recursive function to solve the problem using dynamic programming
 long dfs(int i, int s, int c) {
     if (s == 0 && c == 0) return r1[i];
     if (i == MAX_DIGITS) return 0;
@@ -54,23 +51,18 @@ int countBalancedPermutations(char* num) {
     int s = 0;
     memset(cnt, 0, sizeof(cnt));
     
-    // Count occurrences of each digit and calculate sum
     for (int i = 0; num[i] != '\0'; ++i) {
         int digit = num[i] - '0';
         s += digit;
         ++cnt[digit];
     }
     
-    // If sum is odd, no balanced permutation is possible
     if (s % 2) return 0;
     
-    // Initialize Pascal's triangle
     pascal();
     
-    // Initialize r1
     r1[MAX_DIGITS] = 1;
     
-    // Precompute left_s and left_c
     int ls = 0, lc = 0;
     for (int i = 9; i >= 0; --i) {
         ls += i * cnt[i];
@@ -80,29 +72,23 @@ int countBalancedPermutations(char* num) {
         r1[i] = (r1[i + 1] * cb[left_c[i]][cnt[i]]) % MOD;
     }
     
-    // Initialize length of number
     n = strlen(num);
     
-    // Initialize dp array
     memset(dp, -1, sizeof(dp));
     
-    // Start recursion
     return dfs(0, s / 2, n / 2);
 }
 
 int main() {
-    char num[MAX_NUM_LENGTH + 1]; // +1 for null terminator
+    char num[MAX_NUM_LENGTH + 1]; 
     
-    // Read input string
     scanf("%s", num);
     
-    // 添加输入长度检查
     if (strlen(num) > MAX_NUM_LENGTH - 1) {
         printf("Input too long, maximum allowed length is %d\n", MAX_NUM_LENGTH - 1);
         return 1;
     }
     
-    // Calculate result
     int result = countBalancedPermutations(num);
     printf("%d\n", result);
     

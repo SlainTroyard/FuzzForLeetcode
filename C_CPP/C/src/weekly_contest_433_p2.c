@@ -7,15 +7,13 @@
 #define MOD 1000000007
 #define MX 100000
 
-long long F[MX]; // F[i] = i!
-long long INV_F[MX]; // INV_F[i] = i!^-1
+long long F[MX]; 
+long long INV_F[MX]; 
 
-// 比较函数用于排序
 int compare(const void* a, const void* b) {
     return (*(int*)a - *(int*)b);
 }
 
-// 幂运算函数
 long long power(long long x, int n) {
     long long res = 1;
     while (n > 0) {
@@ -28,13 +26,11 @@ long long power(long long x, int n) {
     return res;
 }
 
-// 组合数计算函数
 long long comb(int n, int m) {
     if (m > n) return 0;
     return (((F[n] * INV_F[m]) % MOD) * INV_F[n - m]) % MOD;
 }
 
-// 初始化阶乘和逆元数组
 void initialize() {
     F[0] = 1;
     for (int i = 1; i < MX; i++) {
@@ -47,16 +43,13 @@ void initialize() {
     }
 }
 
-// 主函数实现
 int minMaxSums(int* nums, int numsSize, int k) {
-    // 确保阶乘和逆元数组已初始化
     static bool initialized = false;
     if (!initialized) {
         initialize();
         initialized = true;
     }
     
-    // 对数组排序
     qsort(nums, numsSize, sizeof(int), compare);
     
     long long ans = 0, s = 1;
@@ -69,14 +62,12 @@ int minMaxSums(int* nums, int numsSize, int k) {
 }
 
 int main() {
-    // 读取输入
     int n, k;
     if (scanf("%d %d", &n, &k) != 2) {
         fprintf(stderr, "Error reading input for n and k\n");
         return 1;
     }
     
-    // 分配内存并读取数组
     int* nums = (int*)malloc(n * sizeof(int));
     if (!nums) {
         fprintf(stderr, "Memory allocation failed for nums array\n");
@@ -91,13 +82,10 @@ int main() {
         }
     }
     
-    // 调用函数计算结果
     int result = minMaxSums(nums, n, k);
     
-    // 输出结果
     printf("%d\n", result);
     
-    // 释放内存
     free(nums);
     
     return 0;

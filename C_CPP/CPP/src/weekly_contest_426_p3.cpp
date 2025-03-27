@@ -2,7 +2,7 @@
 #include <iostream>
 #include <string>
 #include <vector>
-#include <algorithm> // For max
+#include <algorithm> 
 using namespace std;
 
 class Solution {
@@ -34,7 +34,6 @@ public:
 int main() {
     Solution solution;
 
-    // Input for edges1
     int n1;
     cin >> n1;
     vector<vector<int>> edges1(n1, vector<int>(2));
@@ -42,7 +41,6 @@ int main() {
         cin >> edges1[i][0] >> edges1[i][1];
     }
 
-    // Input for edges2
     int n2;
     cin >> n2;
     vector<vector<int>> edges2(n2, vector<int>(2));
@@ -50,14 +48,11 @@ int main() {
         cin >> edges2[i][0] >> edges2[i][1];
     }
 
-    // Input for k
     int k;
     cin >> k;
 
-    // Call the solution method
     vector<int> result = solution.maxTargetNodes(edges1, edges2, k);
 
-    // Output the result
     for (int val : result) {
         cout << val << " ";
     }

@@ -45,20 +45,16 @@ int beautifulSplits(int* nums, int numsSize) {
 int main() {
     int n;
 
-    // Input: size of the array
     scanf("%d", &n);
 
-    // Input: array elements
     int* nums = (int*)malloc(n * sizeof(int));
     for (int i = 0; i < n; i++) {
         scanf("%d", &nums[i]);
     }
 
-    // Calculate and print the result
     int result = beautifulSplits(nums, n);
     printf("%d\n", result);
 
-    // Free allocated memory
     free(nums);
 
     return 0;

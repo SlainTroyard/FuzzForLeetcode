@@ -49,7 +49,6 @@ int** sortMatrix(int** grid, int gridSize, int* gridColSize, int* returnSize, in
 }
 
 int main() {
-    // TODO: Add the base I/O interface here
     int n;
     scanf("%d", &n);
     int **grid = (int **)malloc(sizeof(int *) * n);

@@ -40,7 +40,7 @@ int minimumOperations(int** grid, int gridSize, int* gridColSize) {
 
 int main() {
     int gridSize, gridColSize;
-    scanf("%d %d", &gridSize, &gridColSize); // Input rows and columns
+    scanf("%d %d", &gridSize, &gridColSize); 
 
     int* colSizes = (int*)malloc(gridSize * sizeof(int));
     int** grid = (int**)malloc(gridSize * sizeof(int*));
@@ -48,12 +48,12 @@ int main() {
         grid[i] = (int*)malloc(gridColSize * sizeof(int));
         colSizes[i] = gridColSize;
         for (int j = 0; j < gridColSize; j++) {
-            scanf("%d", &grid[i][j]); // Input matrix elements
+            scanf("%d", &grid[i][j]); 
         }
     }
 
     int result = minimumOperations(grid, gridSize, colSizes);
-    printf("%d\n", result); // Output the result
+    printf("%d\n", result); 
 
     for (int i = 0; i < gridSize; i++) {
         free(grid[i]);

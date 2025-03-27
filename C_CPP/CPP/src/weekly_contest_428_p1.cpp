@@ -23,16 +23,16 @@ public:
 
 int main() {
     int n;
-    cin >> n; // Number of events
+    cin >> n; 
     vector<vector<int>> events(n, vector<int>(2));
     
     for (int i = 0; i < n; ++i) {
-        cin >> events[i][0] >> events[i][1]; // Read index and time
+        cin >> events[i][0] >> events[i][1]; 
     }
     
     Solution solution;
     int result = solution.buttonWithLongestTime(events);
-    cout << result << endl; // Output the result
+    cout << result << endl; 
     
     return 0;
 }

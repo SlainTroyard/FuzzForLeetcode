@@ -27,7 +27,6 @@ public:
 };
 
 int main() {
-    // TODO: Add the base I/O interface here
     string s;
     cin >> s;
     Solution sol;

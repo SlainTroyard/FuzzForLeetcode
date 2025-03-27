@@ -5,12 +5,10 @@
 #include <stdbool.h>
 #include <limits.h>
 
-// 返回两个数中的较大值
 int max(int a, int b) {
     return a > b ? a : b;
 }
 
-// 返回数组中的最小值
 int min_element(int* arr, int size) {
     int min_val = arr[0];
     for (int i = 1; i < size; i++) {
@@ -21,7 +19,6 @@ int min_element(int* arr, int size) {
     return min_val;
 }
 
-// 检查函数 - 判断是否能够达到给定的分数low
 bool check(int* points, int pointsSize, int m, long long low) {
     int n = pointsSize, rem = m, pre = 0;
     for (int i = 0; i < n; i++) {
@@ -39,13 +36,10 @@ bool check(int* points, int pointsSize, int m, long long low) {
     return true;
 }
 
-// 主函数实现
 long long maxScore(int* points, int pointsSize, int m) {
     long long left = 0;
-    // 计算二分查找的右边界
     long long right = (long long)(m + 1) / 2 * min_element(points, pointsSize) + 1;
     
-    // 二分查找最大可能分数
     while (left + 1 < right) {
         long long mid = left + (right - left) / 2;
         if (check(points, pointsSize, m, mid)) {
@@ -59,21 +53,18 @@ long long maxScore(int* points, int pointsSize, int m) {
 }
 
 int main() {
-    // 读取输入
     int n, m;
     if (scanf("%d %d", &n, &m) != 2) {
         fprintf(stderr, "Error reading input for n and m\n");
         return 1;
     }
     
-    // 分配内存
     int* points = (int*)malloc(n * sizeof(int));
     if (!points) {
         fprintf(stderr, "Memory allocation failed\n");
         return 1;
     }
     
-    // 读取points数组
     for (int i = 0; i < n; i++) {
         if (scanf("%d", &points[i]) != 1) {
             fprintf(stderr, "Error reading input for points[%d]\n", i);
@@ -82,13 +73,10 @@ int main() {
         }
     }
     
-    // 调用函数计算结果
     long long result = maxScore(points, n, m);
     
-    // 输出结果
     printf("%lld\n", result);
     
-    // 释放内存
     free(points);
     
     return 0;

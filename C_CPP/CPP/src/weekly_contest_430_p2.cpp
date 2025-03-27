@@ -24,14 +24,11 @@ int main() {
     string s;
     int k;
 
-    // Input string and k
     cin >> s;
     cin >> k;
 
-    // Call answerString function
     string result = solution.answerString(s, k);
 
-    // Print the result
     cout << result << endl;
 
     return 0;

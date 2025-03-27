@@ -55,12 +55,10 @@ public:
 int main() {
     Solution sol;
     
-    // 读取矩阵行列数
     int rows, cols;
     cin >> rows >> cols;
     
     
-    // 读取矩阵元素
     vector<vector<int>> moveTime(rows, vector<int>(cols));
     for(int i = 0; i < rows; i++) {
         for(int j = 0; j < cols; j++) {
@@ -68,7 +66,6 @@ int main() {
         }
     }
     
-    // 计算结果
     int result = sol.minTimeToReach(moveTime);
     cout << result << endl;
     

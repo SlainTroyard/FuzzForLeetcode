@@ -37,7 +37,6 @@ int* maximumSubarrayXor(int* nums, int numsSize, int** queries, int queriesSize,
     }
     *returnSize = queriesSize;
     
-    // Free allocated memory
     for (int i = 0; i < numsSize; i++) {
         free(subarrayXors[i]);
         free(maxScores[i]);
@@ -49,7 +48,6 @@ int* maximumSubarrayXor(int* nums, int numsSize, int** queries, int queriesSize,
 }
 
 int main() {
-    // TODO: Add the base I/O interface here
     int numsSize, queriesSize;
     scanf("%d", &numsSize);
     int* nums = (int*) malloc(sizeof(int) * numsSize);
