@@ -1,0 +1,17 @@
+{
+    "api_key": "your_api_key_here",
+    "api_url": "https://api.example.com/v1/chat/completions",
+    "default_model": "qwq-plus",
+    "model_params": {
+        "temperature": 0.7,
+        "max_tokens": 20000,
+        "top_p": 1.0,
+        "top_k": 5,
+        "timeout": 300,
+        "stream": true
+    },
+    "headers": {
+        "content-type": "application/json"
+    },
+    "system_message": "You are a C/C++ to Rust code translator expert. Translate the code accurately while using idiomatic Rust patterns."
+}
