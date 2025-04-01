@@ -90,7 +90,7 @@ int lenOfVDiagonal(int** grid, int gridSize, int* gridColSize) {
 }
 
 int main() {
-    // TODO: Add the base I/O interface here
+    
     int n, m;
     scanf("%d %d", &n, &m);
     int** grid = malloc(sizeof(int*) * n);

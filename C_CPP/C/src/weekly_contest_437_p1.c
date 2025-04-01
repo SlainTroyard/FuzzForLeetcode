@@ -21,7 +21,7 @@ bool hasSpecialSubstring(char* s, int k) {
 }
 
 int main() {
-    // TODO: Add the base I/O interface here
+    
     char s[100];
     int k;
     scanf("%s %d", s, &k);

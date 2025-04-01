@@ -46,7 +46,7 @@ int maxScore(int** grid, int gridSize, int* gridColSize) {
 }
 
 int main() {
-    // TODO: Add the base I/O interface here
+    
     int gridSize;
     scanf("%d", &gridSize);
     int gridColSize[gridSize];

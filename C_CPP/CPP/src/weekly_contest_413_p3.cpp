@@ -46,7 +46,7 @@ public:
 };
 
 int main() {
-    // TODO: Add the base I/O interface here
+    
     int gridSize;
     cin >> gridSize;
     vector<vector<int>> grid(gridSize);

@@ -33,7 +33,7 @@ int maximumAmount(int** coins, int coinsSize, int* coinsColSize) {
 }
 
 int main() {
-    // TODO: Add the base I/O interface here
+    
     int n, m;
     scanf("%d %d", &n, &m);
     int** coins = (int**)malloc(n * sizeof(int*));

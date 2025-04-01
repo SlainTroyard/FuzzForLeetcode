@@ -76,7 +76,7 @@ public:
 
 int main()
 {
-    // TODO: Add the base I/O interface here
+    
     int side, n, K;
     cin >> side >> n >> K;
     vector<vector<int>> points(n, vector<int>(2));

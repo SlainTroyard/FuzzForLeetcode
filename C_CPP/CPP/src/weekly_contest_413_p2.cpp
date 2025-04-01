@@ -23,7 +23,7 @@ public:
     }
 };
 int main() {
-    // TODO: Add the base I/O interface here
+    
     int queriesSize, k;
     cin >> queriesSize >> k;
     vector<vector<int>> queries(queriesSize, vector<int>(2));

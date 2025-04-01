@@ -55,7 +55,7 @@ public:
 
 
 int main() {
-    // TODO: Add the base I/O interface here
+    
     int n;
     cin >> n;
     vector<vector<int>> cost(n, vector<int>(3));

@@ -22,7 +22,7 @@ public:
     
 
 int main() {
-    // TODO: Add the base I/O interface here
+    
     int gridSize, gridColSize;
     cin >> gridSize >> gridColSize;
     vector<vector<int>> grid(gridSize, vector<int>(gridColSize));

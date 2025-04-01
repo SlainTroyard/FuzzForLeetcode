@@ -18,7 +18,7 @@ int subarraySum(int* nums, int numsSize) {
 }
 
 int main() {
-    // TODO: Add the base I/O interface here
+    
     int n;
     scanf("%d", &n);
     int* nums = (int*)malloc(n * sizeof(int));

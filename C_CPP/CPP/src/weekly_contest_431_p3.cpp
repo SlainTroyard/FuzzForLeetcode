@@ -45,7 +45,7 @@ public:
     
 
 int main() {
-    // TODO: Add the base I/O interface here
+    
     int n, K;
     cin >> n >> K;
     vector<vector<int>> vec(n, vector<int>(3));

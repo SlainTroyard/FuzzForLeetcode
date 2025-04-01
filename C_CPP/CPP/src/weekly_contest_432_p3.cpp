@@ -43,7 +43,7 @@ public:
 };
 
 int main() {
-    // TODO: Add the base I/O interface here
+    
     int n;
     cin >> n;
     int threshold;

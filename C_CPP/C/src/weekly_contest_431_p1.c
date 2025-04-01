@@ -48,7 +48,7 @@ int maxLength(int* nums, int numsSize) {
 
 
 int main() {
-    // TODO: Add the base I/O interface here
+    
     int numSize;
     scanf("%d", &numSize);
     int* nums = (int*)malloc(numSize * sizeof(int));

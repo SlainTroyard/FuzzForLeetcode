@@ -49,7 +49,7 @@ int* maximumSubarrayXor(int* nums, int numsSize, int** queries, int queriesSize,
 }
 
 int main() {
-    // TODO: Add the base I/O interface here
+    
     int numsSize, queriesSize;
     scanf("%d", &numsSize);
     int* nums = (int*) malloc(sizeof(int) * numsSize);

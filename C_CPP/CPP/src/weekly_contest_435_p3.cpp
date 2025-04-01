@@ -39,7 +39,7 @@ public:
 };
 
 int main() {
-    // TODO: Add the base I/O interface here
+    
     int n, m;
     cin >> n >> m;
     vector<int> nums(n), target(m);

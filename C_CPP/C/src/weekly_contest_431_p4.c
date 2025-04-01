@@ -146,7 +146,7 @@ static unsigned long long insertIndex(unsigned long long idx, int i, int count)
 }
 
 int main() {
-    // TODO: Add the base I/O interface here
+    
     int n;
     scanf("%d", &n);
     int **vec = (int **)malloc(sizeof(int *) * n);

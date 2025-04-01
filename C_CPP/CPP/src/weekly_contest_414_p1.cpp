@@ -18,7 +18,7 @@ public:
     }
 };
 int main() {
-    // TODO: Add the base I/O interface here
+    
     string date;
     cin >> date;
     Solution sol;

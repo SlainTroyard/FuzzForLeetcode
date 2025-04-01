@@ -15,7 +15,7 @@ int maxDifference(char* s) {
 }
 
 int main() {
-    // TODO: Add the base I/O interface here
+    
     char s[100];
     scanf("%s", s);
     printf("%d\n", maxDifference(s));

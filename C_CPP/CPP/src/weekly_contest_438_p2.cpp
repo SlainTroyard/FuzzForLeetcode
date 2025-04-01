@@ -40,7 +40,7 @@ public:
 
 int main()
 {
-    // TODO: Add the base I/O interface here
+    
     int n, m, k;
     cin >> n >> m >> k;
     vector<vector<int>> grid(n, vector<int>(m));
